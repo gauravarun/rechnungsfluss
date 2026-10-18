@@ -1,0 +1,11 @@
+# Extends the default gitleaks rules. Allowlist entries must name a specific
+# synthetic value and explain why it is safe.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Synthetic test fixtures"
+regexes = [
+  # Widely published example IBAN used in docs and test fixtures, not a real account.
+  '''DE89370400440532013000''',
+]
