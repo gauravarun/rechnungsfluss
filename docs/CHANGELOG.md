@@ -23,4 +23,5 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **Repo hygiene:** pre-commit (ruff, gitleaks, private-key detection), `.env.example`, LF line endings, MIT licence.
 
 ### Changed
+- Repository published on GitHub (public) with branch protection on `main`. Commit emails rewritten to the GitHub noreply address.
 - Local mode no longer uses LocalStack. It uses an in-process runner plus `moto` instead (ADR-0009).
