@@ -30,8 +30,20 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **Dependency pins:** every dependency is pinned to a release at least two weeks old. GitHub Actions are pinned by commit SHA.
 - **Fictional client:** Nordwerk Industriebedarf GmbH, with tenants `nordwerk-de` and `nordwerk-at`.
 
+### Repository hosting
+- **Hosted publicly** at <https://github.com/gauravarun/rechnungsfluss>. Branch protection on GitHub's free plan requires a public repo.
+- **Commit emails rewritten** to the GitHub noreply address before publishing, so no personal email is exposed in history.
+  - The first private repo was deleted and recreated. GitHub keeps PR refs (`refs/pull/N/head`) permanently, and the PR #1 refs still held the old commits.
+  - As a result, history before this point contains merges of simulated PRs (`--no-ff`), not GitHub PRs.
+- **`main` protection:**
+  - Changes go in only through PRs.
+  - Required checks: `lint, types, unit tests` and `secret scan`. The branch must be up to date before merging.
+  - The rules apply to admins too.
+  - No force-push or deletion. Conversations must be resolved.
+  - **0 required approvals**, because GitHub doesn't let you approve your own PR, so solo work would get stuck.
+  - The `terraform` check is **not required**, because its path filter means it doesn't run on every PR.
+
 ### Open / next session
 - **W1 remainder:** web skeleton (Vite + React + TS) with eslint/tsc in CI. The pipeline runner skeleton follows in W3.
 - **W2:** XRechnung UBL/CII and ZUGFeRD parsers, KoSIT daemon in docker compose, synthetic generator (≥ 100 labelled invoices).
 - **Verify the ⚠️ legal claims** in `standards.md` against primary sources.
-- **Repository hosting:** the repo is local only, with no GitHub remote yet. PRs are simulated with `--no-ff` merges.
