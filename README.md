@@ -21,7 +21,8 @@ This README only states what exists and what has been measured. Plans live in [d
 | AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
 | Step Functions pipeline, Lambdas, queues | ⏳ not built (W3) |
 | Bedrock extraction, eval harness | ⏳ not built (W4) |
-| Review UI, mock ERP | ⏳ not built (W5) |
+| Review UI | 🚧 React + TS shell only (lint, types, tests in CI); review flows not built (W5) |
+| Mock ERP | ⏳ not built (W5) |
 | Runbook | 🚧 deploy bootstrap only |
 | Alarms, threat model, cost estimate | ⏳ not built (W6) |
 
@@ -40,12 +41,13 @@ This README only states what exists and what has been measured. Plans live in [d
 - Tenant isolation is currently enforced and tested in application code only. The IAM and KMS layers (ADR-0006) are not built yet, and they can only be verified in a real AWS account; moto does not evaluate IAM conditions.
 
 ## Getting started
-Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Docker (for the KoSIT validator from W2), Node 20+ (from W5).
+Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Docker (for the KoSIT validator from W2), Node 20+ (for `web/`).
 
 ```bash
 cp .env.example .env
 make install
 make check   # lint, types, unit tests
+make web-install web-check   # review UI: lint, types, tests, build
 ```
 
 ## Documentation

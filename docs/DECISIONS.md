@@ -37,13 +37,20 @@ Short, dated entries per work session. Significant architectural decisions get a
   - As a result, history before this point contains merges of simulated PRs (`--no-ff`), not GitHub PRs.
 - **`main` protection:**
   - Changes go in only through PRs.
-  - Required checks: `lint, types, unit tests` and `secret scan`. The branch must be up to date before merging.
+  - Required checks: `lint, types, unit tests`, `web lint, types, tests, build` and `secret scan`. The branch must be up to date before merging.
   - The rules apply to admins too.
   - No force-push or deletion. Conversations must be resolved.
   - **0 required approvals**, because GitHub doesn't let you approve your own PR, so solo work would get stuck.
   - The `terraform` check is **not required**, because its path filter means it doesn't run on every PR.
 
+### Web skeleton
+- **Pinned versions:** TypeScript **6.0.3** (not 7.x) and ESLint **9.39.5** (not 10.x). `typescript-eslint` 8.71 supports TypeScript `<6.1` only, and `@eslint/js` has no 10.x release that is at least two weeks old. Revisit when typescript-eslint supports TypeScript 7.
+- **ESLint config:** `strictTypeChecked`, with `--max-warnings 0`. Verified that a planted `any` fails lint.
+- **Playwright** is added in W5 with the review flows, not now. There is nothing to drive end-to-end yet.
+- **UI language:** German, matching the client's AP team. Code and docs stay in English.
+- **Repo settings:** auto-merge is enabled at the owner's request. Auto-merge still waits for the required checks.
+
 ### Open / next session
-- **W1 remainder:** web skeleton (Vite + React + TS) with eslint/tsc in CI. The pipeline runner skeleton follows in W3.
+- **W1 status:** complete. The pipeline runner skeleton follows in W3.
 - **W2:** XRechnung UBL/CII and ZUGFeRD parsers, KoSIT daemon in docker compose, synthetic generator (≥ 100 labelled invoices).
 - **Verify the ⚠️ legal claims** in `standards.md` against primary sources.
