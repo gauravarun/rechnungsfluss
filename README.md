@@ -14,14 +14,16 @@ This README only states what exists and what has been measured. Plans live in [d
 | Area | Status |
 |---|---|
 | Brief, architecture, ADRs | ✅ written (`docs/`) |
-| Canonical EN 16931 model | ⏳ not built (W1) |
-| Local-mode ports and adapters | ⏳ not built (W1) |
+| Canonical EN 16931 model, state machine, audit chain | ✅ built, unit-tested (structural validation only) |
+| Local-mode storage adapters (filesystem, SQLite) | ✅ built, unit-tested; pipeline runner not built (W3) |
 | XRechnung / ZUGFeRD parsing, KoSIT validation | ⏳ not built (W2) |
 | Synthetic invoice generator (≥ 100 labelled) | ⏳ not built (W2) |
-| Step Functions pipeline, AWS infra | ⏳ not built (W1 skeleton, W3) |
+| AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
+| Step Functions pipeline, Lambdas, queues | ⏳ not built (W3) |
 | Bedrock extraction, eval harness | ⏳ not built (W4) |
 | Review UI, mock ERP | ⏳ not built (W5) |
-| Alarms, runbook, cost estimate | ⏳ not built (W6) |
+| Runbook | 🚧 deploy bootstrap only |
+| Alarms, threat model, cost estimate | ⏳ not built (W6) |
 
 ## Measured results
 **None yet.** Results will appear here only after the evaluation harness exists (W4). The table will be generated from the files in `eval/reports/`, and each number will link to the report it comes from.
@@ -30,11 +32,12 @@ This README only states what exists and what has been measured. Plans live in [d
 - **Client, tenants, suppliers, POs, invoices:** all synthetic.
 - **ERP:** a mock FastAPI service with fault injection.
 - **Authentication:** signed dev tokens locally; Cognito in the AWS environment.
-- **AWS:** local mode runs the same pipeline in-process without an AWS account. AWS adapters are tested with `moto`, which emulates AWS and is not real AWS behaviour.
+- **AWS:** nothing has been deployed. Terraform is only statically checked (validate, tflint, checkov). The planned local mode runs the pipeline in-process without an AWS account.
 
 ## Known limits
 - No real-world invoices have been tested. Synthetic data is cleaner and more uniform than real supplier invoices, so measured accuracy will overstate real-world accuracy.
 - Legal statements in [docs/standards.md](docs/standards.md) marked ⚠️ are not yet verified against primary sources.
+- Tenant isolation is currently enforced and tested in application code only. The IAM and KMS layers (ADR-0006) are not built yet, and they can only be verified in a real AWS account; moto does not evaluate IAM conditions.
 
 ## Getting started
 Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Docker (for the KoSIT validator from W2), Node 20+ (from W5).
