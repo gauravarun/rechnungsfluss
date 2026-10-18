@@ -1,4 +1,4 @@
-.PHONY: install lint format typecheck test check
+.PHONY: install lint format typecheck test check web-install web-check
 
 UV ?= uv
 
@@ -20,3 +20,9 @@ test:
 	$(UV) run pytest --cov=rechnungsfluss --cov-report=term-missing
 
 check: lint typecheck test
+
+web-install:
+	cd web && npm ci --no-audit --no-fund
+
+web-check:
+	cd web && npm run lint && npm run typecheck && npm test && npm run build
