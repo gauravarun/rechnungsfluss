@@ -1,6 +1,7 @@
 name: terraform
 
 on:
+  workflow_dispatch:
   pull_request:
     paths: ["infra/terraform/**", ".github/workflows/terraform.yml"]
   push:
