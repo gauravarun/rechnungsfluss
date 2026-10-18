@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Secrets & local state
+.env
+.env.*
+!.env.example
+*.pem
+.local-data/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl.bak
+crash.log
+
+# Node
+node_modules/
+web/dist/
+web/test-results/
+web/playwright-report/
+
+# Eval artefacts (large generated files; manifest + labels are committed)
+eval/dataset/files/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
