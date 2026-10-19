@@ -198,7 +198,10 @@ def _ops(inv: Invoice, layout: Layout) -> list[list[Op]]:
 
     # Totals (new page if they would not fit).
     t = inv.totals
-    rows = [("Summe netto", t.total_without_vat, False)]
+    rows = [
+        ("Summe Positionen", t.line_net_sum, False),  # BT-106
+        ("Summe netto", t.total_without_vat, False),  # BT-109
+    ]
     for vat in inv.vat_breakdown:
         label = (
             f"USt. {_rate(vat.rate, vat.category)} auf {_amount(vat.taxable_amount, inv.currency)}"

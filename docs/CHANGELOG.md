@@ -11,6 +11,14 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
   - Versioned prompt `v1`, a print-oriented output schema, and a strict mapping to the canonical model.
   - Record/replay cassettes.
 - **Pipeline:** plain PDFs now go through the extractor. `extraction_incomplete`, `extraction_uncertain` and `not_an_invoice` route to review. Refusals and other technical extraction errors mark the invoice `FAILED` (replayable).
+- **Extraction eval** (`evaluation/extraction`):
+  - Measures field accuracy by field and by layout, **silent errors** (wrong and unflagged), incomplete extractions, latency and tokens.
+  - Can run the end-to-end routing eval with the real extractor.
+  - Recorded and live modes, a cassette-backed CI gate (baseline −2 pp, silent errors, false accepts, plus the owner's threshold once set), and `--limit` for smoke tests.
+- **CI `eval` workflow:** recorded job on PRs; live job nightly or on dispatch through GitHub OIDC. It only runs once the owner sets `AWS_EVAL_ROLE_ARN`.
+- **Terraform `ci-eval` module:** GitHub OIDC provider and a role, limited to main-branch workflows of this repo, that may only invoke the configured Claude models.
+- **Runbook section 4:** Bedrock model access, local profile, smoke test, baseline, threshold decision, nightly CI and failure triage.
+- **Fix:** PDFs now print BT-106 ("Summe Positionen") separately from BT-109. The harness showed that the wrong-line-sum defect was invisible on paper, so no extractor could ever have found it.
 - **PDF variants:**
   - Classic and compact vector layouts, plus image-only **scans** (rotated, blurred, grainy, JPEG, no text layer), all drawn from one layout description.
   - The PDFs now print every reviewable field.

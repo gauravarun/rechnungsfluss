@@ -97,6 +97,7 @@ def extracted(**overrides: Any) -> dict[str, Any]:
             {"rate_percent": "19", "taxable_amount": "125.00", "tax_amount": "23.75"}
         ],
         "totals": {
+            "line_net_sum": "125.00",
             "total_without_vat": "125.00",
             "vat_total": "23.75",
             "total_with_vat": "148.75",

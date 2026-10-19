@@ -540,7 +540,7 @@ def main(argv: list[str] | None = None) -> None:
     by_cat: dict[str, int] = {}
     for lbl in labels:
         by_cat[lbl.category] = by_cat.get(lbl.category, 0) + 1
-    print(f"wrote {len(labels)} documents to {args.out}: {by_cat}")  # noqa: T201
+    print(f"wrote {len(labels)} documents to {args.out}: {by_cat}")
 
 
 if __name__ == "__main__":

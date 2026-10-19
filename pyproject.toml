@@ -51,7 +51,9 @@ select = ["E", "W", "F", "I", "B", "UP", "S", "N", "SIM", "RUF", "PT", "DTZ", "T
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101", "S311"]
 # Seeded, non-cryptographic PRNG on purpose: synthetic data must be reproducible.
-"src/rechnungsfluss/synthetic/**" = ["S311"]
+"src/rechnungsfluss/synthetic/**" = ["S311", "T201"]
+# Evaluation modules are command-line tools: printing a summary is their job.
+"src/rechnungsfluss/evaluation/**" = ["T201"]
 
 [tool.mypy]
 strict = true

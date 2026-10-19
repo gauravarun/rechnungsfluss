@@ -56,6 +56,8 @@ class ExtractedVat(_Strict):
 
 
 class ExtractedTotals(_Strict):
+    line_net_sum: str | None
+    """Sum of the line amounts as printed ("Summe Positionen"), if printed."""
     total_without_vat: str | None
     vat_total: str | None
     total_with_vat: str | None

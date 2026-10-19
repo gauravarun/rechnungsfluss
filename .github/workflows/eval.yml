@@ -1,0 +1,101 @@
+name: eval
+
+# ADR-0010: PRs replay recorded LLM responses (no credentials, no cost);
+# a nightly/manual job calls Bedrock through GitHub OIDC and records fresh cassettes.
+
+on:
+  pull_request:
+  schedule:
+    - cron: "17 2 * * *" # nightly, 02:17 UTC
+  workflow_dispatch:
+    inputs:
+      effort:
+        description: "Effort level for the live run"
+        default: medium
+        type: choice
+        options: [low, medium, high]
+
+permissions:
+  contents: read
+
+jobs:
+  recorded:
+    name: LLM extraction eval (recorded)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: .tools/kosit
+          key: kosit-${{ hashFiles('scripts/kosit.sh') }}
+      - run: uv sync --frozen
+      - name: start KoSIT validator daemon
+        run: |
+          scripts/kosit.sh fetch
+          nohup scripts/kosit.sh start > kosit.log 2>&1 &
+          scripts/kosit.sh wait
+      - name: replay cassettes, gate on baseline and false accepts
+        run: >-
+          uv run python -m rechnungsfluss.evaluation.extraction
+          --mode recorded --routing --gate --out eval-out
+      - if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: eval-recorded
+          path: eval-out/
+          if-no-files-found: ignore
+
+  live:
+    name: LLM extraction eval (live, Bedrock)
+    # Runs only on main and only once the owner has configured the OIDC role (runbook §4).
+    if: >-
+      github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+      && vars.AWS_EVAL_ROLE_ARN != ''
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6.3.0
+        with:
+          role-to-assume: ${{ vars.AWS_EVAL_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_EVAL_REGION || 'eu-central-1' }}
+          role-session-name: rechnungsfluss-eval-${{ github.run_id }}
+      - run: uv sync --frozen
+      - name: start KoSIT validator daemon
+        run: |
+          scripts/kosit.sh fetch
+          nohup scripts/kosit.sh start > kosit.log 2>&1 &
+          scripts/kosit.sh wait
+      - name: live extraction eval (records cassettes)
+        env:
+          RF_BEDROCK_MODEL_ID: ${{ vars.RF_BEDROCK_MODEL_ID || 'anthropic.claude-opus-5-5' }}
+        run: >-
+          uv run python -m rechnungsfluss.evaluation.extraction
+          --mode live --record --routing --gate
+          --region "${{ vars.AWS_EVAL_REGION || 'eu-central-1' }}"
+          --model "$RF_BEDROCK_MODEL_ID"
+          --effort "${{ inputs.effort || 'medium' }}"
+          --cassettes eval-out/cassettes --out eval-out
+      - if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: eval-live
+          path: eval-out/
+          if-no-files-found: ignore
