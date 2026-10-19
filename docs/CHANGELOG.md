@@ -22,6 +22,18 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **New ports and local adapters:** idempotency, fingerprints, purchase orders, validator, extractor, and an ERP that enforces idempotency keys and can inject failures.
 - **AWS adapters** (`adapters/aws`): S3 object store (tenant prefix, optional per-tenant KMS key), DynamoDB invoice repository (conditional writes, by-state GSI), append-only audit log (`attribute_not_exists`), idempotency claims (TTL), fingerprints and POs. Each adapter is bound to one tenant and refuses calls for another. Tested with moto, including a full pipeline run.
 - **ADR-0007 amended:** per-step idempotency comes from state guards and conditional writes, not Powertools.
+- **AWS pipeline (IaC):**
+  - Terraform `pipeline` module: S3 → EventBridge → SQS ingest (+DLQ, KMS) → ingest Lambda → Step Functions (Standard, KMS, X-Ray, transition logging without payloads).
+  - The step Lambda and the review wait (task token) are separate functions.
+  - A tenant-data IAM role is assumed with the session tag `tenant`, and Lambda roles have no data access of their own.
+  - The platform KMS key policy grants scoped access to CloudWatch Logs and EventBridge.
+- **Lambda handlers** (`handlers/`): ingest with partial-batch failures and idempotent execution starts, a one-step-per-task handler, and the review-token handler. The AWS runtime builds tenant-scoped sessions through STS.
+- **Pipeline:** `run_step` (state-guarded single step), deferred-export mode for AWS, and review task-token storage.
+- **Tests:**
+  - The Step Functions definition mirrors the pipeline's step order and retries and catches on every task.
+  - The tenant IAM policy is scoped to `LeadingKeys`, the S3 prefix and KMS tags, and the audit table is append-only.
+  - Handlers (fake runtime) and the AWS runtime (moto) are covered.
+- **`scripts/build_lambda.sh`:** reproducible Lambda zip from `uv.lock`.
 - **Routing evaluation** (`evaluation/routing`) with a CI gate: zero false accepts and full label agreement. Reports: `eval/reports/2026-10-19-routing.md`, plus the structured report re-run on the regenerated dataset.
 
 ### Added (session 2, 2026-10-19: W2)
