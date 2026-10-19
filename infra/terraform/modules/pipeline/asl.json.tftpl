@@ -1,0 +1,93 @@
+{
+  "Comment": "Rechnungsfluss invoice pipeline (ADR-0001). One execution per ingested document; execution name = <tenant>-<invoice_id> (ADR-0007). Step order must match application.pipeline.AUTOMATIC_STEPS (tests/unit/test_stepfunctions_asl.py).",
+  "StartAt": "Parse",
+  "States": {
+    "Parse": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {"FunctionName": "${step_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "step": "parse"}},
+      "ResultSelector": {"tenant.$": "$.Payload.tenant", "invoice_id.$": "$.Payload.invoice_id", "state.$": "$.Payload.state"},
+      "Retry": [{"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError"], "IntervalSeconds": 2, "MaxAttempts": 4, "BackoffRate": 2.0, "JitterStrategy": "FULL"}],
+      "Catch": [{"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "StepFailed"}],
+      "Next": "Validate"
+    },
+    "Validate": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {"FunctionName": "${step_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "step": "validate"}},
+      "ResultSelector": {"tenant.$": "$.Payload.tenant", "invoice_id.$": "$.Payload.invoice_id", "state.$": "$.Payload.state"},
+      "Retry": [{"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError", "ValidatorUnavailableError"], "IntervalSeconds": 5, "MaxAttempts": 5, "BackoffRate": 2.0, "JitterStrategy": "FULL"}],
+      "Catch": [{"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "StepFailed"}],
+      "Next": "Check"
+    },
+    "Check": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {"FunctionName": "${step_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "step": "check"}},
+      "ResultSelector": {"tenant.$": "$.Payload.tenant", "invoice_id.$": "$.Payload.invoice_id", "state.$": "$.Payload.state"},
+      "Retry": [{"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError"], "IntervalSeconds": 2, "MaxAttempts": 4, "BackoffRate": 2.0, "JitterStrategy": "FULL"}],
+      "Catch": [{"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "StepFailed"}],
+      "Next": "Decide"
+    },
+    "Decide": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {"FunctionName": "${step_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "step": "decide"}},
+      "ResultSelector": {"tenant.$": "$.Payload.tenant", "invoice_id.$": "$.Payload.invoice_id", "state.$": "$.Payload.state"},
+      "Retry": [{"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError"], "IntervalSeconds": 2, "MaxAttempts": 4, "BackoffRate": 2.0, "JitterStrategy": "FULL"}],
+      "Catch": [{"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "StepFailed"}],
+      "Next": "Route"
+    },
+    "Route": {
+      "Type": "Choice",
+      "Choices": [
+        {"Variable": "$.state", "StringEquals": "AUTO_APPROVED", "Next": "Export"},
+        {"Variable": "$.state", "StringEquals": "IN_REVIEW", "Next": "AwaitReview"},
+        {"Variable": "$.state", "StringEquals": "FAILED", "Next": "InvoiceFailed"},
+        {"Variable": "$.state", "StringEquals": "EXPORTED", "Next": "Exported"}
+      ],
+      "Default": "UnexpectedState"
+    },
+    "AwaitReview": {
+      "Type": "Task",
+      "Comment": "Pauses until the review API calls SendTaskSuccess with {\"decision\": \"approved\"|\"rejected\"} (W5).",
+      "Resource": "arn:aws:states:::lambda:invoke.waitForTaskToken",
+      "Parameters": {"FunctionName": "${await_review_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "task_token.$": "$$.Task.Token"}},
+      "TimeoutSeconds": ${review_timeout_seconds},
+      "ResultPath": "$.review",
+      "Retry": [{"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError"], "IntervalSeconds": 2, "MaxAttempts": 4, "BackoffRate": 2.0, "JitterStrategy": "FULL"}],
+      "Catch": [
+        {"ErrorEquals": ["States.Timeout"], "ResultPath": "$.error", "Next": "ReviewTimedOut"},
+        {"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "StepFailed"}
+      ],
+      "Next": "ReviewOutcome"
+    },
+    "ReviewOutcome": {
+      "Type": "Choice",
+      "Choices": [
+        {"Variable": "$.review.decision", "StringEquals": "approved", "Next": "Export"},
+        {"Variable": "$.review.decision", "StringEquals": "rejected", "Next": "Rejected"}
+      ],
+      "Default": "UnexpectedState"
+    },
+    "Export": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {"FunctionName": "${step_function_arn}", "Payload": {"tenant.$": "$.tenant", "invoice_id.$": "$.invoice_id", "step": "export"}},
+      "ResultSelector": {"tenant.$": "$.Payload.tenant", "invoice_id.$": "$.Payload.invoice_id", "state.$": "$.Payload.state"},
+      "Retry": [
+        {"ErrorEquals": ["Lambda.ServiceException", "Lambda.AWSLambdaException", "Lambda.SdkClientException", "Lambda.TooManyRequestsException", "ConflictError"], "IntervalSeconds": 2, "MaxAttempts": 4, "BackoffRate": 2.0, "JitterStrategy": "FULL"},
+        {"ErrorEquals": ["ExportFailedError"], "IntervalSeconds": 60, "MaxAttempts": 5, "BackoffRate": 2.0, "JitterStrategy": "FULL"}
+      ],
+      "Catch": [{"ErrorEquals": ["States.ALL"], "ResultPath": "$.error", "Next": "ExportFailed"}],
+      "Next": "Exported"
+    },
+    "Exported": {"Type": "Succeed"},
+    "Rejected": {"Type": "Succeed"},
+    "InvoiceFailed": {"Type": "Fail", "Error": "InvoiceFailed", "Cause": "Document could not be parsed or extracted; see the invoice record and replay (runbook section 3)."},
+    "ReviewTimedOut": {"Type": "Fail", "Error": "ReviewTimedOut", "Cause": "No review decision within the timeout."},
+    "ExportFailed": {"Type": "Fail", "Error": "ExportFailed", "Cause": "ERP export kept failing; invoice is EXPORT_FAILED and can be replayed."},
+    "StepFailed": {"Type": "Fail", "Error": "StepFailed", "Cause": "A pipeline step raised an unexpected error after retries."},
+    "UnexpectedState": {"Type": "Fail", "Error": "UnexpectedState", "Cause": "Step returned a state the workflow does not handle."}
+  }
+}

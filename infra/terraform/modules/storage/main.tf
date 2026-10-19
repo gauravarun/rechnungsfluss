@@ -228,3 +228,17 @@ output "table_names" {
     idempotency = aws_dynamodb_table.idempotency.name
   }
 }
+
+output "bucket_arn" {
+  description = "ARN of the document bucket."
+  value       = aws_s3_bucket.documents.arn
+}
+
+output "table_arns" {
+  description = "DynamoDB table ARNs by role."
+  value = {
+    main        = aws_dynamodb_table.main.arn
+    audit       = aws_dynamodb_table.audit.arn
+    idempotency = aws_dynamodb_table.idempotency.arn
+  }
+}
