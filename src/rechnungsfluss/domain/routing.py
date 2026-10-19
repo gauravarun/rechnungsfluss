@@ -30,6 +30,7 @@ def decide(
     validation_accepted: bool | None,
     match_issues: Sequence[MatchIssue],
     duplicates: Sequence[DuplicateHit],
+    extraction_reasons: Sequence[Reason] = (),
 ) -> Decision:
     """Combine every signal into one route.
 
@@ -48,5 +49,6 @@ def decide(
     if duplicates:
         reasons.add(Reason.DUPLICATE_SUSPECTED)
     reasons.update(issue.reason for issue in match_issues)
+    reasons.update(extraction_reasons)
     ordered = tuple(sorted(reasons, key=lambda r: r.value))
     return Decision(route=Route.REVIEW if ordered else Route.AUTO_APPROVE, reasons=ordered)

@@ -37,6 +37,7 @@ from rechnungsfluss.ports import (
     AuditLog,
     ErpClient,
     ErpUnavailableError,
+    Extraction,
     ExtractionUnavailableError,
     Extractor,
     FingerprintStore,
@@ -191,21 +192,50 @@ class Pipeline:
                     invoice, xml, fmt = doc.invoice, doc.xml, "zugferd"
                     is_e_invoice, profile = doc.is_e_invoice, doc.profile.value
                 except zugferd.NotZugferdError:
-                    invoice, fmt = self._extract(tenant, data), "pdf"
-                    xml = cii.to_cii(invoice, specification_id=SPEC_EN16931)
+                    return self._parsed_pdf(tenant, rec, self._extract(tenant, data))
         except (ParseError, ExtractionUnavailableError) as exc:
             return self._transition(tenant, rec, S.FAILED, meta={"error": str(exc)})
         self.s.store.put(tenant, f"validation-input/{rec.invoice_id}.xml", xml)
         meta = {"format": fmt, "is_e_invoice": is_e_invoice, "profile": profile}
         return self._transition(tenant, rec, S.PARSED, invoice=invoice, meta=meta)
 
-    def _extract(self, tenant: TenantId, pdf: bytes) -> Invoice:
+    def _parsed_pdf(
+        self, tenant: TenantId, rec: InvoiceRecord, extraction: Extraction
+    ) -> InvoiceRecord:
+        reasons: list[str] = []
+        if not extraction.is_invoice:
+            reasons.append(Reason.NOT_AN_INVOICE.value)
+        elif extraction.invoice is None:
+            reasons.append(Reason.EXTRACTION_INCOMPLETE.value)
+        if extraction.uncertain_fields:
+            reasons.append(Reason.EXTRACTION_UNCERTAIN.value)
+        if extraction.invoice is not None:
+            # Same official validation as native XML (ADR-0002).
+            xml = cii.to_cii(extraction.invoice, specification_id=SPEC_EN16931)
+            self.s.store.put(tenant, f"validation-input/{rec.invoice_id}.xml", xml)
+        meta = {
+            "format": "pdf",
+            "is_e_invoice": True,
+            "profile": None,
+            "extraction": {
+                "model": extraction.model,
+                "prompt_version": extraction.prompt_version,
+                "missing_fields": list(extraction.missing_fields),
+                "uncertain_fields": list(extraction.uncertain_fields),
+                "usage": dict(extraction.usage),
+                "latency_ms": extraction.latency_ms,
+                "reasons": reasons,
+            },
+        }
+        return self._transition(tenant, rec, S.PARSED, invoice=extraction.invoice, meta=meta)
+
+    def _extract(self, tenant: TenantId, pdf: bytes) -> Extraction:
         if self.s.extractor is None:
             raise ExtractionUnavailableError("plain PDF received but no extractor is configured")
         return self.s.extractor.extract(tenant, pdf)
 
     def _validate(self, tenant: TenantId, rec: InvoiceRecord) -> InvoiceRecord:
-        if not rec.meta.get("is_e_invoice", True):
+        if rec.invoice is None or not rec.meta.get("is_e_invoice", True):
             return self._transition(tenant, rec, S.VALIDATED, meta={"validation": None})
         xml = self.s.store.get(tenant, f"validation-input/{rec.invoice_id}.xml")
         result = self.s.validator.validate(xml)  # ValidatorUnavailableError -> step retry
@@ -249,6 +279,7 @@ class Pipeline:
             validation_accepted=accepted,
             match_issues=[MatchIssue.model_validate(i) for i in _list(rec.meta, "match_issues")],
             duplicates=[DuplicateHit.model_validate(h) for h in _list(rec.meta, "duplicate_of")],
+            extraction_reasons=[Reason(r) for r in _extraction_reasons(rec.meta)],
         )
         target = S.AUTO_APPROVED if decision.route is Route.AUTO_APPROVE else S.IN_REVIEW
         return self._transition(
@@ -444,6 +475,13 @@ class Pipeline:
             reason=reason,
         )
         self.s.audit.append(tenant, event)
+
+
+def _extraction_reasons(meta: Mapping[str, object]) -> list[str]:
+    extraction = meta.get("extraction")
+    if isinstance(extraction, dict):
+        return [str(r) for r in extraction.get("reasons", [])]
+    return []
 
 
 def _list(meta: Mapping[str, object], key: str) -> list[Any]:

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from rechnungsfluss.domain.invoice import Invoice
 from rechnungsfluss.domain.tenancy import TenantId
+from rechnungsfluss.ports import Extraction
 from rechnungsfluss.validation.kosit import Finding, Severity, ValidationResult
 
 
@@ -26,5 +27,5 @@ class FixedExtractor:
     def __init__(self, invoice: Invoice) -> None:
         self.invoice = invoice
 
-    def extract(self, tenant: TenantId, pdf: bytes) -> Invoice:
-        return self.invoice
+    def extract(self, tenant: TenantId, pdf: bytes) -> Extraction:
+        return Extraction(invoice=self.invoice)

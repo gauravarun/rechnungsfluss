@@ -12,6 +12,12 @@ from enum import StrEnum
 
 class Reason(StrEnum):
     VALIDATION_FAILED = "validation_failed"
+    NOT_AN_INVOICE = "not_an_invoice"
+    """A plain PDF that the extractor says is not an invoice."""
+    EXTRACTION_INCOMPLETE = "extraction_incomplete"
+    """Required data could not be read from a plain PDF."""
+    EXTRACTION_UNCERTAIN = "extraction_uncertain"
+    """The extractor flagged fields it could not read with confidence."""
     NOT_AN_E_INVOICE = "not_an_e_invoice"
     MISSING_DUE_DATE = "missing_due_date"
     DUPLICATE_SUSPECTED = "duplicate_suspected"
