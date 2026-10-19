@@ -86,7 +86,24 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **ERP idempotency key** is `tenant:invoice:v<content_version>`. A correction creates a new version.
 - **Routing eval uses an oracle extractor** for plain PDFs, labelled as such everywhere. LLM extraction is measured separately in W4.
 
+- **Step Functions ↔ local runner drift guard:** a test walks the ASL and compares it with `AUTOMATIC_STEPS`.
+- **Export in AWS is its own state** (`inline_export=False`). ERP failures raise `ExportFailedError`, so Step Functions retries with backoff, and the idempotency key keeps the ERP from booking twice.
+- **The Lambda execution roles have no data access.** Data is reached only through the tenant-data role, assumed with session tag `tenant=<id>`. The trust policy and the Lambda policies both restrict the tag to the configured tenants.
+- **Inbox keys** are `<tenant>/inbox/<safe name>`. Anything else fails the SQS record and ends up in the DLQ (alarmed in W6), so it's never dropped silently.
+- **Checkov skips** (justified inline):
+  - Lambda in a VPC, async DLQ and code signing.
+  - SFN execution-data logging, deliberately off to keep payloads out of logs.
+- **Not wired yet in AWS:** the KoSIT Lambda container (W6) and the ERP client (W5). The runbook says what fails until then.
+- **Windows dev machine:** two scripted edits went wrong this session (a broken noqa, and a chain that hid a failing exit code). Both were caught by lint or by checking the PR, and fixed in follow-up commits.
+
 ### Open / next session
+- **W3: complete.**
+- **W4: LLM extraction.**
+  - Bedrock Claude extractor with a tool-use schema, versioned prompts, and Langfuse tracing (no-op without keys).
+  - Recorded cassettes for PR runs and a nightly live-eval workflow (GitHub OIDC; needs the owner's AWS setup).
+  - First LLM baseline. After it, the **owner sets the accuracy threshold** (ADR-0010).
+  - Visually noisy PDFs for the LLM path.
+- **Owner decision pending:** confirm or change the ADR-0014 tolerance defaults.
 - **W1 and W2: complete.** Remaining W2 acceptance item: none.
 - **W3:**
   - Pipeline runner (local) and Step Functions ASL.

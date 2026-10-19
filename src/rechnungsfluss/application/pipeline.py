@@ -18,6 +18,7 @@ import hashlib
 import logging
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass, replace
+from enum import StrEnum
 from typing import Any
 
 from rechnungsfluss.domain.audit import AuditAction, append_event, field_changes
@@ -92,9 +93,35 @@ CORRECTABLE_PREFIXES = (
 )
 
 
+class Step(StrEnum):
+    """Automatic steps in execution order. The Step Functions definition must match
+    (tests/unit/test_stepfunctions_asl.py checks it)."""
+
+    PARSE = "parse"
+    VALIDATE = "validate"
+    CHECK = "check"
+    DECIDE = "decide"
+    EXPORT = "export"
+
+
+AUTOMATIC_STEPS = (Step.PARSE, Step.VALIDATE, Step.CHECK, Step.DECIDE)
+"""Steps from RECEIVED to a routing decision; export follows separately."""
+
+
 class Pipeline:
-    def __init__(self, services: Services) -> None:
+    def __init__(self, services: Services, *, inline_export: bool = True) -> None:
+        """``inline_export=False`` (AWS): auto-approval and review approval stop at
+        AUTO_APPROVED / APPROVED, and the Step Functions Export state runs the export."""
         self.s = services
+        self.inline_export = inline_export
+        self._steps: dict[
+            Step, tuple[InvoiceState, Callable[[TenantId, InvoiceRecord], InvoiceRecord]]
+        ] = {
+            Step.PARSE: (S.RECEIVED, self._parse),
+            Step.VALIDATE: (S.PARSED, self._validate),
+            Step.CHECK: (S.VALIDATED, self._check),
+            Step.DECIDE: (S.MATCHED, self._decide),
+        }
 
     # --- ingest ------------------------------------------------------------------
 
@@ -118,17 +145,32 @@ class Pipeline:
     def process(self, tenant: TenantId, invoice_id: str) -> InvoiceRecord:
         """Run every automatic step that the current state allows."""
         rec = self.s.repo.get(tenant, invoice_id)
-        if rec.state is S.RECEIVED:
-            rec = self._parse(tenant, rec)
-        if rec.state is S.PARSED:
-            rec = self._validate(tenant, rec)
-        if rec.state is S.VALIDATED:
-            rec = self._check(tenant, rec)
-        if rec.state is S.MATCHED:
-            rec = self._decide(tenant, rec)
-        if rec.state is S.AUTO_APPROVED:
+        for step in AUTOMATIC_STEPS:
+            rec = self.run_step(tenant, invoice_id, step, rec)
+        if rec.state is S.AUTO_APPROVED and self.inline_export:
             rec = self.export(tenant, invoice_id)
         return rec
+
+    def run_step(
+        self, tenant: TenantId, invoice_id: str, step: Step, rec: InvoiceRecord | None = None
+    ) -> InvoiceRecord:
+        """Run one step if the invoice is in that step's source state; otherwise no-op.
+
+        This is what a Step Functions task calls, so a retried task never repeats work.
+        """
+        if step is Step.EXPORT:
+            return self.export(tenant, invoice_id)
+        rec = rec or self.s.repo.get(tenant, invoice_id)
+        source, fn = self._steps[step]
+        return fn(tenant, rec) if rec.state is source else rec
+
+    def attach_review_token(self, tenant: TenantId, invoice_id: str, token: str) -> None:
+        """Store the Step Functions task token the review API must answer (W5)."""
+        rec = self._require(tenant, invoice_id, S.IN_REVIEW)
+        updated = replace(
+            rec, version=rec.version + 1, meta={**rec.meta, "review_task_token": token}
+        )
+        self.s.repo.update(tenant, updated, expected_version=rec.version)
 
     # --- steps ---------------------------------------------------------------------
 
@@ -250,6 +292,8 @@ class Pipeline:
             actor=actor,
             meta={**meta, "approved_by": actor},
         )
+        if not self.inline_export:
+            return self.s.repo.get(tenant, invoice_id)
         return self.export(tenant, invoice_id)
 
     def reject(
@@ -434,4 +478,12 @@ def _set_path(data: dict[str, Any], path: str, value: str) -> None:
         raise ReviewActionError(f"unknown field {path!r}") from exc
 
 
-__all__ = ["IngestOutcome", "Pipeline", "Reason", "ReviewActionError", "Services"]
+__all__ = [
+    "AUTOMATIC_STEPS",
+    "IngestOutcome",
+    "Pipeline",
+    "Reason",
+    "ReviewActionError",
+    "Services",
+    "Step",
+]

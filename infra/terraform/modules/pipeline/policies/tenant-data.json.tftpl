@@ -1,0 +1,53 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "TenantRowsInMainAndIdempotencyTables",
+      "Effect": "Allow",
+      "Action": ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Query"],
+      "Resource": ["${main_table_arn}", "${main_table_arn}/index/gsi1", "${idempotency_table_arn}"],
+      "Condition": {
+        "ForAllValues:StringLike": {"dynamodb:LeadingKeys": ["TENANT#$${aws:PrincipalTag/tenant}#*"]}
+      }
+    },
+    {
+      "Sid": "AuditAppendAndReadOnly",
+      "Effect": "Allow",
+      "Action": ["dynamodb:PutItem", "dynamodb:Query", "dynamodb:GetItem"],
+      "Resource": ["${audit_table_arn}"],
+      "Condition": {
+        "ForAllValues:StringLike": {"dynamodb:LeadingKeys": ["TENANT#$${aws:PrincipalTag/tenant}#*"]}
+      }
+    },
+    {
+      "Sid": "AuditIsAppendOnly",
+      "Effect": "Deny",
+      "Action": ["dynamodb:UpdateItem", "dynamodb:DeleteItem", "dynamodb:BatchWriteItem", "dynamodb:PartiQLUpdate", "dynamodb:PartiQLDelete"],
+      "Resource": ["${audit_table_arn}"]
+    },
+    {
+      "Sid": "TenantObjects",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject", "s3:PutObject"],
+      "Resource": ["${bucket_arn}/$${aws:PrincipalTag/tenant}/*"]
+    },
+    {
+      "Sid": "TenantKmsKeyOnly",
+      "Effect": "Allow",
+      "Action": ["kms:Decrypt", "kms:GenerateDataKey"],
+      "Resource": ${tenant_kms_key_arns_json},
+      "Condition": {
+        "StringEquals": {"aws:ResourceTag/tenant": "$${aws:PrincipalTag/tenant}"}
+      }
+    },
+    {
+      "Sid": "PlatformKeyOnlyViaDynamoDbAndS3",
+      "Effect": "Allow",
+      "Action": ["kms:Decrypt", "kms:GenerateDataKey"],
+      "Resource": ["${platform_kms_key_arn}"],
+      "Condition": {
+        "StringEquals": {"kms:ViaService": ["dynamodb.${region}.amazonaws.com", "s3.${region}.amazonaws.com"]}
+      }
+    }
+  ]
+}

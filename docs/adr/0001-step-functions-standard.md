@@ -12,6 +12,13 @@ Use AWS Step Functions **Standard** workflows, with one execution per invoice do
 - **SQS chaining between Lambdas.** Lowest cost, but retries, branching, timeouts and the per-invoice history would all have to be hand-built.
 - **Temporal / Airflow.** Very capable, but they mean extra infrastructure to run, which is unjustified at this scale.
 
+## Implementation note (2026-10-19)
+- The definition is `infra/terraform/modules/pipeline/asl.json.tftpl`.
+- The step order is tested against `application.pipeline.AUTOMATIC_STEPS`.
+- The review wait uses `lambda:invoke.waitForTaskToken`: the token is stored on the invoice record, and the review API (W5) answers with `{"decision": "approved"|"rejected"}`.
+- The review timeout is 30 days.
+- `include_execution_data` is off, so execution payloads never reach the logs.
+
 ## Consequences
 - ➕ Built-in retries with backoff, catch → DLQ, and a visual execution history.
 - ➕ Execution names are unique per state machine (for 90 days), so they double as the ingest idempotency key (ADR-0007).

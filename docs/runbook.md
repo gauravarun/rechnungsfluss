@@ -21,7 +21,13 @@ aws s3api put-bucket-encryption --bucket "$TF_STATE_BUCKET" \
   --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"aws:kms"}}]}'
 ```
 
-### 1.2 Plan and apply
+### 1.2 Build the Lambda package
+```bash
+scripts/build_lambda.sh        # -> dist/lambda.zip (about 36 MB; Lambda direct-upload limit is 50 MB)
+```
+The package is built from `uv.lock` (runtime dependencies only) as Linux `manylinux_2_28` wheels for the python3.12 runtime. If it ever grows past 50 MB, upload it to S3 and switch the functions to `s3_bucket` / `s3_key`.
+
+### 1.3 Plan and apply
 ```bash
 cd infra/terraform/envs/aws-dev
 terraform init -backend-config="bucket=$TF_STATE_BUCKET" \
@@ -30,13 +36,18 @@ terraform plan -out=tfplan
 terraform apply tfplan
 ```
 
-### 1.3 Tear-down
+### 1.4 Tear-down
 Tables have `deletion_protection_enabled = true`, and the document bucket is versioned. To tear down:
 1. Set `deletion_protection_enabled = false`, then apply.
 2. Empty the bucket (all versions).
 3. Run `terraform destroy`.
 
 KMS keys enter a 30-day pending-deletion window and can be cancelled during that time.
+
+### 1.5 What does not work yet after an apply
+- **Validate step:** fails with `ConfigurationError` (validator not configured) until the KoSIT Lambda container exists (W6). The execution ends in `StepFailed`.
+- **Export step:** same, until the ERP client is wired (W5).
+- **Review:** an invoice in review waits for `SendTaskSuccess` from the review API (W5), at most 30 days (`review_timeout_seconds`).
 
 ## 2. Alerts
 *Not built yet (W6).* Each alert will get an entry here covering threshold, meaning, first checks and remediation.

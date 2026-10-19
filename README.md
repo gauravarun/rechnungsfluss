@@ -22,8 +22,8 @@ This README only states what exists and what has been measured. Plans live in [d
 | UBL 2.1 serializer + parser | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung (UBL) in CI |
 | ZUGFeRD / Factur-X | ✅ extract + embed (EN 16931 profile); MINIMUM / BASIC WL flagged as not an e-invoice; output passes KoSIT EN 16931 in CI. Generated PDFs are **not** checked for PDF/A-3 conformance |
 | Synthetic labelled evaluation set | ✅ 132 documents, 2 tenants, 6 categories. Every label's validation verdict and rule IDs match KoSIT exactly (checked in CI). Routing labels await the W3 pipeline. See [eval/dataset](eval/dataset/README.md) |
-| AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
-| Step Functions pipeline, Lambdas, queues | ⏳ not built (W3, next PR) |
+| AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS, SQS + DLQ, EventBridge, Lambdas, Step Functions, tenant IAM. Checked in CI (validate, tflint, checkov), **never applied** |
+| AWS adapters and Lambda handlers | ✅ built; tested with moto and fakes. In AWS, the validate and export steps fail until the KoSIT Lambda container (W6) and the ERP client (W5) are wired |
 | Bedrock extraction, eval harness | ⏳ not built (W4) |
 | Review UI | 🚧 React + TS shell only (lint, types, tests in CI); review flows not built (W5) |
 | Mock ERP | ⏳ not built (W5) |
@@ -72,7 +72,9 @@ How to read this:
 ## Known limits
 - No real-world invoices have been tested. Synthetic data is cleaner and more uniform than real supplier invoices, so measured accuracy will overstate real-world accuracy.
 - Legal statements in [docs/standards.md](docs/standards.md) marked ⚠️ are not yet verified against primary sources.
-- Tenant isolation is currently enforced and tested in application code only. The IAM and KMS layers (ADR-0006) are not built yet, and they can only be verified in a real AWS account; moto does not evaluate IAM conditions.
+- Tenant isolation is enforced and tested in application code (local and AWS adapters).
+- The IAM layer (tenant-tagged role, DynamoDB `LeadingKeys`, S3 prefix, per-tenant KMS keys) is written, and its policy documents are unit-tested. It has **not** been exercised in a real AWS account, because moto doesn't evaluate IAM.
+- The AWS deployment has never been applied, so cold-start latency, real IAM behaviour and cost are unmeasured.
 
 ## Getting started
 Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Java 11+ (for the KoSIT validator), Node 20+ (for `web/`).
