@@ -40,4 +40,13 @@ Scenario selection was verified on 2026-10-19 by `tests/integration/test_kosit_d
 
 The validator and configuration are fetched by `scripts/kosit.sh`. It checks SHA-256 checksums that match GitHub's published asset digests.
 
+## Observed rule behaviour (pinned configuration)
+These facts come from the schematron shipped in the pinned KoSIT configuration. They are checked by `tests/integration/test_dataset_labels.py`.
+
+| Rule | Behaviour | Consequence here |
+|---|---|---|
+| BR-CO-17, BR-S-09 | VAT amount vs. basis × rate is checked with a **±1.00 tolerance**. BR-CO-17 is inclusive, BR-S-09 exclusive. | Smaller VAT errors pass official validation. Seeded VAT defects use deltas > 1.00. |
+| BR-CO-25 | Due date or payment terms required when an amount is due. The configuration's CHANGELOG lists it as a test to *monitor*, so it is not enforced. | A missing due date is accepted. We route it to review as our own rule (`missing_due_date`). |
+| BR-CO-10 | Line sum must equal BT-106 exactly. | A changed BT-106 also fails BR-CO-13 (BT-109 consistency). |
+
 Pin updates are recorded in [DECISIONS.md](DECISIONS.md).

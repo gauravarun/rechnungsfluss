@@ -176,6 +176,49 @@ def to_cii(invoice: Invoice, *, specification_id: str) -> bytes:
     return etree.tostring(root, xml_declaration=True, encoding="UTF-8", pretty_print=True)
 
 
+FACTURX_MINIMUM = "urn:factur-x.eu:1p0:minimum"
+
+
+def to_cii_minimum(invoice: Invoice) -> bytes:
+    """Factur-X MINIMUM profile: document header, parties and totals only, no lines.
+
+    Used to produce test inputs for the "not an e-invoice" path. Element order
+    follows the Factur-X MINIMUM XSD, which factur-x checks on embedding.
+    """
+    root = etree.Element(f"{{{RSM}}}CrossIndustryInvoice", nsmap=NS)
+    ctx = _sub(root, f"{{{RSM}}}ExchangedDocumentContext")
+    _sub(_sub(ctx, _r("GuidelineSpecifiedDocumentContextParameter")), _r("ID"), FACTURX_MINIMUM)
+    doc = _sub(root, f"{{{RSM}}}ExchangedDocument")
+    _sub(doc, _r("ID"), invoice.number)
+    _sub(doc, _r("TypeCode"), invoice.type_code)
+    _date(doc, "IssueDateTime", invoice.issue_date)
+    tx = _sub(root, f"{{{RSM}}}SupplyChainTradeTransaction")
+    agreement = _sub(tx, _r("ApplicableHeaderTradeAgreement"))
+    seller = _sub(agreement, _r("SellerTradeParty"))
+    _sub(seller, _r("Name"), invoice.seller.name)
+    _sub(
+        _sub(seller, _r("PostalTradeAddress")), _r("CountryID"), invoice.seller.address.country_code
+    )
+    if invoice.seller.vat_id:
+        _sub(
+            _sub(seller, _r("SpecifiedTaxRegistration")),
+            _r("ID"),
+            invoice.seller.vat_id,
+            schemeID="VA",
+        )
+    _sub(_sub(agreement, _r("BuyerTradeParty")), _r("Name"), invoice.buyer.name)
+    _sub(tx, _r("ApplicableHeaderTradeDelivery"))
+    settlement = _sub(tx, _r("ApplicableHeaderTradeSettlement"))
+    _sub(settlement, _r("InvoiceCurrencyCode"), invoice.currency)
+    t = invoice.totals
+    sums = _sub(settlement, _r("SpecifiedTradeSettlementHeaderMonetarySummation"))
+    _sub(sums, _r("TaxBasisTotalAmount"), fmt_amount(t.total_without_vat))
+    _sub(sums, _r("TaxTotalAmount"), fmt_amount(t.vat_total), currencyID=invoice.currency)
+    _sub(sums, _r("GrandTotalAmount"), fmt_amount(t.total_with_vat))
+    _sub(sums, _r("DuePayableAmount"), fmt_amount(t.amount_due))
+    return etree.tostring(root, xml_declaration=True, encoding="UTF-8", pretty_print=True)
+
+
 # --- parsing ----------------------------------------------------------------
 
 
