@@ -240,7 +240,7 @@ def main(argv: list[str] | None = None) -> None:
         newline="\n",
     )
     stem.with_suffix(".md").write_text(to_markdown(report), encoding="utf-8", newline="\n")
-    print(f"wrote {stem}.json and {stem}.md")  # noqa: T201
+    print(f"wrote {stem}.json and {stem}.md")
 
 
 if __name__ == "__main__":
