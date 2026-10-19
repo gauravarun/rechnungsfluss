@@ -16,7 +16,8 @@ This README only states what exists and what has been measured. Plans live in [d
 | Brief, architecture, ADRs | ✅ written (`docs/`) |
 | Canonical EN 16931 model, state machine, audit chain | ✅ built, unit-tested (structural validation only) |
 | Local-mode storage adapters (filesystem, SQLite) | ✅ built, unit-tested; pipeline runner not built (W3) |
-| XRechnung / ZUGFeRD parsing, KoSIT validation | ⏳ not built (W2) |
+| CII serializer + parser, KoSIT validation | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung 3.0.2 in CI |
+| UBL parsing, ZUGFeRD / Factur-X | ⏳ not built (W2) |
 | Synthetic invoice generator (≥ 100 labelled) | ⏳ not built (W2) |
 | AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
 | Step Functions pipeline, Lambdas, queues | ⏳ not built (W3) |
@@ -41,12 +42,13 @@ This README only states what exists and what has been measured. Plans live in [d
 - Tenant isolation is currently enforced and tested in application code only. The IAM and KMS layers (ADR-0006) are not built yet, and they can only be verified in a real AWS account; moto does not evaluate IAM conditions.
 
 ## Getting started
-Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Docker (for the KoSIT validator from W2), Node 20+ (for `web/`).
+Requirements: Python 3.12, [uv](https://docs.astral.sh/uv/), Java 11+ (for the KoSIT validator), Node 20+ (for `web/`).
 
 ```bash
 cp .env.example .env
 make install
-make check   # lint, types, unit tests
+scripts/kosit.sh fetch && scripts/kosit.sh start &   # official validator on :8081
+make check   # lint, types, unit + KoSIT integration tests (skipped if the daemon is down)
 make web-install web-check   # review UI: lint, types, tests, build
 ```
 

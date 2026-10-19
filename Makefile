@@ -14,10 +14,10 @@ format:
 	$(UV) run ruff check --fix .
 
 typecheck:
-	$(UV) run mypy
+	$(UV) run python -m mypy
 
 test:
-	$(UV) run pytest --cov=rechnungsfluss --cov-report=term-missing
+	$(UV) run python -m pytest --cov=rechnungsfluss --cov-report=term-missing
 
 check: lint typecheck test
 
