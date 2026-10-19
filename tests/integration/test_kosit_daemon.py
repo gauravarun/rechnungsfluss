@@ -6,7 +6,6 @@ RF_REQUIRE_KOSIT=1 so a missing daemon fails the build instead of skipping.
 
 from __future__ import annotations
 
-import os
 from decimal import Decimal
 
 import pytest
@@ -15,25 +14,11 @@ from hypothesis import HealthCheck, given, settings
 from rechnungsfluss.domain.invoice import Invoice, Totals
 from rechnungsfluss.formats import SPEC_EN16931, SPEC_XRECHNUNG_3_0, cii, ubl, zugferd
 from rechnungsfluss.synthetic.render import render_pdf
-from rechnungsfluss.validation.kosit import KositValidator, ValidatorUnavailableError
+from rechnungsfluss.validation.kosit import KositValidator
 from tests.conftest import make_invoice
 from tests.strategies import invoices
 
 pytestmark = pytest.mark.kosit
-
-KOSIT_URL = os.environ.get("RF_KOSIT_URL", "http://127.0.0.1:8081")
-
-
-@pytest.fixture(scope="module")
-def validator() -> KositValidator:
-    v = KositValidator(KOSIT_URL, timeout_s=60)
-    try:
-        v.validate(b"<probe/>")
-    except ValidatorUnavailableError:
-        if os.environ.get("RF_REQUIRE_KOSIT") == "1":
-            pytest.fail(f"KoSIT daemon not reachable at {KOSIT_URL}")
-        pytest.skip(f"KoSIT daemon not reachable at {KOSIT_URL}")
-    return v
 
 
 @settings(

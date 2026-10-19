@@ -66,7 +66,8 @@ class ZugferdDocument:
         return self.profile not in NOT_AN_E_INVOICE
 
 
-def _attachment(pdf: bytes) -> tuple[str, bytes]:
+def attachment(pdf: bytes) -> tuple[str, bytes]:
+    """Return ``(name, raw bytes)`` of the invoice XML attachment, unparsed."""
     if len(pdf) > MAX_PDF_BYTES:
         raise ParseError(f"PDF larger than {MAX_PDF_BYTES} bytes")
     try:
@@ -89,7 +90,7 @@ def _profile(root: object) -> Profile:
 
 
 def extract(pdf: bytes) -> ZugferdDocument:
-    name, xml = _attachment(pdf)
+    name, xml = attachment(pdf)
     root = parse_xml(xml)  # hardened: rejects DTD/entities before factur-x sees the bytes
     profile = Profile.XRECHNUNG if name == "xrechnung.xml" else _profile(root)
     if profile is not Profile.XRECHNUNG:
