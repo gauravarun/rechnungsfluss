@@ -11,6 +11,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **`validation/kosit`:** KoSIT daemon client and report parser that returns the official rule IDs.
 - **`scripts/kosit.sh`:** fetches the validator and configuration (SHA-256 pinned) and runs the daemon.
 - **CI:** starts KoSIT and runs the integration tests with `RF_REQUIRE_KOSIT=1`, so a missing validator fails the build instead of skipping.
+- **`formats/ubl`:** UBL 2.1 Invoice serializer and parser. A property test checks that UBL and CII parse to identical canonical invoices.
 
 ### Added (session 1, continued)
 - `web/`: Vite + React 19 + TypeScript review-UI shell, ESLint (typescript-eslint strict, type-checked), Vitest + Testing Library; CI job for lint, types, tests and build.
