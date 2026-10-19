@@ -233,10 +233,13 @@ def main(argv: list[str] | None = None) -> None:
     stem = args.out / f"{report.generated_at[:10]}-structured"
     payload = asdict(report)
     payload["field_accuracy_total"] = report.field_totals().accuracy
+    # newline="\n": byte-identical reports on every OS (no CRLF on Windows).
     stem.with_suffix(".json").write_text(
-        json.dumps(payload, indent=1, sort_keys=True, default=str) + "\n", encoding="utf-8"
+        json.dumps(payload, indent=1, sort_keys=True, default=str) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
-    stem.with_suffix(".md").write_text(to_markdown(report), encoding="utf-8")
+    stem.with_suffix(".md").write_text(to_markdown(report), encoding="utf-8", newline="\n")
     print(f"wrote {stem}.json and {stem}.md")  # noqa: T201
 
 
