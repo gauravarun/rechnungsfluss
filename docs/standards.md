@@ -25,7 +25,7 @@ The pipeline treats a ZUGFeRD file whose profile is MINIMUM or BASIC-WL as an **
 | XRechnung CIUS | 3.0.2 | KoSIT, <https://xeinkauf.de/xrechnung/> | ✅ |
 | KoSIT validator | `v1.6.3` (2026-08-20) | <https://github.com/itplr-kosit/validator/releases> | ✅ checked 2026-10-18 |
 | KoSIT XRechnung configuration | `v2026-08-31` (XRechnung 3.0.2) | <https://github.com/itplr-kosit/validator-configuration-xrechnung/releases> | ✅ checked 2026-10-18 |
-| Factur-X / ZUGFeRD library | `factur-x` 7.3 (PyPI) | <https://github.com/akretion/factur-x> | ✅ checked 2026-10-18 |
+| Factur-X / ZUGFeRD library | `factur-x` 7.3 (PyPI) | <https://github.com/akretion/factur-x> | ✅ checked 2026-10-18; used for profile detection, profile XSD check and embedding (`formats/zugferd.py`) |
 
 The **EN 16931 schematron** is still pinned in case the project later needs core-only validation. It is not used yet: the KoSIT XRechnung configuration already includes the EN 16931 core rules.
 
