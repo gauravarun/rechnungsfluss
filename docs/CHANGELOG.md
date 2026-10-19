@@ -11,6 +11,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
   - Versioned prompt `v1`, a print-oriented output schema, and a strict mapping to the canonical model.
   - Record/replay cassettes.
 - **Pipeline:** plain PDFs now go through the extractor. `extraction_incomplete`, `extraction_uncertain` and `not_an_invoice` route to review. Refusals and other technical extraction errors mark the invoice `FAILED` (replayable).
+- **Langfuse tracing** (`observability/tracing`): one generation per live Bedrock call, carrying usage, latency, model, prompt version and tenant. It's a no-op without keys. The PDF is never sent, and identifiers in the output are masked. langfuse 4.16.0 pinned.
 - **Extraction eval** (`evaluation/extraction`):
   - Measures field accuracy by field and by layout, **silent errors** (wrong and unflagged), incomplete extractions, latency and tokens.
   - Can run the end-to-end routing eval with the real extractor.
