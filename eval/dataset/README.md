@@ -36,6 +36,13 @@ The `missing_fields` variants are:
 - `nordwerk-de`: XRechnung 3.0 CII and UBL, ZUGFeRD (EN 16931 profile), plain PDF.
 - `nordwerk-at`: EN 16931 CII and UBL, ZUGFeRD, plain PDF. XRechnung is German.
 
+## Purchase orders and BT-132
+- Each PO in `purchase_orders.json` lists its lines, plus the supplier VAT ID and name.
+- Invoice lines reference PO lines through **BT-132**:
+  - always on noisy invoices,
+  - on 70 % of other invoices.
+- The remaining invoices exercise the description fallback of 2-way matching (ADR-0014).
+
 ## Label schema (`manifest.jsonl`, one JSON object per line)
 
 | Field | Meaning |

@@ -55,7 +55,7 @@ The model is based on the EN 16931 semantic model. Field names carry their BT/BG
 | Seller (BG-4) | BT-27 name, BT-31 VAT identifier, BT-84 payment account (IBAN) |
 | Buyer (BG-7) | BT-44 name |
 | Totals (BG-22) | BT-106 line net sum, BT-109 total without VAT, BT-110 VAT total, BT-112 total with VAT, BT-115 amount due |
-| Lines (BG-25) | BT-126 line id, BT-129 quantity, BT-130 unit, BT-131 line net amount, BT-146 net price, BT-151 VAT category, BT-152 VAT rate |
+| Lines (BG-25) | BT-126 line id, BT-129 quantity, BT-130 unit, BT-131 line net amount, BT-132 referenced PO line, BT-146 net price, BT-151 VAT category, BT-152 VAT rate |
 | VAT breakdown (BG-23) | BT-116 taxable amount, BT-117 tax amount, BT-118 category, BT-119 rate |
 
 Each extracted field carries provenance: `source ∈ {xml, llm, human}` and an optional `confidence`.

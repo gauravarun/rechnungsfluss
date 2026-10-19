@@ -110,6 +110,8 @@ class InvoiceLine(_Frozen):
     """BT-152."""
     description: str | None = None
     """BT-153 item name."""
+    order_line_ref: str | None = None
+    """BT-132 referenced purchase order line (line number within BT-13)."""
 
 
 class VatBreakdown(_Frozen):

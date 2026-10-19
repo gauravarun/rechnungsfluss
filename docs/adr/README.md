@@ -17,3 +17,4 @@ Format: context → decision → consequences (trade-offs). Status values are `p
 | [0011](0011-langfuse-cloud-eu.md) | Langfuse Cloud (EU) for LLM tracing | accepted |
 | [0012](0012-review-ui-auth.md) | Review UI auth: Cognito in AWS, signed dev tokens locally | accepted |
 | [0013](0013-python-and-iac-tooling.md) | Tooling: uv, ruff, mypy strict, pytest; Terraform + tflint + checkov | accepted |
+| [0014](0014-two-way-matching-and-routing.md) | Two-way PO matching, tolerances and routing | proposed (tolerance defaults await owner) |

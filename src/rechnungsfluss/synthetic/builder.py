@@ -30,6 +30,8 @@ class LineSpec:
     net_price: Decimal
     vat_category: str = "S"
     vat_rate: Decimal | None = Decimal("19")
+    order_line_ref: str | None = None
+    """BT-132: PO line number this invoice line bills."""
 
 
 def build_invoice(
@@ -62,6 +64,7 @@ def build_invoice(
                 vat_category=spec.vat_category,
                 vat_rate=spec.vat_rate,
                 description=spec.description,
+                order_line_ref=spec.order_line_ref,
             )
         )
         key = (spec.vat_category, spec.vat_rate)

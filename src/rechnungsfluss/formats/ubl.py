@@ -133,6 +133,8 @@ def to_ubl(invoice: Invoice, *, specification_id: str) -> bytes:
         _sub(el, _b("ID"), line.line_id)
         _sub(el, _b("InvoicedQuantity"), fmt_quantity(line.quantity), unitCode=line.unit_code)
         _sub(el, _b("LineExtensionAmount"), fmt_amount(line.net_amount), currencyID=cur)
+        if line.order_line_ref:
+            _sub(_sub(el, _a("OrderLineReference")), _b("LineID"), line.order_line_ref)
         item = _sub(el, _a("Item"))
         _sub(item, _b("Name"), line.description or "-")
         cat = _sub(item, _a("ClassifiedTaxCategory"))
@@ -227,6 +229,7 @@ def from_ubl(data: bytes) -> Invoice:
                 vat_category=req_text(el, "cac:Item/cac:ClassifiedTaxCategory/cbc:ID", NS),
                 vat_rate=_opt_dec(el, "cac:Item/cac:ClassifiedTaxCategory/cbc:Percent"),
                 description=child_text(el, "cac:Item/cbc:Name", NS),
+                order_line_ref=child_text(el, "cac:OrderLineReference/cbc:LineID", NS),
             )
         )
     breakdown = [

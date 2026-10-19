@@ -4,6 +4,15 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 
 ## [Unreleased]
 
+### Added (session 2, continued: W3)
+- **ADR-0014** (proposed): 2-way PO matching rules, reason codes and per-tenant tolerance defaults. The defaults await owner confirmation.
+- **Canonical model:** BT-132 (referenced PO line) on invoice lines, in both CII and UBL. KoSIT accepts both.
+- **`domain/matching`:** pairs lines via BT-132, with a fallback on description and unit. Checks price, quantity, unit, currency and supplier.
+- **`domain/duplicates`:** exact key on seller + normalized number, plus a fuzzy check on amount and date window (ADR-0008).
+- **`domain/routing`:** combines every reason. Auto-approve only when there are none.
+- **`domain/reasons`:** reason codes shared by the pipeline and the dataset generator.
+- **Dataset regenerated:** BT-132 on lines, supplier name on POs.
+
 ### Added (session 2, 2026-10-19: W2)
 - **Canonical model:** extended with postal addresses (BG-5/BG-8), seller contact (BG-6), electronic addresses (BT-34/BT-49), payment-means code (BT-81) and specification ID (BT-24). All are required for valid XRechnung.
 - **`formats/cii`:** CII D16B serializer and parser with hardened XML parsing (no DTDs or entities, size limit). The round trip is property-tested.
