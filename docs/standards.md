@@ -33,7 +33,11 @@ The **EN 16931 schematron** is still pinned in case the project later needs core
 | Input | Rules applied |
 |---|---|
 | XRechnung (UBL or CII) | KoSIT validator + XRechnung configuration (EN 16931 core + XRechnung CIUS rules, BR-DE-*) |
-| ZUGFeRD / Factur-X | `factur-x`: XML extraction + XSD for the declared profile. Then the KoSIT validator on the extracted CII. XRechnung-only (BR-DE-*) findings are reported as **warnings**, not errors, because B2B suppliers aren't bound by the XRechnung CIUS. See ADR-0002. |
-| Plain PDF (LLM-extracted) | Extracted data is serialized to CII and run through the same KoSIT validation as ZUGFeRD |
+| ZUGFeRD / Factur-X | `factur-x`: XML extraction + XSD for the declared profile. Then the KoSIT validator on the extracted CII. The validator's "EN16931 (CII)" scenario applies (core rules, no BR-DE-*), selected by BT-24. See ADR-0002. |
+| Plain PDF (LLM-extracted) | Extracted data is serialized to CII with BT-24 `urn:cen.eu:en16931:2017` and run through the same KoSIT "EN16931 (CII)" scenario |
+
+Scenario selection was verified on 2026-10-19 by `tests/integration/test_kosit_daemon.py`. The same invoice without BT-10 fails BR-DE-15 under the XRechnung BT-24 and is accepted under the EN 16931 BT-24.
+
+The validator and configuration are fetched by `scripts/kosit.sh`. It checks SHA-256 checksums that match GitHub's published asset digests.
 
 Pin updates are recorded in [DECISIONS.md](DECISIONS.md).

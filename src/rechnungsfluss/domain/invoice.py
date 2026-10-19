@@ -54,11 +54,41 @@ class Provenance(_Frozen):
     confidence: Annotated[float, Field(ge=0.0, le=1.0)] | None = None
 
 
+class PostalAddress(_Frozen):
+    """BG-5 (seller) / BG-8 (buyer) postal address."""
+
+    line1: str | None = None
+    """BT-35 / BT-50."""
+    city: str | None = None
+    """BT-37 / BT-52."""
+    post_code: str | None = None
+    """BT-38 / BT-53."""
+    country_code: Annotated[str, StringConstraints(pattern=r"^[A-Z]{2}$")]
+    """BT-40 / BT-55, ISO 3166-1 alpha-2."""
+
+
+class Contact(_Frozen):
+    """BG-6 seller contact."""
+
+    name: str | None = None
+    """BT-41."""
+    phone: str | None = None
+    """BT-42."""
+    email: str | None = None
+    """BT-43."""
+
+
 class Party(_Frozen):
     name: NonEmpty
     """BT-27 (seller) / BT-44 (buyer)."""
     vat_id: VatId | None = None
     """BT-31 (seller) / BT-48 (buyer) VAT identifier."""
+    address: PostalAddress
+    """BG-5 / BG-8 (mandatory in EN 16931)."""
+    electronic_address: str | None = None
+    """BT-34 / BT-49, scheme ``EM`` (e-mail)."""
+    contact: Contact | None = None
+    """BG-6 (seller only)."""
 
 
 class InvoiceLine(_Frozen):
@@ -131,6 +161,10 @@ class Invoice(_Frozen):
     """BG-4."""
     seller_iban: Iban | None = None
     """BT-84."""
+    payment_means_code: Annotated[str, StringConstraints(pattern=r"^[0-9]{1,3}$")] = "58"
+    """BT-81, UNTDID 4461 (58 = SEPA credit transfer)."""
+    specification_id: str | None = None
+    """BT-24 specification identifier as found in the source (selects validation rules)."""
     buyer: Party
     """BG-7."""
     lines: Annotated[tuple[InvoiceLine, ...], Field(min_length=1)]

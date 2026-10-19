@@ -6,7 +6,7 @@ The KoSIT validator is the reference validator for XRechnung. It is Java, while 
 
 ## Decision
 - **AWS:** package the KoSIT validator (pinned version, see `docs/standards.md`) with the XRechnung configuration as a Java **Lambda container image**. The validate step invokes it.
-- **Local:** run the same jar in daemon (HTTP) mode via docker compose.
+- **Local and CI:** run the same jar in daemon (HTTP) mode with `scripts/kosit.sh` (Java 11+; JDK 21 used). The script downloads checksum-pinned artefacts. Docker is not required.
 
 ## Alternatives
 - **ECS Fargate service running the daemon.** No cold start, but it is always on and costs money while idle.
