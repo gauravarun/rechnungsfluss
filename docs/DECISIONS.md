@@ -96,7 +96,17 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **Not wired yet in AWS:** the KoSIT Lambda container (W6) and the ERP client (W5). The runbook says what fails until then.
 - **Windows dev machine:** two scripted edits went wrong this session (a broken noqa, and a chain that hid a failing exit code). Both were caught by lint or by checking the PR, and fixed in follow-up commits.
 
+## 2026-10-19: Session 3 (W4)
+- **The owner will set up Bedrock access.** Until then the extractor is built and tested with simulated responses only, and the README says no LLM accuracy has been measured.
+- **Structured outputs instead of forced tool use** (Opus 5.5 rejects forced `tool_choice`). Effort `medium`. Client-side refusal fallback to Opus 4.8, because Bedrock has no server-side fallbacks. Details are in the ADR-0004 amendment.
+- **Print-oriented output schema:** our code parses amounts and dates; nothing is computed to fill gaps.
+- **Dataset documents are committed:** cassettes are keyed by exact PDF bytes, and scan rasterization isn't byte-stable across operating systems.
+- **The extraction harness caught a dataset flaw:** BT-106 wasn't printed, so the wrong-line-sum defect was invisible on PDFs. PDFs now print it, and prompt `v1` was adjusted. That was safe because v1 has never been run live; after the first live run, prompt changes get a new version.
+- **Key extraction metric = silent errors:** wrong values the model didn't flag. Flagged errors already go to review.
+- **CI live eval via OIDC:** main branch only, invoke-only permissions, and nothing runs until the owner sets the role variable. The exact IAM actions for the Mantle endpoint get verified by the smoke test (runbook §4.3).
+
 ### Open / next session
+- **Owner action:** Bedrock setup and first baseline (runbook §4), then the accuracy threshold.
 - **W3: complete.**
 - **W4: LLM extraction.**
   - Bedrock Claude extractor with a tool-use schema, versioned prompts, and Langfuse tracing (no-op without keys).

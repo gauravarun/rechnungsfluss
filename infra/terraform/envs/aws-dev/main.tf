@@ -137,6 +137,24 @@ module "pipeline" {
   lambda_package_path  = var.lambda_package_path
 }
 
+variable "github_repository" {
+  description = "Repository whose main-branch workflows may run the live LLM eval."
+  type        = string
+  default     = "gauravarun/rechnungsfluss"
+}
+
+module "ci_eval" {
+  source            = "../../modules/ci-eval"
+  project           = var.project
+  github_repository = var.github_repository
+  region            = var.region
+}
+
+output "ci_eval_role_arn" {
+  description = "Repository variable AWS_EVAL_ROLE_ARN (runbook section 4)."
+  value       = module.ci_eval.role_arn
+}
+
 output "state_machine_arn" {
   description = "Pipeline state machine ARN."
   value       = module.pipeline.state_machine_arn

@@ -24,7 +24,8 @@ This README only states what exists and what has been measured. Plans live in [d
 | Synthetic labelled evaluation set | ✅ 132 documents, 2 tenants, 6 categories. Every label's validation verdict and rule IDs match KoSIT exactly (checked in CI). Routing labels await the W3 pipeline. See [eval/dataset](eval/dataset/README.md) |
 | AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS, SQS + DLQ, EventBridge, Lambdas, Step Functions, tenant IAM. Checked in CI (validate, tflint, checkov), **never applied** |
 | AWS adapters and Lambda handlers | ✅ built; tested with moto and fakes. In AWS, the validate and export steps fail until the KoSIT Lambda container (W6) and the ERP client (W5) are wired |
-| Bedrock extraction, eval harness | ⏳ not built (W4) |
+| LLM extraction (Claude Opus 5.5 on Bedrock) and its eval harness | 🚧 built and tested with simulated responses. **Not yet run against Bedrock; no LLM accuracy measured.** First live run is pending the owner's AWS setup (runbook §4) |
+| Plain-PDF layouts (classic, compact, image-only scan) | ✅ built; 30 plain PDFs in the eval set |
 | Review UI | 🚧 React + TS shell only (lint, types, tests in CI); review flows not built (W5) |
 | Mock ERP | ⏳ not built (W5) |
 | Runbook | 🚧 deploy bootstrap only |
