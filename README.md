@@ -18,7 +18,7 @@ This README only states what exists and what has been measured. Plans live in [d
 | Local-mode storage adapters (filesystem, SQLite) | ✅ built, unit-tested; pipeline runner not built (W3) |
 | CII serializer + parser, KoSIT validation | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung 3.0.2 in CI |
 | UBL 2.1 serializer + parser | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung (UBL) in CI |
-| ZUGFeRD / Factur-X | ⏳ not built (W2) |
+| ZUGFeRD / Factur-X | ✅ extract + embed (EN 16931 profile); MINIMUM / BASIC WL flagged as not an e-invoice; output passes KoSIT EN 16931 in CI. Generated PDFs are **not** checked for PDF/A-3 conformance |
 | Synthetic invoice generator (≥ 100 labelled) | ⏳ not built (W2) |
 | AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
 | Step Functions pipeline, Lambdas, queues | ⏳ not built (W3) |

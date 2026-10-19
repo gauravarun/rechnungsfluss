@@ -50,6 +50,18 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **UI language:** German, matching the client's AP team. Code and docs stay in English.
 - **Repo settings:** auto-merge is enabled at the owner's request. Auto-merge still waits for the required checks.
 
+## 2026-10-19: Session 2 (W2)
+- **KoSIT runs as a plain Java daemon** (`scripts/kosit.sh`) locally and in CI. Docker isn't needed. Artefacts are SHA-256-pinned, and the checksums match GitHub's published digests. The owner approved downloading them.
+- **ADR-0002 revised.** The rule set (XRechnung vs plain EN 16931) is selected by KoSIT's own scenarios through BT-24, instead of downgrading BR-DE-* in our code.
+- **ZUGFeRD extraction.** pypdf extracts the attachment, and the hardened parser checks it *before* factur-x parses it, because factur-x uses lxml's default parser. factur-x is used for profile detection, the profile XSD and embedding.
+- **MINIMUM / BASIC WL** profiles get `invoice=None` and `is_e_invoice=False`, so the pipeline (W3) routes them to review. This depends on the still-⚠️ BMF claim in `standards.md`.
+- **Two-week rule enforced mechanically** with `exclude-newer` in `pyproject.toml`. The re-lock showed that pytest and mypy transitive dependencies in `main` were newer than allowed, so the rule had been broken without anyone noticing until now.
+- **Local Windows quirks (dev machine only, CI unaffected):**
+  - Windows Application Control blocks unsigned venv launchers (`mypy.exe`, `pytest.exe`). Run them as `python -m` instead; the Makefile does this.
+  - It also blocks some freshly installed native DLLs on first load. Most clear on retry. `ast-serialize` 0.12.1 stays blocked, so run `mypy --no-native-parser` locally.
+  - The security policy was not changed.
+- **Known limit:** generated hybrid PDFs are not verified for PDF/A-3 conformance. Only the Factur-X XML is validated, by the factur-x XSD and KoSIT.
+
 ### Open / next session
 - **W1 status:** complete. The pipeline runner skeleton follows in W3.
 - **W2:** XRechnung UBL/CII and ZUGFeRD parsers, KoSIT daemon in docker compose, synthetic generator (≥ 100 labelled invoices).

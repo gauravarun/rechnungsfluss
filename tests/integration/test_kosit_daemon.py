@@ -13,7 +13,8 @@ import pytest
 from hypothesis import HealthCheck, given, settings
 
 from rechnungsfluss.domain.invoice import Invoice, Totals
-from rechnungsfluss.formats import SPEC_EN16931, SPEC_XRECHNUNG_3_0, cii, ubl
+from rechnungsfluss.formats import SPEC_EN16931, SPEC_XRECHNUNG_3_0, cii, ubl, zugferd
+from rechnungsfluss.synthetic.render import render_pdf
 from rechnungsfluss.validation.kosit import KositValidator, ValidatorUnavailableError
 from tests.conftest import make_invoice
 from tests.strategies import invoices
@@ -52,6 +53,14 @@ def test_generated_invoices_pass_xrechnung(validator: KositValidator, inv: Invoi
 def test_generated_ubl_invoices_pass_xrechnung(validator: KositValidator, inv: Invoice) -> None:
     result = validator.validate(ubl.to_ubl(inv, specification_id=SPEC_XRECHNUNG_3_0))
     assert result.scenario == "EN16931 XRechnung (UBL Invoice)"
+    assert result.accepted, sorted(result.error_codes)
+
+
+def test_zugferd_attachment_passes_en16931(validator: KositValidator) -> None:
+    inv = make_invoice()
+    doc = zugferd.extract(zugferd.embed(render_pdf(inv), inv))
+    result = validator.validate(doc.xml)
+    assert result.scenario == "EN16931 (CII)"
     assert result.accepted, sorted(result.error_codes)
 
 

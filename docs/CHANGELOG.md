@@ -11,6 +11,9 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **`validation/kosit`:** KoSIT daemon client and report parser that returns the official rule IDs.
 - **`scripts/kosit.sh`:** fetches the validator and configuration (SHA-256 pinned) and runs the daemon.
 - **CI:** starts KoSIT and runs the integration tests with `RF_REQUIRE_KOSIT=1`, so a missing validator fails the build instead of skipping.
+- **`formats/zugferd`:** extracts and embeds Factur-X/ZUGFeRD 2.x data with the `factur-x` library. The attachment is pre-checked by the hardened XML parser. MINIMUM and BASIC WL profiles are flagged as not being e-invoices.
+- **`synthetic/render`:** deterministic invoice PDF (reportlab) with a visible "SYNTHETISCH" marker.
+- **Dependency cutoff:** `[tool.uv] exclude-newer` enforces the two-week rule for transitive dependencies too. It downgraded `ast-serialize`, `iniconfig`, `pluggy` and `pillow`, which had slipped in too new.
 - **`formats/ubl`:** UBL 2.1 Invoice serializer and parser. A property test checks that UBL and CII parse to identical canonical invoices.
 
 ### Added (session 1, continued)
