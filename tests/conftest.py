@@ -7,7 +7,15 @@ from decimal import Decimal
 
 import pytest
 
-from rechnungsfluss.domain.invoice import Invoice, InvoiceLine, Party, Totals, VatBreakdown
+from rechnungsfluss.domain.invoice import (
+    Contact,
+    Invoice,
+    InvoiceLine,
+    Party,
+    PostalAddress,
+    Totals,
+    VatBreakdown,
+)
 from rechnungsfluss.domain.tenancy import TenantId
 
 # DE89370400440532013000 is the widely published example IBAN, not a real account.
@@ -31,9 +39,29 @@ def make_invoice(**overrides: object) -> Invoice:
         "currency": "EUR",
         "due_date": dt.date(2026, 10, 31),
         "purchase_order_ref": "PO-DE-1001",
-        "seller": Party(name="Muster Schrauben KG (synthetic)", vat_id="DE999999999"),
+        "buyer_reference": "04011000-12345-34",
+        "seller": Party(
+            name="Muster Schrauben KG (synthetic)",
+            vat_id="DE999999999",
+            address=PostalAddress(
+                line1="Beispielweg 1", city="Musterstadt", post_code="12345", country_code="DE"
+            ),
+            electronic_address="rechnung@muster-schrauben.example",
+            contact=Contact(
+                name="Erika Beispiel",
+                phone="+49 30 0000000",
+                email="erika@muster-schrauben.example",
+            ),
+        ),
         "seller_iban": EXAMPLE_IBAN,
-        "buyer": Party(name="Nordwerk GmbH (fictional)", vat_id="DE888888888"),
+        "buyer": Party(
+            name="Nordwerk GmbH (fictional)",
+            vat_id="DE888888888",
+            address=PostalAddress(
+                line1="Werkstraße 7", city="Nordstadt", post_code="54321", country_code="DE"
+            ),
+            electronic_address="ap@nordwerk.example",
+        ),
         "lines": (
             InvoiceLine(
                 line_id="1",
