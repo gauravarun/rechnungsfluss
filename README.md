@@ -15,13 +15,15 @@ This README only states what exists and what has been measured. Plans live in [d
 |---|---|
 | Brief, architecture, ADRs | ✅ written (`docs/`) |
 | Canonical EN 16931 model, state machine, audit chain | ✅ built, unit-tested (structural validation only) |
-| Local-mode storage adapters (filesystem, SQLite) | ✅ built, unit-tested; pipeline runner not built (W3) |
+| Local-mode storage adapters (filesystem, SQLite) | ✅ built, unit-tested |
+| Local pipeline runner | ✅ ingest → parse → validate → duplicates + 2-way match → route → export; audited, replayable. Plain PDFs need an extractor (W4) |
+| 2-way PO matching, duplicate detection, routing | ✅ built; ADR-0014 tolerance defaults **await owner confirmation** |
 | CII serializer + parser, KoSIT validation | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung 3.0.2 in CI |
 | UBL 2.1 serializer + parser | ✅ built; round-trip property-tested; generated invoices pass KoSIT XRechnung (UBL) in CI |
 | ZUGFeRD / Factur-X | ✅ extract + embed (EN 16931 profile); MINIMUM / BASIC WL flagged as not an e-invoice; output passes KoSIT EN 16931 in CI. Generated PDFs are **not** checked for PDF/A-3 conformance |
 | Synthetic labelled evaluation set | ✅ 132 documents, 2 tenants, 6 categories. Every label's validation verdict and rule IDs match KoSIT exactly (checked in CI). Routing labels await the W3 pipeline. See [eval/dataset](eval/dataset/README.md) |
 | AWS infra (Terraform) | 🚧 S3, DynamoDB, KMS only; validated in CI, **never applied** |
-| Step Functions pipeline, Lambdas, queues | ⏳ not built (W3) |
+| Step Functions pipeline, Lambdas, queues | ⏳ not built (W3, next PR) |
 | Bedrock extraction, eval harness | ⏳ not built (W4) |
 | Review UI | 🚧 React + TS shell only (lint, types, tests in CI); review flows not built (W5) |
 | Mock ERP | ⏳ not built (W5) |
@@ -34,16 +36,32 @@ Every number below comes from a report file in `eval/reports/`. Every figure is 
 ### Structured XML path (CII, UBL, ZUGFeRD): [report 2026-10-19](eval/reports/2026-10-19-structured.md)
 | Metric | Result |
 |---|---|
-| Documents parsed without error | 101 / 101 |
+| Documents parsed without error | 104 / 104 |
 | Factur-X MINIMUM detected as "not an e-invoice" | 4 / 4 |
-| Field-level accuracy | 100.00 % (7,489 / 7,489 fields) |
-| KoSIT verdict + exact rule IDs equal to label | 97 / 97 |
+| Field-level accuracy | 100.00 % (8,665 / 8,665 fields) |
+| KoSIT verdict + exact rule IDs equal to label | 100 / 100 |
 
 How to read this:
 - The XML parsers are deterministic and are checked against data from this project's own serializers. The 100 % is a **regression gate** (CI fails below it), not evidence about real supplier XML.
 - The validation figures come from the official KoSIT validator, which is independent of our code.
 
-**Not measured yet:** LLM extraction from plain PDFs (W4), PO matching, duplicate detection and routing (W3), latency and cost.
+### End-to-end routing (local pipeline): [report 2026-10-19](eval/reports/2026-10-19-routing.md)
+All 132 documents are ingested in order and run through the full local pipeline, with the real KoSIT validator.
+
+| Metric | Result |
+|---|---|
+| Route equal to label | 132 / 132 |
+| Review reasons equal to label (exact set) | 132 / 132 |
+| **False accepts** (auto-approved, label says review) | **0** |
+| Duplicate detection precision / recall | 12 / 12, 12 / 12 |
+| Audit hash chains verified | 126 / 126 (the 6 byte-identical re-sends are dropped at ingest) |
+
+How to read this:
+- **Plain PDFs use an oracle extractor** that returns the ground truth, so these numbers measure validation, duplicates, matching, routing and export, **not** extraction (W4).
+- The labels and the rules were designed together (ADR-0014). Full agreement is therefore a regression gate, not proof that the rules are right for a real AP team.
+- The matching tolerances are still a proposal awaiting the owner's confirmation.
+
+**Not measured yet:** LLM extraction from plain PDFs (W4), latency and cost.
 
 ## What is simulated
 - **Client, tenants, suppliers, POs, invoices:** all synthetic.

@@ -76,6 +76,16 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **The first harness run caught a label bug.** It measured 98.70 %, because every truth had `specification_id = null` while the documents carry BT-24. The generator now records the BT-24 it writes. The report keeps the honest caveat that 100 % on self-generated data is a regression check, not real-world accuracy.
 - **The XML-path CI gate is fixed at 100 %**, because parsing is deterministic. The LLM-path threshold is still the owner's decision after the W4 baseline (ADR-0010).
 
+## 2026-10-19: Session 2, continued (W3)
+- **ADR-0014 proposed.** Tolerance defaults are +2 % / +0.02 on price, 0 % on quantity, and a ±3-day / 0.01 duplicate window. They're strict on purpose and **await the owner's confirmation**.
+- **BT-132 added** (referenced PO line) to pair invoice lines with PO lines. The description fallback is deliberately simple; when it fails, the invoice goes to review.
+- **Review rules (ours):**
+  - An invoice that fails official validation can't be approved unchanged. It has to be corrected (and re-validated) or rejected.
+  - A MINIMUM-profile document can only be rejected.
+  - Reviewers may correct header, totals, line and VAT fields only. Party names and BT-24 need a new document from the supplier.
+- **ERP idempotency key** is `tenant:invoice:v<content_version>`. A correction creates a new version.
+- **Routing eval uses an oracle extractor** for plain PDFs, labelled as such everywhere. LLM extraction is measured separately in W4.
+
 ### Open / next session
 - **W1 and W2: complete.** Remaining W2 acceptance item: none.
 - **W3:**

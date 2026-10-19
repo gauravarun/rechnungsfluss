@@ -12,6 +12,15 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **`domain/routing`:** combines every reason. Auto-approve only when there are none.
 - **`domain/reasons`:** reason codes shared by the pipeline and the dataset generator.
 - **Dataset regenerated:** BT-132 on lines, supplier name on POs.
+- **Local pipeline runner** (`application/pipeline`):
+  - Ingest with byte-level idempotency.
+  - Parse CII, UBL and ZUGFeRD. Plain PDFs go through the extractor port.
+  - KoSIT validation, then duplicate detection and 2-way matching, then routing, then export.
+  - Every transition is audited in a hash chain. Re-running a step is a no-op.
+  - Review actions: approve, approve with corrections (re-validated and audited field by field), reject.
+  - Replay for `FAILED` and `EXPORT_FAILED`.
+- **New ports and local adapters:** idempotency, fingerprints, purchase orders, validator, extractor, and an ERP that enforces idempotency keys and can inject failures.
+- **Routing evaluation** (`evaluation/routing`) with a CI gate: zero false accepts and full label agreement. Reports: `eval/reports/2026-10-19-routing.md`, plus the structured report re-run on the regenerated dataset.
 
 ### Added (session 2, 2026-10-19: W2)
 - **Canonical model:** extended with postal addresses (BG-5/BG-8), seller contact (BG-6), electronic addresses (BT-34/BT-49), payment-means code (BT-81) and specification ID (BT-24). All are required for valid XRechnung.

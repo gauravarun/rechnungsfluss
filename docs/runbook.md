@@ -42,4 +42,11 @@ KMS keys enter a 30-day pending-deletion window and can be cancelled during that
 *Not built yet (W6).* Each alert will get an entry here covering threshold, meaning, first checks and remediation.
 
 ## 3. Replaying failed items
-*Not built yet (W5).* This will cover the `rf replay` CLI.
+*The replay CLI arrives in W5. The logic exists today as `Pipeline.replay`.*
+
+| State | Meaning | Replay does |
+|---|---|---|
+| `FAILED` | A parse or extraction step failed. The error is in `meta.error`. | Back to `RECEIVED`, then the full pipeline runs again. Audited as `REPLAYED`. |
+| `EXPORT_FAILED` | The ERP was unavailable. | Re-posts with the **same** idempotency key, so the ERP can't book the invoice twice. |
+
+Healthy invoices can't be replayed. Replay refuses them.

@@ -1,203 +1,207 @@
 {
  "by_format": {
-  "cii": 39,
-  "ubl": 28,
-  "zugferd": 34
+  "cii": 28,
+  "ubl": 33,
+  "zugferd": 43
  },
- "dataset_manifest_sha256": "6bd1c8d58c38076e4c9b454d9cebfd3ea2150fc2446c5f9f580fb0b22022343c",
- "documents": 101,
+ "dataset_manifest_sha256": "da261af9b9dc9e2f49569dce96effa7c016236c266b4c35edbee811361c00cc9",
+ "documents": 104,
  "field_accuracy_total": 1.0,
  "field_errors": [],
  "fields": {
   "buyer.address.city": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.address.country_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.address.line1": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.address.post_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.contact": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.electronic_address": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.name": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer.vat_id": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "buyer_reference": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "currency": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "due_date": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "issue_date": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "lines[].description": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].line_id": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].net_amount": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].net_price": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
+  },
+  "lines[].order_line_ref": {
+   "compared": 533,
+   "correct": 533
   },
   "lines[].quantity": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].unit_code": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].vat_category": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "lines[].vat_rate": {
-   "compared": 471,
-   "correct": 471
+   "compared": 533,
+   "correct": 533
   },
   "number": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "payment_means_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "purchase_order_ref": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.address.city": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.address.country_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.address.line1": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.address.post_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.contact.email": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.contact.name": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.contact.phone": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.electronic_address": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.name": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller.vat_id": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "seller_iban": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "specification_id": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "totals.amount_due": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "totals.line_net_sum": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "totals.total_with_vat": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "totals.total_without_vat": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "totals.vat_total": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "type_code": {
-   "compared": 97,
-   "correct": 97
+   "compared": 100,
+   "correct": 100
   },
   "vat_breakdown[].category": {
-   "compared": 130,
-   "correct": 130
+   "compared": 142,
+   "correct": 142
   },
   "vat_breakdown[].rate": {
-   "compared": 130,
-   "correct": 130
+   "compared": 142,
+   "correct": 142
   },
   "vat_breakdown[].tax_amount": {
-   "compared": 130,
-   "correct": 130
+   "compared": 142,
+   "correct": 142
   },
   "vat_breakdown[].taxable_amount": {
-   "compared": 130,
-   "correct": 130
+   "compared": 142,
+   "correct": 142
   }
  },
- "generated_at": "2026-10-19T08:13:16+00:00",
- "git_commit": "92ecb2a",
+ "generated_at": "2026-10-19T08:36:21+00:00",
+ "git_commit": "c0947a9",
  "not_e_invoice_detected": 4,
  "not_e_invoice_expected": 4,
  "parse_failed": [],
- "parse_ok": 101,
- "validation_agree": 97,
- "validation_compared": 97,
+ "parse_ok": 104,
+ "validation_agree": 100,
+ "validation_compared": 100,
  "validation_disagreements": [],
  "validator": "KoSIT validator 1.6.3 + XRechnung configuration v2026-08-31"
 }
