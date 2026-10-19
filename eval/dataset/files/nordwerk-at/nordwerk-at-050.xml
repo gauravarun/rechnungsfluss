@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:CustomizationID>urn:cen.eu:en16931:2017</cbc:CustomizationID>
+  <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+  <cbc:ID>WG-2026-53911</cbc:ID>
+  <cbc:IssueDate>2026-10-15</cbc:IssueDate>
+  <cbc:DueDate>2026-11-29</cbc:DueDate>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+  <cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+  <cbc:BuyerReference>NWAT-EINKAUF</cbc:BuyerReference>
+  <cac:OrderReference>
+    <cbc:ID>PO-AT-4050</cbc:ID>
+  </cac:OrderReference>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="EM">rechnung@lieferant5.at.example</cbc:EndpointID>
+      <cac:PostalAddress>
+        <cbc:StreetName>Gewerbering 21</cbc:StreetName>
+        <cbc:CityName>Kirchtal</cbc:CityName>
+        <cbc:PostalZone>5428</cbc:PostalZone>
+        <cac:Country>
+          <cbc:IdentificationCode>AT</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>ATU63537681</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Werkzeug Gruberhof GmbH (fiktiv)</cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:Name>Buchhaltung</cbc:Name>
+        <cbc:Telephone>+43 1 0000000</cbc:Telephone>
+        <cbc:ElectronicMail>buchhaltung@lieferant5.at.example</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cbc:EndpointID schemeID="EM">rechnungseingang@nordwerk-at.example</cbc:EndpointID>
+      <cac:PostalAddress>
+        <cbc:StreetName>Werkstraße 7</cbc:StreetName>
+        <cbc:CityName>Nordau</cbc:CityName>
+        <cbc:PostalZone>5432</cbc:PostalZone>
+        <cac:Country>
+          <cbc:IdentificationCode>AT</cbc:IdentificationCode>
+        </cac:Country>
+      </cac:PostalAddress>
+      <cac:PartyTaxScheme>
+        <cbc:CompanyID>ATU27104742</cbc:CompanyID>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:PartyTaxScheme>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>Nordwerk Handels GmbH (fiktiv)</cbc:RegistrationName>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:PaymentMeansCode>58</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>AT580000078123844967</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="EUR">739.29</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="EUR">2994.00</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="EUR">299.40</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>10.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="EUR">2199.46</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="EUR">439.89</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>20.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="EUR">5193.46</cbc:LineExtensionAmount>
+    <cbc:TaxExclusiveAmount currencyID="EUR">5193.46</cbc:TaxExclusiveAmount>
+    <cbc:TaxInclusiveAmount currencyID="EUR">5932.75</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="EUR">5932.75</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="H87">60</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">2994.00</cbc:LineExtensionAmount>
+    <cac:OrderLineReference>
+      <cbc:LineID>1</cbc:LineID>
+    </cac:OrderLineReference>
+    <cac:Item>
+      <cbc:Name>Fachbuch Hydraulik-Grundlagen</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>10.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="EUR">49.90</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>2</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="KGM">29.5</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">140.13</cbc:LineExtensionAmount>
+    <cac:OrderLineReference>
+      <cbc:LineID>2</cbc:LineID>
+    </cac:OrderLineReference>
+    <cac:Item>
+      <cbc:Name>Stretchfolie 500 mm, 23 µ</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>20.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="EUR">4.75</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>3</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="H87">53</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">2014.00</cbc:LineExtensionAmount>
+    <cac:OrderLineReference>
+      <cbc:LineID>3</cbc:LineID>
+    </cac:OrderLineReference>
+    <cac:Item>
+      <cbc:Name>Gehörschutzstöpsel (Box à 200)</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>20.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="EUR">38.00</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+  <cac:InvoiceLine>
+    <cbc:ID>4</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="MTR">24.5</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="EUR">45.33</cbc:LineExtensionAmount>
+    <cac:OrderLineReference>
+      <cbc:LineID>4</cbc:LineID>
+    </cac:OrderLineReference>
+    <cac:Item>
+      <cbc:Name>Druckluftschlauch PU 8x6 mm</cbc:Name>
+      <cac:ClassifiedTaxCategory>
+        <cbc:ID>S</cbc:ID>
+        <cbc:Percent>20.00</cbc:Percent>
+        <cac:TaxScheme>
+          <cbc:ID>VAT</cbc:ID>
+        </cac:TaxScheme>
+      </cac:ClassifiedTaxCategory>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="EUR">1.85</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>

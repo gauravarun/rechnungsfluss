@@ -6,9 +6,9 @@
 ```bash
 python -m rechnungsfluss.synthetic.generate --out eval/dataset   # seed 20261019
 ```
-- `files/` is gitignored and must be regenerated.
-- `manifest.jsonl` and `purchase_orders.json` are committed.
-- CI regenerates the set and fails if either committed file differs (`test_committed_manifest_matches_the_generator`).
+- `files/`, `manifest.jsonl` and `purchase_orders.json` are all **committed**. The committed documents are the canonical eval inputs, and the LLM cassettes are keyed by their exact bytes.
+- CI regenerates the set and fails if the labels or POs differ (`test_committed_manifest_matches_the_generator`). It also checks every committed file against its label hash (`test_committed_files_match_their_labels`).
+- **Scans** are image-only and are rasterized with FreeType, blur and JPEG. That isn't guaranteed byte-identical across operating systems, so their hashes are excluded from the regeneration comparison and checked against the committed files instead.
 
 ## Contents
 There are 132 documents across 2 tenants:
@@ -35,6 +35,17 @@ The `missing_fields` variants are:
 **Formats:**
 - `nordwerk-de`: XRechnung 3.0 CII and UBL, ZUGFeRD (EN 16931 profile), plain PDF.
 - `nordwerk-at`: EN 16931 CII and UBL, ZUGFeRD, plain PDF. XRechnung is German.
+
+## Plain-PDF layouts (input for LLM extraction)
+| Layout | What it is |
+|---|---|
+| `classic` | Vector PDF with a text layer, seller top-left, header data below the buyer |
+| `compact` | Vector PDF with a different arrangement: seller top-right, header data in a right-hand box, totals left-aligned |
+| `scan` | The classic arrangement drawn as a 150-dpi grayscale image, rotated up to ±1.2°, blurred, with seeded grain and JPEG compression. **No text layer.** |
+
+- Noisy invoices are always scans. Other plain PDFs are split 40/30/30 by a seeded random choice.
+- Every PDF prints every reviewable field of the truth (addresses with country, e-mail addresses, the seller contact, and the PO-line column for BT-132), so extraction is scored only on what is on the page.
+- All three layouts come from one layout description, so they can't show different data.
 
 ## Purchase orders and BT-132
 - Each PO in `purchase_orders.json` lists its lines, plus the supplier VAT ID and name.
@@ -70,5 +81,5 @@ The two-way-match and routing labels (`expected_route`, `review_reasons`) descri
 
 ## Known limits
 - The data is cleaner and more uniform than real supplier invoices: 13 catalogue items, fixed layouts, and one VAT category (`S`) per line.
-- Plain PDFs are text PDFs from one renderer. Scans and layout noise for the LLM path arrive in W4.
+- Plain PDFs come from one renderer with three layouts. Real supplier PDFs vary far more: logos, tables without ruling, multi-column text, handwriting, stamps and photos of paper.
 - No credit notes (type 381), allowances, charges or prepayments.

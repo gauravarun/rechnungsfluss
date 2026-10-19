@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:100">
+  <rsm:ExchangedDocumentContext>
+    <ram:BusinessProcessSpecifiedDocumentContextParameter>
+      <ram:ID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</ram:ID>
+    </ram:BusinessProcessSpecifiedDocumentContextParameter>
+    <ram:GuidelineSpecifiedDocumentContextParameter>
+      <ram:ID>urn:cen.eu:en16931:2017</ram:ID>
+    </ram:GuidelineSpecifiedDocumentContextParameter>
+  </rsm:ExchangedDocumentContext>
+  <rsm:ExchangedDocument>
+    <ram:ID>SM-2026-97498</ram:ID>
+    <ram:TypeCode>380</ram:TypeCode>
+    <ram:IssueDateTime>
+      <udt:DateTimeString format="102">20260909</udt:DateTimeString>
+    </ram:IssueDateTime>
+  </rsm:ExchangedDocument>
+  <rsm:SupplyChainTradeTransaction>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>1</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Kabelbinder 300x4,8 mm (100 Stk.)</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>5.20</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="H87">59</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>306.80</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>2</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Schweißdraht SG2 1,0 mm</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>3.95</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="KGM">11.75</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>46.41</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>3</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Stretchfolie 500 mm, 23 µ</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>4.75</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="KGM">82.25</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>390.69</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:ApplicableHeaderTradeAgreement>
+      <ram:BuyerReference>NWAT-EINKAUF</ram:BuyerReference>
+      <ram:SellerTradeParty>
+        <ram:Name>Sicherheitstechnik Moosbrugger GmbH (fiktiv)</ram:Name>
+        <ram:DefinedTradeContact>
+          <ram:PersonName>Buchhaltung</ram:PersonName>
+          <ram:TelephoneUniversalCommunication>
+            <ram:CompleteNumber>+43 1 0000000</ram:CompleteNumber>
+          </ram:TelephoneUniversalCommunication>
+          <ram:EmailURIUniversalCommunication>
+            <ram:URIID>buchhaltung@lieferant3.at.example</ram:URIID>
+          </ram:EmailURIUniversalCommunication>
+        </ram:DefinedTradeContact>
+        <ram:PostalTradeAddress>
+          <ram:PostcodeCode>3154</ram:PostcodeCode>
+          <ram:LineOne>Industriestraße 57</ram:LineOne>
+          <ram:CityName>Moosbach am See</ram:CityName>
+          <ram:CountryID>AT</ram:CountryID>
+        </ram:PostalTradeAddress>
+        <ram:URIUniversalCommunication>
+          <ram:URIID schemeID="EM">rechnung@lieferant3.at.example</ram:URIID>
+        </ram:URIUniversalCommunication>
+        <ram:SpecifiedTaxRegistration>
+          <ram:ID schemeID="VA">ATU63717192</ram:ID>
+        </ram:SpecifiedTaxRegistration>
+      </ram:SellerTradeParty>
+      <ram:BuyerTradeParty>
+        <ram:Name>Nordwerk Handels GmbH (fiktiv)</ram:Name>
+        <ram:PostalTradeAddress>
+          <ram:PostcodeCode>5432</ram:PostcodeCode>
+          <ram:LineOne>Werkstraße 7</ram:LineOne>
+          <ram:CityName>Nordau</ram:CityName>
+          <ram:CountryID>AT</ram:CountryID>
+        </ram:PostalTradeAddress>
+        <ram:URIUniversalCommunication>
+          <ram:URIID schemeID="EM">rechnungseingang@nordwerk-at.example</ram:URIID>
+        </ram:URIUniversalCommunication>
+        <ram:SpecifiedTaxRegistration>
+          <ram:ID schemeID="VA">ATU27104742</ram:ID>
+        </ram:SpecifiedTaxRegistration>
+      </ram:BuyerTradeParty>
+      <ram:BuyerOrderReferencedDocument>
+        <ram:IssuerAssignedID>PO-AT-4014</ram:IssuerAssignedID>
+      </ram:BuyerOrderReferencedDocument>
+    </ram:ApplicableHeaderTradeAgreement>
+    <ram:ApplicableHeaderTradeDelivery/>
+    <ram:ApplicableHeaderTradeSettlement>
+      <ram:InvoiceCurrencyCode>EUR</ram:InvoiceCurrencyCode>
+      <ram:SpecifiedTradeSettlementPaymentMeans>
+        <ram:TypeCode>58</ram:TypeCode>
+        <ram:PayeePartyCreditorFinancialAccount>
+          <ram:IBANID>AT770000047877395320</ram:IBANID>
+        </ram:PayeePartyCreditorFinancialAccount>
+      </ram:SpecifiedTradeSettlementPaymentMeans>
+      <ram:ApplicableTradeTax>
+        <ram:CalculatedAmount>148.78</ram:CalculatedAmount>
+        <ram:TypeCode>VAT</ram:TypeCode>
+        <ram:BasisAmount>743.90</ram:BasisAmount>
+        <ram:CategoryCode>S</ram:CategoryCode>
+        <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+      </ram:ApplicableTradeTax>
+      <ram:SpecifiedTradePaymentTerms>
+        <ram:DueDateDateTime>
+          <udt:DateTimeString format="102">20261009</udt:DateTimeString>
+        </ram:DueDateDateTime>
+      </ram:SpecifiedTradePaymentTerms>
+      <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+        <ram:LineTotalAmount>743.90</ram:LineTotalAmount>
+        <ram:TaxBasisTotalAmount>743.90</ram:TaxBasisTotalAmount>
+        <ram:TaxTotalAmount currencyID="EUR">148.78</ram:TaxTotalAmount>
+        <ram:GrandTotalAmount>892.68</ram:GrandTotalAmount>
+        <ram:DuePayableAmount>892.68</ram:DuePayableAmount>
+      </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+    </ram:ApplicableHeaderTradeSettlement>
+  </rsm:SupplyChainTradeTransaction>
+</rsm:CrossIndustryInvoice>

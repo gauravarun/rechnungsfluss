@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100" xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:100">
+  <rsm:ExchangedDocumentContext>
+    <ram:BusinessProcessSpecifiedDocumentContextParameter>
+      <ram:ID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</ram:ID>
+    </ram:BusinessProcessSpecifiedDocumentContextParameter>
+    <ram:GuidelineSpecifiedDocumentContextParameter>
+      <ram:ID>urn:cen.eu:en16931:2017</ram:ID>
+    </ram:GuidelineSpecifiedDocumentContextParameter>
+  </rsm:ExchangedDocumentContext>
+  <rsm:ExchangedDocument>
+    <ram:ID>SK-2026-99680</ram:ID>
+    <ram:TypeCode>380</ram:TypeCode>
+    <ram:IssueDateTime>
+      <udt:DateTimeString format="102">20260913</udt:DateTimeString>
+    </ram:IssueDateTime>
+  </rsm:ExchangedDocument>
+  <rsm:SupplyChainTradeTransaction>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>1</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Hydrauliköl HLP 46</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:BuyerOrderReferencedDocument>
+          <ram:LineID>1</ram:LineID>
+        </ram:BuyerOrderReferencedDocument>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>3.15</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="LTR">52</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>163.80</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>2</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Sechskantschraube M8x40, verzinkt (100 Stk.)</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:BuyerOrderReferencedDocument>
+          <ram:LineID>2</ram:LineID>
+        </ram:BuyerOrderReferencedDocument>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>12.50</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="H87">58</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>725.00</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:IncludedSupplyChainTradeLineItem>
+      <ram:AssociatedDocumentLineDocument>
+        <ram:LineID>3</ram:LineID>
+      </ram:AssociatedDocumentLineDocument>
+      <ram:SpecifiedTradeProduct>
+        <ram:Name>Druckluftschlauch PU 8x6 mm</ram:Name>
+      </ram:SpecifiedTradeProduct>
+      <ram:SpecifiedLineTradeAgreement>
+        <ram:BuyerOrderReferencedDocument>
+          <ram:LineID>3</ram:LineID>
+        </ram:BuyerOrderReferencedDocument>
+        <ram:NetPriceProductTradePrice>
+          <ram:ChargeAmount>1.85</ram:ChargeAmount>
+        </ram:NetPriceProductTradePrice>
+      </ram:SpecifiedLineTradeAgreement>
+      <ram:SpecifiedLineTradeDelivery>
+        <ram:BilledQuantity unitCode="MTR">90.5</ram:BilledQuantity>
+      </ram:SpecifiedLineTradeDelivery>
+      <ram:SpecifiedLineTradeSettlement>
+        <ram:ApplicableTradeTax>
+          <ram:TypeCode>VAT</ram:TypeCode>
+          <ram:CategoryCode>S</ram:CategoryCode>
+          <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+        </ram:ApplicableTradeTax>
+        <ram:SpecifiedTradeSettlementLineMonetarySummation>
+          <ram:LineTotalAmount>167.43</ram:LineTotalAmount>
+        </ram:SpecifiedTradeSettlementLineMonetarySummation>
+      </ram:SpecifiedLineTradeSettlement>
+    </ram:IncludedSupplyChainTradeLineItem>
+    <ram:ApplicableHeaderTradeAgreement>
+      <ram:BuyerReference>NWAT-EINKAUF</ram:BuyerReference>
+      <ram:SellerTradeParty>
+        <ram:Name>Stahlbau Kirchtaler GmbH (fiktiv)</ram:Name>
+        <ram:DefinedTradeContact>
+          <ram:PersonName>Buchhaltung</ram:PersonName>
+          <ram:TelephoneUniversalCommunication>
+            <ram:CompleteNumber>+43 1 0000000</ram:CompleteNumber>
+          </ram:TelephoneUniversalCommunication>
+          <ram:EmailURIUniversalCommunication>
+            <ram:URIID>buchhaltung@lieferant1.at.example</ram:URIID>
+          </ram:EmailURIUniversalCommunication>
+        </ram:DefinedTradeContact>
+        <ram:PostalTradeAddress>
+          <ram:PostcodeCode>4971</ram:PostcodeCode>
+          <ram:LineOne>Am Werkhof 70</ram:LineOne>
+          <ram:CityName>Prandau</ram:CityName>
+          <ram:CountryID>AT</ram:CountryID>
+        </ram:PostalTradeAddress>
+        <ram:URIUniversalCommunication>
+          <ram:URIID schemeID="EM">rechnung@lieferant1.at.example</ram:URIID>
+        </ram:URIUniversalCommunication>
+        <ram:SpecifiedTaxRegistration>
+          <ram:ID schemeID="VA">ATU62056897</ram:ID>
+        </ram:SpecifiedTaxRegistration>
+      </ram:SellerTradeParty>
+      <ram:BuyerTradeParty>
+        <ram:Name>Nordwerk Handels GmbH (fiktiv)</ram:Name>
+        <ram:PostalTradeAddress>
+          <ram:PostcodeCode>5432</ram:PostcodeCode>
+          <ram:LineOne>Werkstraße 7</ram:LineOne>
+          <ram:CityName>Nordau</ram:CityName>
+          <ram:CountryID>AT</ram:CountryID>
+        </ram:PostalTradeAddress>
+        <ram:URIUniversalCommunication>
+          <ram:URIID schemeID="EM">rechnungseingang@nordwerk-at.example</ram:URIID>
+        </ram:URIUniversalCommunication>
+        <ram:SpecifiedTaxRegistration>
+          <ram:ID schemeID="VA">ATU27104742</ram:ID>
+        </ram:SpecifiedTaxRegistration>
+      </ram:BuyerTradeParty>
+      <ram:BuyerOrderReferencedDocument>
+        <ram:IssuerAssignedID>PO-AT-4038</ram:IssuerAssignedID>
+      </ram:BuyerOrderReferencedDocument>
+    </ram:ApplicableHeaderTradeAgreement>
+    <ram:ApplicableHeaderTradeDelivery/>
+    <ram:ApplicableHeaderTradeSettlement>
+      <ram:InvoiceCurrencyCode>EUR</ram:InvoiceCurrencyCode>
+      <ram:SpecifiedTradeSettlementPaymentMeans>
+        <ram:TypeCode>58</ram:TypeCode>
+        <ram:PayeePartyCreditorFinancialAccount>
+          <ram:IBANID>AT920000069166986381</ram:IBANID>
+        </ram:PayeePartyCreditorFinancialAccount>
+      </ram:SpecifiedTradeSettlementPaymentMeans>
+      <ram:ApplicableTradeTax>
+        <ram:CalculatedAmount>211.25</ram:CalculatedAmount>
+        <ram:TypeCode>VAT</ram:TypeCode>
+        <ram:BasisAmount>1056.23</ram:BasisAmount>
+        <ram:CategoryCode>S</ram:CategoryCode>
+        <ram:RateApplicablePercent>20.00</ram:RateApplicablePercent>
+      </ram:ApplicableTradeTax>
+      <ram:SpecifiedTradePaymentTerms>
+        <ram:DueDateDateTime>
+          <udt:DateTimeString format="102">20261028</udt:DateTimeString>
+        </ram:DueDateDateTime>
+      </ram:SpecifiedTradePaymentTerms>
+      <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+        <ram:LineTotalAmount>1058.23</ram:LineTotalAmount>
+        <ram:TaxBasisTotalAmount>1056.23</ram:TaxBasisTotalAmount>
+        <ram:TaxTotalAmount currencyID="EUR">211.25</ram:TaxTotalAmount>
+        <ram:GrandTotalAmount>1267.48</ram:GrandTotalAmount>
+        <ram:DuePayableAmount>1267.48</ram:DuePayableAmount>
+      </ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+    </ram:ApplicableHeaderTradeSettlement>
+  </rsm:SupplyChainTradeTransaction>
+</rsm:CrossIndustryInvoice>
