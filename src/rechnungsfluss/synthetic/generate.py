@@ -39,7 +39,7 @@ from rechnungsfluss.synthetic.masterdata import (
     buyer_party,
     suppliers,
 )
-from rechnungsfluss.synthetic.render import render_pdf
+from rechnungsfluss.synthetic.render import Layout, render_pdf
 
 DEFAULT_SEED = 20261019
 GENERATOR_VERSION = "1"
@@ -123,6 +123,8 @@ class Label:
     PDF metadata with the generation time."""
     specification_id: str | None
     """BT-24 written into the document (None for plain PDFs)."""
+    layout: str | None
+    """Plain PDFs only: classic | compact | scan (image-only, no text layer)."""
     expected_validation: str
     """accept | reject | not_an_e_invoice. For plain PDFs: the result for a perfect
     extraction serialized as EN 16931 CII."""
@@ -336,8 +338,24 @@ class _TenantGenerator:
                 )
 
 
+LAYOUT_WEIGHTS = ((Layout.CLASSIC, 40), (Layout.COMPACT, 30), (Layout.SCAN, 30))
+"""Plain-PDF layouts; noisy invoices are always scans."""
+
+
+def _pick_layout(category: Category, rng: random.Random) -> Layout:
+    if category is Category.NOISY:
+        return Layout.SCAN
+    layouts = [lay for lay, _ in LAYOUT_WEIGHTS]
+    return rng.choices(layouts, weights=[w for _, w in LAYOUT_WEIGHTS], k=1)[0]
+
+
 def _serialize(
-    draft_format: str, inv: Invoice, profile: TenantProfile, minimum_profile: bool
+    draft_format: str,
+    inv: Invoice,
+    profile: TenantProfile,
+    minimum_profile: bool,
+    layout: Layout | None = None,
+    seed: str = "",
 ) -> tuple[bytes, str | None]:
     if minimum_profile:
         return _minimum_zugferd(inv), "urn:factur-x.eu:1p0:minimum"
@@ -347,7 +365,7 @@ def _serialize(
         return ubl.to_ubl(inv, specification_id=profile.specification_id), profile.specification_id
     if draft_format == "zugferd":
         return zugferd.embed(render_pdf(inv), inv), SPEC_EN16931
-    return render_pdf(inv), None
+    return render_pdf(inv, layout or Layout.CLASSIC, seed=seed), None
 
 
 def _minimum_zugferd(inv: Invoice) -> bytes:
@@ -390,8 +408,11 @@ def generate(out: Path, seed: int = DEFAULT_SEED) -> list[Label]:
         tenant_labels: list[tuple[Label, Invoice, bytes]] = []
         for n, draft in enumerate(gen.drafts(), start=1):
             fmt = draft.format or _pick_format(profile, gen.rng)
-            data, spec = _serialize(fmt, draft.invoice, profile, draft.minimum_profile)
             doc_id = f"{profile.tenant}-{n:03d}"
+            layout = _pick_layout(draft.category, gen.rng) if fmt == "pdf" else None
+            data, spec = _serialize(
+                fmt, draft.invoice, profile, draft.minimum_profile, layout, seed=doc_id
+            )
             if draft.po and draft.variant != "missing_po_reference":
                 pos.append(draft.po)
             rule_ids = draft.rule_ids
@@ -413,6 +434,7 @@ def generate(out: Path, seed: int = DEFAULT_SEED) -> list[Label]:
                 variant=draft.variant,
                 sha256=_content_hash(fmt, data),
                 specification_id=spec,
+                layout=layout.value if layout else None,
                 expected_validation=validation,
                 expected_rule_ids=sorted(rule_ids),
                 expected_route=route.value,
@@ -465,12 +487,14 @@ def _duplicates(
             n += 1
             doc_id = f"{profile.tenant}-{n:03d}"
             fmt, spec = original.format, original.specification_id
+            layout = Layout(original.layout) if original.layout else None
             route, reasons = Route.REVIEW, [REASON_DUPLICATE]
             if kind == "exact_resend":
                 route, reasons = Route.SKIP_DUPLICATE_DELIVERY, []
             elif kind == "other_format":
                 fmt = "pdf" if original.format != "pdf" else "cii"
-                data, spec = _serialize(fmt, inv, profile, False)
+                layout = _pick_layout(Category.DUPLICATE, gen.rng) if fmt == "pdf" else None
+                data, spec = _serialize(fmt, inv, profile, False, layout, seed=doc_id)
             else:  # fuzzy: new number, date shifted, same seller and amount
                 inv = inv.model_copy(
                     update={
@@ -478,7 +502,7 @@ def _duplicates(
                         "issue_date": inv.issue_date + dt.timedelta(days=gen.rng.randint(1, 3)),
                     }
                 )
-                data, spec = _serialize(fmt, inv, profile, False)
+                data, spec = _serialize(fmt, inv, profile, False, layout, seed=doc_id)
             label = Label(
                 doc_id=doc_id,
                 tenant=profile.tenant,
@@ -488,6 +512,7 @@ def _duplicates(
                 variant=kind,
                 sha256=_content_hash(fmt, data),
                 specification_id=spec,
+                layout=layout.value if layout else None,
                 expected_validation="accept",
                 expected_rule_ids=[],
                 expected_route=route.value,

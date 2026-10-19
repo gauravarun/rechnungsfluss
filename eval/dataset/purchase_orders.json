@@ -72,37 +72,30 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "description": "Montagestunde Servicetechniker",
      "line_no": 1,
-     "net_price": "5.20",
-     "quantity": "6",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
+     "net_price": "78.00",
      "quantity": "15.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 3,
-     "net_price": "38.00",
-     "quantity": "6",
-     "unit_code": "H87"
+     "unit_code": "HUR"
     },
     {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
+     "line_no": 2,
      "net_price": "3.95",
+     "quantity": "10.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 3,
+     "net_price": "16.80",
      "quantity": "57",
      "unit_code": "KGM"
     }
    ],
    "number": "PO-DE-4003",
-   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
-   "supplier_vat_id": "DE344777702",
+   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
+   "supplier_vat_id": "DE179024487",
    "tenant": "nordwerk-de"
   },
   {
@@ -222,39 +215,32 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 1,
-     "net_price": "5.20",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 2,
-     "net_price": "16.80",
-     "quantity": "13.75",
-     "unit_code": "KGM"
-    },
-    {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 3,
+     "line_no": 1,
      "net_price": "38.00",
-     "quantity": "52",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 4,
-     "net_price": "49.90",
      "quantity": "17",
      "unit_code": "H87"
     },
     {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "6.90",
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
      "quantity": "52",
      "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "6.90",
+     "quantity": "1",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 4,
+     "net_price": "4.75",
+     "quantity": "54.25",
+     "unit_code": "KGM"
     }
    ],
    "number": "PO-DE-4008",
@@ -266,60 +252,60 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Schweißdraht SG2 1,0 mm",
+     "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
-     "net_price": "3.95",
-     "quantity": "24",
+     "net_price": "38.00",
+     "quantity": "21",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 2,
+     "net_price": "16.80",
+     "quantity": "31.75",
      "unit_code": "KGM"
     },
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "59",
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 3,
+     "net_price": "3.15",
+     "quantity": "38.5",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 4,
+     "net_price": "4.35",
+     "quantity": "26",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 5,
+     "net_price": "6.90",
+     "quantity": "49",
      "unit_code": "H87"
     }
    ],
    "number": "PO-DE-4009",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kaffeebohnen für Kantine 1 kg",
+     "description": "Hydrauliköl HLP 46",
      "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "6.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "16",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 3,
-     "net_price": "1.85",
-     "quantity": "33.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "32.25",
-     "unit_code": "HUR"
+     "net_price": "3.15",
+     "quantity": "81.25",
+     "unit_code": "LTR"
     }
    ],
    "number": "PO-DE-4010",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
+   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
+   "supplier_vat_id": "DE179024487",
    "tenant": "nordwerk-de"
   },
   {
@@ -393,132 +379,88 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Hydrauliköl HLP 46",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "69",
-     "unit_code": "LTR"
+     "net_price": "6.90",
+     "quantity": "35",
+     "unit_code": "H87"
     },
     {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 2,
-     "net_price": "6.90",
+     "net_price": "12.50",
      "quantity": "40",
      "unit_code": "H87"
     }
    ],
    "number": "PO-DE-4013",
-   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
-   "supplier_vat_id": "DE179024487",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Druckluftschlauch PU 8x6 mm",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 1,
-     "net_price": "1.85",
-     "quantity": "57.25",
-     "unit_code": "MTR"
+     "net_price": "2.40",
+     "quantity": "29",
+     "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Rillenkugellager 6204-2RS",
      "line_no": 2,
-     "net_price": "2.40",
+     "net_price": "4.35",
      "quantity": "38",
      "unit_code": "H87"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
+     "description": "Kaffeebohnen für Kantine 1 kg",
      "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "1",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 4,
-     "net_price": "49.90",
-     "quantity": "34",
-     "unit_code": "H87"
+     "net_price": "16.80",
+     "quantity": "1.5",
+     "unit_code": "KGM"
     },
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
+     "line_no": 4,
      "net_price": "6.90",
-     "quantity": "19",
+     "quantity": "34",
      "unit_code": "H87"
     }
    ],
    "number": "PO-DE-4014",
-   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
-   "supplier_vat_id": "DE738503799",
+   "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
+   "supplier_vat_id": "DE348942229",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 1,
-     "net_price": "38.00",
-     "quantity": "43",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 2,
-     "net_price": "2.40",
-     "quantity": "45",
-     "unit_code": "H87"
-    },
-    {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 3,
+     "line_no": 1,
      "net_price": "3.95",
-     "quantity": "24.75",
+     "quantity": "98.75",
      "unit_code": "KGM"
     },
     {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 4,
-     "net_price": "3.15",
-     "quantity": "68.5",
-     "unit_code": "LTR"
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 2,
+     "net_price": "1.85",
+     "quantity": "73.25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 3,
+     "net_price": "49.90",
+     "quantity": "15",
+     "unit_code": "H87"
     }
    ],
    "number": "PO-DE-4015",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 1,
-     "net_price": "2.40",
-     "quantity": "42",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "3",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 3,
-     "net_price": "78.00",
-     "quantity": "32.5",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-DE-4016",
    "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
    "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
@@ -530,55 +472,11 @@
      "description": "Rillenkugellager 6204-2RS",
      "line_no": 1,
      "net_price": "4.35",
-     "quantity": "32",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 2,
-     "net_price": "78.00",
-     "quantity": "60.75",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-DE-4017",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "6.90",
-     "quantity": "50",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "30",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "19",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 4,
-     "net_price": "2.40",
-     "quantity": "33",
+     "quantity": "20",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4018",
+   "number": "PO-DE-4016",
    "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
    "supplier_vat_id": "DE738503799",
    "tenant": "nordwerk-de"
@@ -590,108 +488,69 @@
      "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
      "net_price": "38.00",
-     "quantity": "1",
+     "quantity": "35",
      "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "41",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 3,
-     "net_price": "49.90",
-     "quantity": "19",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 4,
-     "net_price": "3.15",
-     "quantity": "45.25",
-     "unit_code": "LTR"
-    }
-   ],
-   "number": "PO-DE-4019",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "35.5",
-     "unit_code": "LTR"
     },
     {
      "description": "Kaffeebohnen für Kantine 1 kg",
      "line_no": 2,
      "net_price": "16.80",
-     "quantity": "76.25",
+     "quantity": "30",
      "unit_code": "KGM"
     },
     {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "description": "Rillenkugellager 6204-2RS",
      "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "58",
+     "net_price": "4.35",
+     "quantity": "9",
      "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4017",
+   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
+   "supplier_vat_id": "DE327637349",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 1,
+     "net_price": "16.80",
+     "quantity": "19",
+     "unit_code": "KGM"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "12.50",
-     "quantity": "15",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4020",
-   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
-   "supplier_vat_id": "DE392289281",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 2,
+     "net_price": "3.95",
+     "quantity": "39.5",
+     "unit_code": "KGM"
+    },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "52",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4021",
-   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
-   "supplier_vat_id": "DE738503799",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 3,
+     "net_price": "3.15",
+     "quantity": "83.5",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 4,
+     "net_price": "4.75",
+     "quantity": "16",
+     "unit_code": "KGM"
+    },
     {
      "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 1,
+     "line_no": 5,
      "net_price": "1.85",
-     "quantity": "12",
+     "quantity": "98.75",
      "unit_code": "MTR"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "51",
-     "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4022",
+   "number": "PO-DE-4018",
    "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
    "supplier_vat_id": "DE348942229",
    "tenant": "nordwerk-de"
@@ -700,237 +559,301 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "description": "Schweißdraht SG2 1,0 mm",
      "line_no": 1,
-     "net_price": "5.20",
-     "quantity": "2",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "10",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 3,
-     "net_price": "49.90",
-     "quantity": "7",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 4,
-     "net_price": "16.80",
-     "quantity": "82.25",
+     "net_price": "3.95",
+     "quantity": "57",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 5,
-     "net_price": "4.75",
-     "quantity": "98.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 6,
-     "net_price": "6.90",
-     "quantity": "30",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 7,
-     "net_price": "12.50",
-     "quantity": "48",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 8,
-     "net_price": "4.35",
-     "quantity": "54",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 9,
-     "net_price": "38.00",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 10,
-     "net_price": "78.00",
-     "quantity": "90",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 11,
-     "net_price": "16.80",
-     "quantity": "67.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 12,
-     "net_price": "38.00",
-     "quantity": "53",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 13,
-     "net_price": "16.80",
-     "quantity": "52.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 14,
-     "net_price": "4.35",
-     "quantity": "55",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 15,
-     "net_price": "2.40",
-     "quantity": "5",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 16,
-     "net_price": "6.90",
-     "quantity": "40",
-     "unit_code": "H87"
     },
     {
      "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 17,
+     "line_no": 2,
      "net_price": "5.20",
-     "quantity": "8",
+     "quantity": "13",
      "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 18,
-     "net_price": "2.40",
-     "quantity": "35",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 19,
-     "net_price": "49.90",
-     "quantity": "7",
-     "unit_code": "H87"
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 3,
+     "net_price": "1.85",
+     "quantity": "45",
+     "unit_code": "MTR"
     }
    ],
-   "number": "PO-DE-4023",
-   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
-   "supplier_vat_id": "DE738503799",
+   "number": "PO-DE-4019",
+   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
+   "supplier_vat_id": "DE179024487",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "44",
+     "net_price": "4.75",
+     "quantity": "12.25",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-DE-4020",
+   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
+   "supplier_vat_id": "DE908729628",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
+     "net_price": "2.40",
+     "quantity": "41",
      "unit_code": "H87"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "description": "Schweißdraht SG2 1,0 mm",
      "line_no": 2,
-     "net_price": "49.90",
-     "quantity": "29",
+     "net_price": "3.95",
+     "quantity": "73.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 3,
+     "net_price": "3.15",
+     "quantity": "79.75",
+     "unit_code": "LTR"
+    }
+   ],
+   "number": "PO-DE-4021",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 1,
+     "net_price": "16.80",
+     "quantity": "65.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "6.90",
+     "quantity": "5",
      "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "12.50",
+     "quantity": "12",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 4,
+     "net_price": "3.95",
+     "quantity": "52.5",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-DE-4022",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 1,
+     "net_price": "78.00",
+     "quantity": "44.75",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 2,
+     "net_price": "3.15",
+     "quantity": "33.25",
+     "unit_code": "LTR"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
      "line_no": 3,
-     "net_price": "16.80",
-     "quantity": "92.25",
-     "unit_code": "KGM"
+     "net_price": "4.35",
+     "quantity": "46",
+     "unit_code": "H87"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
      "line_no": 4,
      "net_price": "2.40",
      "quantity": "2",
      "unit_code": "H87"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
      "line_no": 5,
+     "net_price": "2.40",
+     "quantity": "10",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 6,
+     "net_price": "5.20",
+     "quantity": "7",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 7,
+     "net_price": "4.35",
+     "quantity": "60",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 8,
      "net_price": "49.90",
-     "quantity": "59",
+     "quantity": "30",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 9,
+     "net_price": "16.80",
+     "quantity": "18.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 10,
+     "net_price": "4.75",
+     "quantity": "60",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 11,
+     "net_price": "6.90",
+     "quantity": "48",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 6,
+     "line_no": 12,
      "net_price": "12.50",
-     "quantity": "13",
+     "quantity": "54",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4023",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 1,
+     "net_price": "3.95",
+     "quantity": "70",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 2,
+     "net_price": "3.15",
+     "quantity": "12.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 3,
+     "net_price": "1.85",
+     "quantity": "98.5",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 4,
+     "net_price": "1.85",
+     "quantity": "9.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 5,
+     "net_price": "78.00",
+     "quantity": "8",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 6,
+     "net_price": "38.00",
+     "quantity": "18",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 7,
+     "net_price": "2.40",
+     "quantity": "8",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 7,
-     "net_price": "6.90",
-     "quantity": "52",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 8,
-     "net_price": "1.85",
-     "quantity": "23.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 9,
-     "net_price": "1.85",
-     "quantity": "41.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 10,
-     "net_price": "5.20",
-     "quantity": "4",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 11,
      "net_price": "6.90",
-     "quantity": "31",
+     "quantity": "32",
      "unit_code": "H87"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 12,
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 9,
+     "net_price": "4.75",
+     "quantity": "54.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 10,
      "net_price": "1.85",
-     "quantity": "15.25",
+     "quantity": "48.5",
      "unit_code": "MTR"
     },
     {
-     "description": "Montagestunde Servicetechniker",
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 11,
+     "net_price": "3.95",
+     "quantity": "48.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 12,
+     "net_price": "12.50",
+     "quantity": "12",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 13,
-     "net_price": "78.00",
-     "quantity": "36",
-     "unit_code": "HUR"
+     "net_price": "6.90",
+     "quantity": "47",
+     "unit_code": "H87"
     }
    ],
    "number": "PO-DE-4024",
@@ -945,407 +868,437 @@
      "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 1,
      "net_price": "5.20",
-     "quantity": "29",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 2,
-     "net_price": "2.40",
-     "quantity": "37",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 3,
-     "net_price": "49.90",
-     "quantity": "47",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "10.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "12.50",
-     "quantity": "47",
+     "quantity": "6",
      "unit_code": "H87"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 6,
-     "net_price": "2.40",
-     "quantity": "14",
+     "line_no": 2,
+     "net_price": "49.90",
+     "quantity": "29",
      "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 3,
+     "net_price": "3.15",
+     "quantity": "7",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 4,
+     "net_price": "5.20",
+     "quantity": "31",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 5,
+     "net_price": "3.15",
+     "quantity": "15.25",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 6,
+     "net_price": "16.80",
+     "quantity": "36",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 7,
      "net_price": "2.40",
-     "quantity": "34",
+     "quantity": "23",
      "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
      "line_no": 8,
+     "net_price": "3.15",
+     "quantity": "59.5",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 9,
+     "net_price": "4.35",
+     "quantity": "2",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 10,
+     "net_price": "2.40",
+     "quantity": "52",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4025",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "12.50",
+     "quantity": "14",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 2,
+     "net_price": "49.90",
+     "quantity": "34",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 3,
      "net_price": "4.35",
      "quantity": "56",
      "unit_code": "H87"
     },
     {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 9,
-     "net_price": "16.80",
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 4,
+     "net_price": "3.95",
      "quantity": "81",
      "unit_code": "KGM"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 10,
-     "net_price": "16.80",
-     "quantity": "32.5",
-     "unit_code": "KGM"
+     "line_no": 5,
+     "net_price": "5.20",
+     "quantity": "17",
+     "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 11,
-     "net_price": "1.85",
-     "quantity": "4",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 12,
-     "net_price": "3.15",
-     "quantity": "57.75",
-     "unit_code": "LTR"
+     "line_no": 6,
+     "net_price": "49.90",
+     "quantity": "2",
+     "unit_code": "H87"
     },
     {
      "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 13,
+     "line_no": 7,
      "net_price": "4.75",
-     "quantity": "77",
+     "quantity": "57.75",
      "unit_code": "KGM"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 14,
-     "net_price": "4.35",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 8,
+     "net_price": "6.90",
+     "quantity": "39",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 9,
+     "net_price": "5.20",
      "quantity": "31",
      "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 15,
-     "net_price": "12.50",
-     "quantity": "28",
-     "unit_code": "H87"
+     "line_no": 10,
+     "net_price": "78.00",
+     "quantity": "55.5",
+     "unit_code": "HUR"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 16,
-     "net_price": "12.50",
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 11,
+     "net_price": "4.35",
      "quantity": "34",
      "unit_code": "H87"
     },
     {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 17,
-     "net_price": "1.85",
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 12,
+     "net_price": "3.95",
      "quantity": "83.75",
-     "unit_code": "MTR"
+     "unit_code": "KGM"
     },
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 18,
+     "line_no": 13,
      "net_price": "12.50",
      "quantity": "28",
      "unit_code": "H87"
     },
     {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 19,
-     "net_price": "49.90",
-     "quantity": "2",
-     "unit_code": "H87"
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 14,
+     "net_price": "4.75",
+     "quantity": "4",
+     "unit_code": "KGM"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 20,
-     "net_price": "4.35",
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 15,
+     "net_price": "49.90",
      "quantity": "38",
      "unit_code": "H87"
     },
     {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 21,
-     "net_price": "3.95",
-     "quantity": "80.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 22,
-     "net_price": "5.20",
-     "quantity": "45",
-     "unit_code": "H87"
-    },
-    {
      "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 23,
-     "net_price": "49.90",
-     "quantity": "32",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4025",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 1,
+     "line_no": 16,
      "net_price": "49.90",
      "quantity": "59",
      "unit_code": "H87"
     },
     {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "85.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 3,
-     "net_price": "1.85",
-     "quantity": "62",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "87.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 5,
-     "net_price": "78.00",
-     "quantity": "77.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 6,
-     "net_price": "3.15",
-     "quantity": "81.75",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 7,
-     "net_price": "38.00",
-     "quantity": "29",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 8,
-     "net_price": "38.00",
-     "quantity": "10",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 9,
-     "net_price": "3.95",
-     "quantity": "2",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 10,
-     "net_price": "3.95",
-     "quantity": "93.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 11,
-     "net_price": "78.00",
-     "quantity": "13.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 12,
-     "net_price": "4.75",
-     "quantity": "46",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 13,
-     "net_price": "12.50",
-     "quantity": "40",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 14,
-     "net_price": "49.90",
-     "quantity": "47",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 15,
-     "net_price": "3.15",
-     "quantity": "26.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 16,
-     "net_price": "2.40",
-     "quantity": "50",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 17,
-     "net_price": "3.95",
-     "quantity": "2.75",
+     "net_price": "5.20",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 18,
+     "net_price": "6.90",
+     "quantity": "44",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 19,
+     "net_price": "16.80",
+     "quantity": "4.5",
      "unit_code": "KGM"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 20,
+     "net_price": "5.20",
+     "quantity": "2",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 21,
+     "net_price": "49.90",
+     "quantity": "12",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 22,
+     "net_price": "1.85",
+     "quantity": "74",
+     "unit_code": "MTR"
     }
    ],
    "number": "PO-DE-4026",
-   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
-   "supplier_vat_id": "DE179024487",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kaffeebohnen für Kantine 1 kg",
+     "description": "Fachbuch Hydraulik-Grundlagen",
      "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "38.25",
-     "unit_code": "KGM"
+     "net_price": "49.90",
+     "quantity": "31",
+     "unit_code": "H87"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Hydrauliköl HLP 46",
      "line_no": 2,
      "net_price": "3.15",
-     "quantity": "96.75",
+     "quantity": "87.25",
      "unit_code": "LTR"
     },
     {
-     "description": "Stretchfolie 500 mm, 23 µ",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 3,
+     "net_price": "2.40",
+     "quantity": "39",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 4,
+     "net_price": "3.95",
+     "quantity": "81.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 5,
+     "net_price": "2.40",
+     "quantity": "29",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 6,
+     "net_price": "1.85",
+     "quantity": "20",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 7,
+     "net_price": "6.90",
+     "quantity": "54",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 8,
+     "net_price": "3.15",
+     "quantity": "77.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 9,
+     "net_price": "3.15",
+     "quantity": "77.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 10,
+     "net_price": "3.95",
+     "quantity": "64.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 11,
+     "net_price": "78.00",
+     "quantity": "100",
+     "unit_code": "HUR"
+    }
+   ],
+   "number": "PO-DE-4027",
+   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
+   "supplier_vat_id": "DE738503799",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 1,
+     "net_price": "16.80",
+     "quantity": "65.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 2,
+     "net_price": "3.15",
+     "quantity": "6.25",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 3,
+     "net_price": "4.35",
+     "quantity": "27",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 4,
+     "net_price": "6.90",
+     "quantity": "54",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 5,
+     "net_price": "12.50",
+     "quantity": "6",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 6,
+     "net_price": "1.85",
+     "quantity": "96.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 7,
      "net_price": "4.75",
      "quantity": "29.25",
      "unit_code": "KGM"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 4,
-     "net_price": "6.90",
-     "quantity": "6",
-     "unit_code": "H87"
+     "line_no": 8,
+     "net_price": "78.00",
+     "quantity": "10.75",
+     "unit_code": "HUR"
     },
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
+     "line_no": 9,
      "net_price": "6.90",
      "quantity": "25",
      "unit_code": "H87"
     },
     {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 6,
-     "net_price": "4.75",
-     "quantity": "48.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 7,
-     "net_price": "4.75",
-     "quantity": "97",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 8,
-     "net_price": "3.95",
-     "quantity": "51.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 9,
-     "net_price": "78.00",
-     "quantity": "7",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Rillenkugellager 6204-2RS",
      "line_no": 10,
-     "net_price": "12.50",
-     "quantity": "16",
+     "net_price": "4.35",
+     "quantity": "56",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 11,
+     "net_price": "3.95",
+     "quantity": "52.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 12,
+     "net_price": "4.35",
+     "quantity": "31",
      "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 11,
-     "net_price": "4.75",
-     "quantity": "76.5",
+     "line_no": 13,
+     "net_price": "16.80",
+     "quantity": "31.75",
      "unit_code": "KGM"
     },
     {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 12,
-     "net_price": "16.80",
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 14,
+     "net_price": "3.15",
+     "quantity": "76.5",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 15,
+     "net_price": "4.75",
      "quantity": "54",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 13,
-     "net_price": "1.85",
-     "quantity": "54.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 14,
-     "net_price": "3.95",
-     "quantity": "80.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 15,
-     "net_price": "78.00",
-     "quantity": "63.75",
-     "unit_code": "HUR"
     }
    ],
-   "number": "PO-DE-4027",
+   "number": "PO-DE-4028",
    "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
    "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
@@ -1354,86 +1307,107 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "3",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "73.25",
+     "net_price": "4.75",
+     "quantity": "4.5",
      "unit_code": "KGM"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 2,
+     "net_price": "2.40",
+     "quantity": "55",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "44",
+     "net_price": "5.20",
+     "quantity": "34",
      "unit_code": "H87"
     },
     {
      "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 4,
      "net_price": "4.75",
-     "quantity": "37",
+     "quantity": "26.25",
      "unit_code": "KGM"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 5,
-     "net_price": "4.75",
-     "quantity": "3.5",
+     "net_price": "16.80",
+     "quantity": "69.5",
      "unit_code": "KGM"
     },
     {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "description": "Schweißdraht SG2 1,0 mm",
      "line_no": 6,
-     "net_price": "38.00",
-     "quantity": "30",
-     "unit_code": "H87"
+     "net_price": "3.95",
+     "quantity": "20.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 7,
+     "net_price": "4.75",
+     "quantity": "5.25",
+     "unit_code": "KGM"
     },
     {
      "description": "Hydrauliköl HLP 46",
-     "line_no": 7,
+     "line_no": 8,
      "net_price": "3.15",
-     "quantity": "11.25",
+     "quantity": "73.25",
      "unit_code": "LTR"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 8,
-     "net_price": "12.50",
-     "quantity": "34",
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 9,
+     "net_price": "4.35",
+     "quantity": "44",
      "unit_code": "H87"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 9,
-     "net_price": "4.35",
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 10,
+     "net_price": "12.50",
+     "quantity": "19",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 11,
+     "net_price": "2.40",
      "quantity": "2",
      "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 10,
-     "net_price": "4.75",
-     "quantity": "14.5",
+     "line_no": 12,
+     "net_price": "78.00",
+     "quantity": "60",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 13,
+     "net_price": "16.80",
+     "quantity": "11.25",
      "unit_code": "KGM"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 11,
-     "net_price": "4.35",
-     "quantity": "51",
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 14,
+     "net_price": "49.90",
+     "quantity": "34",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4028",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
+   "number": "PO-DE-4029",
+   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
+   "supplier_vat_id": "DE179024487",
    "tenant": "nordwerk-de"
   },
   {
@@ -1442,226 +1416,202 @@
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "30.75",
-     "unit_code": "KGM"
+     "net_price": "2.40",
+     "quantity": "2",
+     "unit_code": "H87"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
      "line_no": 2,
-     "net_price": "12.50",
-     "quantity": "48",
-     "unit_code": "H87"
+     "net_price": "3.15",
+     "quantity": "64",
+     "unit_code": "LTR"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Kaffeebohnen für Kantine 1 kg",
      "line_no": 3,
-     "net_price": "12.50",
-     "quantity": "23",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 4,
-     "net_price": "4.35",
-     "quantity": "3",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 5,
-     "net_price": "1.85",
-     "quantity": "46",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 6,
-     "net_price": "3.95",
-     "quantity": "77",
+     "net_price": "16.80",
+     "quantity": "91.5",
      "unit_code": "KGM"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 7,
-     "net_price": "5.20",
-     "quantity": "49",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 8,
-     "net_price": "12.50",
-     "quantity": "20",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 9,
-     "net_price": "49.90",
-     "quantity": "41",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 10,
-     "net_price": "12.50",
+     "line_no": 4,
+     "net_price": "4.35",
      "quantity": "42",
      "unit_code": "H87"
     },
     {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 11,
+     "line_no": 5,
      "net_price": "3.95",
-     "quantity": "61.25",
+     "quantity": "3",
      "unit_code": "KGM"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 12,
-     "net_price": "4.35",
-     "quantity": "11",
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 6,
+     "net_price": "49.90",
+     "quantity": "56",
      "unit_code": "H87"
     },
     {
      "description": "Montagestunde Servicetechniker",
-     "line_no": 13,
+     "line_no": 7,
      "net_price": "78.00",
-     "quantity": "35",
+     "quantity": "85",
      "unit_code": "HUR"
     },
     {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 14,
-     "net_price": "3.15",
-     "quantity": "60.25",
-     "unit_code": "LTR"
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 8,
+     "net_price": "16.80",
+     "quantity": "39.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 9,
+     "net_price": "78.00",
+     "quantity": "4.75",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 10,
+     "net_price": "2.40",
+     "quantity": "23",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 11,
+     "net_price": "78.00",
+     "quantity": "77",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 12,
+     "net_price": "78.00",
+     "quantity": "97.25",
+     "unit_code": "HUR"
     }
    ],
-   "number": "PO-DE-4029",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
+   "number": "PO-DE-4030",
+   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
+   "supplier_vat_id": "DE738503799",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
+     "description": "Rillenkugellager 6204-2RS",
      "line_no": 1,
-     "net_price": "38.00",
-     "quantity": "32",
+     "net_price": "4.35",
+     "quantity": "8",
      "unit_code": "H87"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 2,
      "net_price": "2.40",
      "quantity": "60",
      "unit_code": "H87"
     },
     {
-     "description": "Hydrauliköl HLP 46",
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "97.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 4,
-     "net_price": "4.75",
-     "quantity": "32.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "6.90",
-     "quantity": "39",
+     "net_price": "5.20",
+     "quantity": "23",
      "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 6,
-     "net_price": "12.50",
-     "quantity": "44",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 7,
-     "net_price": "4.75",
-     "quantity": "56.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 8,
-     "net_price": "3.95",
-     "quantity": "89.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 9,
-     "net_price": "49.90",
-     "quantity": "55",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 10,
-     "net_price": "2.40",
-     "quantity": "49",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 11,
-     "net_price": "2.40",
-     "quantity": "24",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 12,
-     "net_price": "16.80",
-     "quantity": "19.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 13,
-     "net_price": "3.95",
-     "quantity": "47.5",
-     "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4030",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
+   "number": "PO-DE-4031",
+   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
+   "supplier_vat_id": "DE344777702",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Montagestunde Servicetechniker",
+     "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "75.75",
-     "unit_code": "HUR"
+     "net_price": "4.75",
+     "quantity": "75.25",
+     "unit_code": "KGM"
     },
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "7",
+     "net_price": "6.90",
+     "quantity": "45",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4031",
+   "number": "PO-DE-4032",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "12.50",
+     "quantity": "31",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "6.90",
+     "quantity": "17",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4033",
+   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
+   "supplier_vat_id": "DE327637349",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "6.90",
+     "quantity": "10",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 2,
+     "net_price": "16.80",
+     "quantity": "47.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 3,
+     "net_price": "5.20",
+     "quantity": "1",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 4,
+     "net_price": "38.00",
+     "quantity": "8",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4034",
    "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
    "supplier_vat_id": "DE348942229",
    "tenant": "nordwerk-de"
@@ -1673,115 +1623,27 @@
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 1,
      "net_price": "12.50",
-     "quantity": "57",
+     "quantity": "20",
      "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 2,
+     "net_price": "4.75",
+     "quantity": "27.75",
+     "unit_code": "KGM"
     },
     {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 2,
+     "line_no": 3,
      "net_price": "3.95",
-     "quantity": "2.25",
+     "quantity": "34.75",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 3,
-     "net_price": "1.85",
-     "quantity": "54.5",
-     "unit_code": "MTR"
     }
    ],
-   "number": "PO-DE-4032",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "77.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "43",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 3,
-     "net_price": "4.75",
-     "quantity": "80.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 4,
-     "net_price": "49.90",
-     "quantity": "12",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 5,
-     "net_price": "78.00",
-     "quantity": "25.75",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-DE-4033",
-   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
-   "supplier_vat_id": "DE179024487",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "32.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "46.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "29",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "12.50",
-     "quantity": "7",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 5,
-     "net_price": "38.00",
-     "quantity": "55",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4034",
-   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
-   "supplier_vat_id": "DE210850056",
+   "number": "PO-DE-4035",
+   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
+   "supplier_vat_id": "DE908729628",
    "tenant": "nordwerk-de"
   },
   {
@@ -1791,41 +1653,124 @@
      "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 1,
      "net_price": "5.20",
-     "quantity": "15",
+     "quantity": "17",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "12.50",
+     "quantity": "3",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 3,
+     "net_price": "1.85",
+     "quantity": "70.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 4,
+     "net_price": "78.00",
+     "quantity": "30.75",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 5,
+     "net_price": "3.15",
+     "quantity": "14.25",
+     "unit_code": "LTR"
+    }
+   ],
+   "number": "PO-DE-4036",
+   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
+   "supplier_vat_id": "DE344777702",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "12.50",
+     "quantity": "16",
      "unit_code": "H87"
     },
     {
      "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 2,
      "net_price": "38.00",
-     "quantity": "28",
+     "quantity": "35",
      "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "44.5",
-     "unit_code": "LTR"
-    },
+    }
+   ],
+   "number": "PO-DE-4037",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 4,
+     "line_no": 1,
      "net_price": "6.90",
-     "quantity": "30",
+     "quantity": "32",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 5,
+     "line_no": 2,
      "net_price": "12.50",
-     "quantity": "45",
+     "quantity": "34",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 3,
+     "net_price": "38.00",
+     "quantity": "33",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 4,
+     "net_price": "4.35",
+     "quantity": "55",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4035",
-   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
-   "supplier_vat_id": "DE392289281",
+   "number": "PO-DE-4038",
+   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
+   "supplier_vat_id": "DE344777702",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 1,
+     "net_price": "1.85",
+     "quantity": "92.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 2,
+     "net_price": "38.00",
+     "quantity": "57",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4039",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
   },
   {
@@ -1846,7 +1791,7 @@
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4036",
+   "number": "PO-DE-4040",
    "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
    "supplier_vat_id": "DE738503799",
    "tenant": "nordwerk-de"
@@ -1855,44 +1800,55 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "49",
+     "net_price": "2.40",
+     "quantity": "55",
      "unit_code": "H87"
-    },
+    }
+   ],
+   "number": "PO-DE-4041",
+   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
+   "supplier_vat_id": "DE392289281",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
     {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 2,
-     "net_price": "49.90",
-     "quantity": "12",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "6.90",
+     "quantity": "22",
      "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "1",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "36.25",
-     "unit_code": "KGM"
     },
     {
      "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 5,
+     "line_no": 2,
      "net_price": "4.75",
-     "quantity": "93",
+     "quantity": "98.75",
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4037",
-   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
-   "supplier_vat_id": "DE344777702",
+   "number": "PO-DE-4043",
+   "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
+   "supplier_vat_id": "DE348942229",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 1,
+     "net_price": "5.20",
+     "quantity": "44",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-DE-4044",
+   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
+   "supplier_vat_id": "DE908729628",
    "tenant": "nordwerk-de"
   },
   {
@@ -1902,76 +1858,18 @@
      "description": "Druckluftschlauch PU 8x6 mm",
      "line_no": 1,
      "net_price": "1.85",
-     "quantity": "98.25",
+     "quantity": "25.75",
      "unit_code": "MTR"
     },
     {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "50",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 4,
-     "net_price": "49.90",
-     "quantity": "34",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4038",
-   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
-   "supplier_vat_id": "DE179024487",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "16.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "26",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
-     "net_price": "2.40",
-     "quantity": "34",
-     "unit_code": "H87"
-    },
-    {
      "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 4,
+     "line_no": 2,
      "net_price": "4.75",
-     "quantity": "56",
+     "quantity": "64.75",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "6.90",
-     "quantity": "60",
-     "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4039",
+   "number": "PO-DE-4045",
    "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
    "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
@@ -1987,7 +1885,7 @@
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4040",
+   "number": "PO-DE-4046",
    "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
    "supplier_vat_id": "DE344777702",
    "tenant": "nordwerk-de"
@@ -1996,72 +1894,37 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 1,
-     "net_price": "1.85",
-     "quantity": "66.25",
-     "unit_code": "MTR"
-    },
-    {
      "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
+     "line_no": 1,
      "net_price": "4.75",
-     "quantity": "22.5",
+     "quantity": "33.5",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 3,
-     "net_price": "38.00",
-     "quantity": "9",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "14.75",
-     "unit_code": "HUR"
     },
     {
      "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 5,
+     "line_no": 2,
      "net_price": "16.80",
-     "quantity": "74.25",
+     "quantity": "35",
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4041",
-   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
-   "supplier_vat_id": "DE210850056",
+   "number": "PO-DE-4048",
+   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
+   "supplier_vat_id": "DE327637349",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
-     "net_price": "5.20",
+     "net_price": "33.44",
      "quantity": "55",
      "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "11",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "6",
-     "unit_code": "LTR"
     }
    ],
-   "number": "PO-DE-4043",
+   "number": "PO-DE-4049",
    "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
    "supplier_vat_id": "DE908729628",
    "tenant": "nordwerk-de"
@@ -2073,7 +1936,7 @@
      "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 1,
      "net_price": "4.75",
-     "quantity": "74",
+     "quantity": "37",
      "unit_code": "KGM"
     },
     {
@@ -2098,44 +1961,44 @@
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4044",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
+   "number": "PO-DE-4050",
+   "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
+   "supplier_vat_id": "DE348942229",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "61.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "20",
-     "unit_code": "H87"
-    },
-    {
      "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
-     "net_price": "2.40",
+     "line_no": 1,
+     "net_price": "2.04",
      "quantity": "22",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
+     "line_no": 2,
      "net_price": "12.50",
      "quantity": "15",
      "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 3,
+     "net_price": "78.00",
+     "quantity": "93.75",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 4,
+     "net_price": "3.15",
+     "quantity": "21.5",
+     "unit_code": "LTR"
     }
    ],
-   "number": "PO-DE-4045",
+   "number": "PO-DE-4051",
    "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
    "supplier_vat_id": "DE392289281",
    "tenant": "nordwerk-de"
@@ -2144,76 +2007,104 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Schweißdraht SG2 1,0 mm",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 1,
-     "net_price": "3.95",
-     "quantity": "28.5",
+     "net_price": "6.90",
+     "quantity": "19",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 2,
+     "net_price": "2.40",
+     "quantity": "13",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 3,
+     "net_price": "4.75",
+     "quantity": "36.25",
      "unit_code": "KGM"
     },
     {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "21",
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 4,
+     "net_price": "3.15",
+     "quantity": "7.25",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 5,
+     "net_price": "38.00",
+     "quantity": "8",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4046",
-   "supplier_name": "Elektrobedarf Sandhagen GmbH (fiktiv)",
-   "supplier_vat_id": "DE908729628",
+   "number": "PO-DE-4052",
+   "supplier_name": "Schraubenwerk Lindenau KG (fiktiv)",
+   "supplier_vat_id": "DE344777702",
    "tenant": "nordwerk-de"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Fachbuch Hydraulik-Grundlagen",
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 1,
-     "net_price": "49.90",
-     "quantity": "18",
+     "net_price": "11.38",
+     "quantity": "52",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 2,
+     "net_price": "16.80",
+     "quantity": "80.75",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-DE-4053",
+   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
+   "supplier_vat_id": "DE738503799",
+   "tenant": "nordwerk-de"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 1,
+     "net_price": "4.35",
+     "quantity": "3.5",
      "unit_code": "H87"
     },
     {
      "description": "Montagestunde Servicetechniker",
      "line_no": 2,
      "net_price": "78.00",
-     "quantity": "7.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
-     "net_price": "2.40",
-     "quantity": "47",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4048",
-   "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
-   "supplier_vat_id": "DE392289281",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 1,
-     "net_price": "68.64",
-     "quantity": "92.5",
+     "quantity": "84.75",
      "unit_code": "HUR"
     },
     {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 2,
+     "line_no": 3,
      "net_price": "3.95",
-     "quantity": "12.25",
+     "quantity": "10",
      "unit_code": "KGM"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 4,
+     "net_price": "2.40",
+     "quantity": "55",
+     "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4049",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
+   "number": "PO-DE-4054",
+   "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
+   "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
   },
   {
@@ -2222,8 +2113,8 @@
     {
      "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
-     "net_price": "38.00",
-     "quantity": "9",
+     "net_price": "34.20",
+     "quantity": "18",
      "unit_code": "H87"
     },
     {
@@ -2248,7 +2139,7 @@
      "unit_code": "H87"
     }
    ],
-   "number": "PO-DE-4050",
+   "number": "PO-DE-4055",
    "supplier_name": "Arbeitsschutz Vogtmann e.K. (fiktiv)",
    "supplier_vat_id": "DE392289281",
    "tenant": "nordwerk-de"
@@ -2257,65 +2148,14 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "11.50",
-     "quantity": "48",
-     "unit_code": "H87"
-    },
-    {
      "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "33.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 3,
-     "net_price": "16.80",
-     "quantity": "13",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-DE-4051",
-   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
-   "supplier_vat_id": "DE738503799",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 1,
-     "net_price": "6.90",
-     "quantity": "8.5",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "34",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "81.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 4,
-     "net_price": "16.80",
-     "quantity": "87.75",
+     "net_price": "4.75",
+     "quantity": "47.5",
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-DE-4052",
+   "number": "PO-DE-4056",
    "supplier_name": "Hydraulik Brennecke GmbH (fiktiv)",
    "supplier_vat_id": "DE210850056",
    "tenant": "nordwerk-de"
@@ -2324,145 +2164,11 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 1,
-     "net_price": "74.10",
-     "quantity": "45.75",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-DE-4053",
-   "supplier_name": "Werkzeughandel Quernheim OHG (fiktiv)",
-   "supplier_vat_id": "DE327637349",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 1,
-     "net_price": "4.35",
-     "quantity": "26",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "12.50",
-     "quantity": "17",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 3,
-     "net_price": "5.20",
-     "quantity": "45",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4054",
-   "supplier_name": "Verpackung Hollerbeck AG (fiktiv)",
-   "supplier_vat_id": "DE348942229",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "10.75",
-     "quantity": "14",
-     "unit_code": "H87"
-    },
-    {
      "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 2,
-     "net_price": "49.90",
-     "quantity": "20",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 3,
-     "net_price": "78.00",
-     "quantity": "89",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-DE-4055",
-   "supplier_name": "Kugellager Ostermeier GmbH (fiktiv)",
-   "supplier_vat_id": "DE738503799",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
      "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "7.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "1",
+     "net_price": "46.41",
+     "quantity": "27",
      "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "90.5",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "12.50",
-     "quantity": "39",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-DE-4056",
-   "supplier_name": "Druckluft Technik Wiesmoor GmbH (fiktiv)",
-   "supplier_vat_id": "DE179024487",
-   "tenant": "nordwerk-de"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "6.00",
-     "quantity": "7",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 2,
-     "net_price": "1.85",
-     "quantity": "73",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 3,
-     "net_price": "49.90",
-     "quantity": "47",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "5",
-     "unit_code": "KGM"
     }
    ],
    "number": "PO-DE-4057",
@@ -2705,61 +2411,40 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 1,
-     "net_price": "38.00",
-     "quantity": "46",
+     "net_price": "2.40",
+     "quantity": "29",
      "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Fachbuch Hydraulik-Grundlagen",
      "line_no": 2,
-     "net_price": "2.40",
-     "quantity": "5",
+     "net_price": "49.90",
+     "quantity": "58",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "6.90",
+     "quantity": "55",
      "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4008",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
+   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
+   "supplier_vat_id": "ATU29308231",
    "tenant": "nordwerk-at"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 1,
-     "net_price": "38.00",
-     "quantity": "51",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 2,
-     "net_price": "16.80",
-     "quantity": "34.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 3,
-     "net_price": "3.95",
-     "quantity": "28.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 4,
-     "net_price": "49.90",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "6.90",
-     "quantity": "18",
+     "net_price": "12.50",
+     "quantity": "15",
      "unit_code": "H87"
     }
    ],
@@ -2772,39 +2457,32 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Stretchfolie 500 mm, 23 µ",
+     "description": "Schweißdraht SG2 1,0 mm",
      "line_no": 1,
+     "net_price": "3.95",
+     "quantity": "59.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 2,
      "net_price": "4.75",
      "quantity": "0.75",
      "unit_code": "KGM"
     },
     {
      "description": "Montagestunde Servicetechniker",
-     "line_no": 2,
+     "line_no": 3,
      "net_price": "78.00",
      "quantity": "66.5",
      "unit_code": "HUR"
     },
     {
      "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
+     "line_no": 4,
      "net_price": "3.15",
      "quantity": "16.5",
      "unit_code": "LTR"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 4,
-     "net_price": "38.00",
-     "quantity": "8",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "12.50",
-     "quantity": "37",
-     "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4010",
@@ -2816,44 +2494,30 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Montagestunde Servicetechniker",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "49.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "12.50",
-     "quantity": "29",
+     "net_price": "2.40",
+     "quantity": "47",
      "unit_code": "H87"
     },
     {
      "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 3,
+     "line_no": 2,
      "net_price": "3.95",
-     "quantity": "6",
+     "quantity": "22",
      "unit_code": "KGM"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 4,
-     "net_price": "4.35",
-     "quantity": "14",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 5,
-     "net_price": "2.40",
-     "quantity": "57",
-     "unit_code": "H87"
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 3,
+     "net_price": "78.00",
+     "quantity": "38.25",
+     "unit_code": "HUR"
     }
    ],
    "number": "PO-AT-4011",
-   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
-   "supplier_vat_id": "ATU62056897",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
    "tenant": "nordwerk-at"
   },
   {
@@ -2863,15 +2527,29 @@
      "description": "Hydrauliköl HLP 46",
      "line_no": 1,
      "net_price": "3.15",
-     "quantity": "10.25",
+     "quantity": "96.5",
      "unit_code": "LTR"
     },
     {
-     "description": "Schweißdraht SG2 1,0 mm",
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "56.75",
-     "unit_code": "KGM"
+     "net_price": "5.20",
+     "quantity": "39",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "6.90",
+     "quantity": "18",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 4,
+     "net_price": "38.00",
+     "quantity": "59",
+     "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4012",
@@ -2913,74 +2591,28 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Montagestunde Servicetechniker",
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "67.5",
-     "unit_code": "HUR"
+     "net_price": "5.20",
+     "quantity": "59",
+     "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Schweißdraht SG2 1,0 mm",
      "line_no": 2,
-     "net_price": "2.40",
-     "quantity": "53",
-     "unit_code": "H87"
+     "net_price": "3.95",
+     "quantity": "11.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 3,
+     "net_price": "4.75",
+     "quantity": "82.25",
+     "unit_code": "KGM"
     }
    ],
    "number": "PO-AT-4014",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "40.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 2,
-     "net_price": "16.80",
-     "quantity": "80.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 3,
-     "net_price": "1.85",
-     "quantity": "65.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 4,
-     "net_price": "5.20",
-     "quantity": "24",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4015",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "23.75",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4016",
    "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
    "supplier_vat_id": "ATU63717192",
    "tenant": "nordwerk-at"
@@ -2989,58 +2621,35 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kaffeebohnen für Kantine 1 kg",
+     "description": "Hydrauliköl HLP 46",
      "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "82",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4017",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "6.90",
-     "quantity": "54",
-     "unit_code": "H87"
+     "net_price": "3.15",
+     "quantity": "51",
+     "unit_code": "LTR"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 2,
-     "net_price": "2.40",
-     "quantity": "47",
+     "net_price": "12.50",
+     "quantity": "36",
      "unit_code": "H87"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
+     "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "11",
+     "net_price": "38.00",
+     "quantity": "20",
      "unit_code": "H87"
     },
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 4,
-     "net_price": "5.20",
-     "quantity": "37",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 5,
-     "net_price": "16.80",
-     "quantity": "31",
+     "net_price": "4.75",
+     "quantity": "63.5",
      "unit_code": "KGM"
     }
    ],
-   "number": "PO-AT-4018",
+   "number": "PO-AT-4015",
    "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
    "supplier_vat_id": "ATU63537681",
    "tenant": "nordwerk-at"
@@ -3049,151 +2658,107 @@
    "currency": "EUR",
    "lines": [
     {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "3.15",
+     "quantity": "30",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 2,
+     "net_price": "78.00",
+     "quantity": "82",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 3,
+     "net_price": "5.20",
+     "quantity": "47",
+     "unit_code": "H87"
+    },
+    {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 1,
+     "line_no": 4,
      "net_price": "38.00",
-     "quantity": "4",
+     "quantity": "60",
      "unit_code": "H87"
     },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 2,
-     "net_price": "16.80",
-     "quantity": "10.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 3,
-     "net_price": "5.20",
-     "quantity": "59",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 4,
-     "net_price": "4.35",
-     "quantity": "57",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4019",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "29.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 2,
-     "net_price": "1.85",
-     "quantity": "37.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "18",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4020",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "22.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "50",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4021",
-   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
-   "supplier_vat_id": "ATU62056897",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "23.75",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "45",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "9",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 4,
-     "net_price": "5.20",
-     "quantity": "54",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 5,
-     "net_price": "16.80",
-     "quantity": "39",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4022",
-   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
-   "supplier_vat_id": "ATU62056897",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 1,
+     "line_no": 5,
      "net_price": "12.50",
-     "quantity": "6",
+     "quantity": "58",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4016",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
+     "net_price": "2.40",
+     "quantity": "5",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4017",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 1,
+     "net_price": "4.75",
+     "quantity": "57.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 2,
+     "net_price": "38.00",
+     "quantity": "24",
      "unit_code": "H87"
     },
     {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 3,
+     "net_price": "49.90",
+     "quantity": "51",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4018",
+   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
+   "supplier_vat_id": "ATU47798882",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 1,
+     "net_price": "16.80",
+     "quantity": "55.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "3",
+     "net_price": "5.20",
+     "quantity": "6",
      "unit_code": "H87"
     },
     {
@@ -3204,116 +2769,250 @@
      "unit_code": "H87"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Hydrauliköl HLP 46",
      "line_no": 4,
+     "net_price": "3.15",
+     "quantity": "41",
+     "unit_code": "LTR"
+    }
+   ],
+   "number": "PO-AT-4019",
+   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
+   "supplier_vat_id": "ATU51008732",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 1,
+     "net_price": "78.00",
+     "quantity": "22.5",
+     "unit_code": "HUR"
+    }
+   ],
+   "number": "PO-AT-4020",
+   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
+   "supplier_vat_id": "ATU47798882",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
+     "net_price": "2.40",
+     "quantity": "35",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "12.50",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 3,
+     "net_price": "4.75",
+     "quantity": "62.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 4,
+     "net_price": "49.90",
+     "quantity": "16",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 5,
+     "net_price": "78.00",
+     "quantity": "58.75",
+     "unit_code": "HUR"
+    }
+   ],
+   "number": "PO-AT-4021",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 1,
+     "net_price": "4.35",
+     "quantity": "19",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4022",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
      "net_price": "2.40",
      "quantity": "21",
      "unit_code": "H87"
     },
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 5,
-     "net_price": "38.00",
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "6.90",
      "quantity": "16",
      "unit_code": "H87"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 6,
+     "line_no": 3,
+     "net_price": "12.50",
+     "quantity": "12",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 4,
      "net_price": "1.85",
-     "quantity": "23",
+     "quantity": "60.25",
      "unit_code": "MTR"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 7,
-     "net_price": "2.40",
-     "quantity": "55",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 8,
-     "net_price": "6.90",
-     "quantity": "6",
-     "unit_code": "H87"
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 5,
+     "net_price": "1.85",
+     "quantity": "47.75",
+     "unit_code": "MTR"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 9,
-     "net_price": "12.50",
-     "quantity": "6",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 10,
-     "net_price": "1.85",
-     "quantity": "40.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 11,
-     "net_price": "1.85",
-     "quantity": "94.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 12,
+     "line_no": 6,
      "net_price": "49.90",
-     "quantity": "19",
+     "quantity": "38",
      "unit_code": "H87"
     },
     {
      "description": "Hydrauliköl HLP 46",
-     "line_no": 13,
+     "line_no": 7,
      "net_price": "3.15",
-     "quantity": "13.5",
+     "quantity": "40.75",
      "unit_code": "LTR"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 14,
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 8,
      "net_price": "49.90",
-     "quantity": "22",
+     "quantity": "48",
      "unit_code": "H87"
     },
     {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 15,
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 9,
      "net_price": "1.85",
-     "quantity": "63.5",
+     "quantity": "36.5",
      "unit_code": "MTR"
     },
     {
      "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 16,
+     "line_no": 10,
      "net_price": "16.80",
-     "quantity": "25",
+     "quantity": "13.5",
      "unit_code": "KGM"
     },
     {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 17,
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 11,
      "net_price": "4.35",
-     "quantity": "49",
+     "quantity": "22",
      "unit_code": "H87"
     },
     {
      "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 18,
+     "line_no": 12,
      "net_price": "49.90",
+     "quantity": "32",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 13,
+     "net_price": "2.40",
+     "quantity": "13",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 14,
+     "net_price": "78.00",
+     "quantity": "97.5",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 15,
+     "net_price": "6.90",
      "quantity": "22",
      "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 19,
-     "net_price": "2.40",
+     "line_no": 16,
+     "net_price": "6.90",
      "quantity": "36",
      "unit_code": "H87"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 17,
+     "net_price": "4.35",
+     "quantity": "29",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 18,
+     "net_price": "5.20",
+     "quantity": "52",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 19,
+     "net_price": "78.00",
+     "quantity": "94.5",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 20,
+     "net_price": "12.50",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 21,
+     "net_price": "1.85",
+     "quantity": "50.25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 22,
+     "net_price": "16.80",
+     "quantity": "19.25",
+     "unit_code": "KGM"
     }
    ],
    "number": "PO-AT-4023",
@@ -3325,459 +3024,161 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Rillenkugellager 6204-2RS",
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
      "line_no": 1,
-     "net_price": "4.35",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 2,
-     "net_price": "49.90",
-     "quantity": "31",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "6.90",
-     "quantity": "21",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 5,
-     "net_price": "3.15",
-     "quantity": "94.5",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 6,
-     "net_price": "1.85",
-     "quantity": "32.25",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 7,
-     "net_price": "49.90",
-     "quantity": "23",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 8,
-     "net_price": "1.85",
-     "quantity": "5",
-     "unit_code": "MTR"
+     "net_price": "4.75",
+     "quantity": "92",
+     "unit_code": "KGM"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 9,
-     "net_price": "49.90",
-     "quantity": "15",
-     "unit_code": "H87"
+     "line_no": 2,
+     "net_price": "1.85",
+     "quantity": "3.5",
+     "unit_code": "MTR"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 10,
-     "net_price": "4.35",
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 3,
+     "net_price": "38.00",
      "quantity": "46",
      "unit_code": "H87"
     },
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 11,
-     "net_price": "5.20",
-     "quantity": "59",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 12,
-     "net_price": "6.90",
-     "quantity": "13",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 13,
-     "net_price": "49.90",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 14,
-     "net_price": "3.15",
-     "quantity": "11.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 15,
-     "net_price": "5.20",
-     "quantity": "58",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 16,
-     "net_price": "4.75",
-     "quantity": "40.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 17,
-     "net_price": "1.85",
-     "quantity": "32.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 18,
-     "net_price": "4.75",
-     "quantity": "19.5",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4024",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "34.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "40",
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 4,
+     "net_price": "38.00",
+     "quantity": "14",
      "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 3,
-     "net_price": "16.80",
-     "quantity": "22",
+     "line_no": 5,
+     "net_price": "4.75",
+     "quantity": "33.25",
      "unit_code": "KGM"
     },
     {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "41.25",
-     "unit_code": "HUR"
-    },
-    {
      "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 5,
-     "net_price": "5.20",
-     "quantity": "33",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 6,
-     "net_price": "12.50",
-     "quantity": "45",
+     "net_price": "5.20",
+     "quantity": "12",
      "unit_code": "H87"
     },
     {
      "description": "Fachbuch Hydraulik-Grundlagen",
      "line_no": 7,
      "net_price": "49.90",
+     "quantity": "13",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 8,
+     "net_price": "4.75",
+     "quantity": "69.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 9,
+     "net_price": "1.85",
+     "quantity": "49.5",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 10,
+     "net_price": "38.00",
+     "quantity": "17",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 11,
+     "net_price": "6.90",
      "quantity": "10",
      "unit_code": "H87"
     },
     {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 8,
-     "net_price": "4.75",
-     "quantity": "49.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 9,
-     "net_price": "78.00",
-     "quantity": "56.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 10,
-     "net_price": "12.50",
-     "quantity": "58",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 11,
-     "net_price": "1.85",
-     "quantity": "9.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
      "line_no": 12,
-     "net_price": "3.95",
-     "quantity": "55.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 13,
-     "net_price": "12.50",
+     "net_price": "6.90",
      "quantity": "48",
      "unit_code": "H87"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 14,
-     "net_price": "12.50",
-     "quantity": "58",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 15,
-     "net_price": "5.20",
-     "quantity": "31",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 16,
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 13,
      "net_price": "4.35",
-     "quantity": "59",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 17,
-     "net_price": "38.00",
      "quantity": "60",
      "unit_code": "H87"
     },
     {
      "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 18,
+     "line_no": 14,
      "net_price": "49.90",
-     "quantity": "16",
+     "quantity": "22",
      "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 19,
-     "net_price": "16.80",
-     "quantity": "56",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 20,
-     "net_price": "3.15",
-     "quantity": "87.75",
-     "unit_code": "LTR"
-    }
-   ],
-   "number": "PO-AT-4025",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 1,
-     "net_price": "78.00",
-     "quantity": "78.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "51.75",
-     "unit_code": "KGM"
     },
     {
      "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
+     "line_no": 15,
      "net_price": "2.40",
-     "quantity": "57",
+     "quantity": "53",
      "unit_code": "H87"
     },
     {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 4,
-     "net_price": "5.20",
-     "quantity": "20",
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 16,
+     "net_price": "2.40",
+     "quantity": "32",
      "unit_code": "H87"
     },
     {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 5,
-     "net_price": "3.95",
-     "quantity": "83.5",
-     "unit_code": "KGM"
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 17,
+     "net_price": "3.15",
+     "quantity": "83.75",
+     "unit_code": "LTR"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 6,
-     "net_price": "16.80",
-     "quantity": "63",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 7,
-     "net_price": "4.75",
-     "quantity": "14.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 8,
+     "line_no": 18,
      "net_price": "2.40",
-     "quantity": "19",
+     "quantity": "3",
      "unit_code": "H87"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 9,
-     "net_price": "2.40",
-     "quantity": "45",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 10,
-     "net_price": "4.75",
-     "quantity": "62",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 11,
-     "net_price": "4.75",
-     "quantity": "91.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 12,
-     "net_price": "6.90",
-     "quantity": "46",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 13,
-     "net_price": "16.80",
-     "quantity": "53.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 14,
-     "net_price": "78.00",
-     "quantity": "92",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 15,
-     "net_price": "4.75",
-     "quantity": "89.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 16,
-     "net_price": "78.00",
-     "quantity": "82.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 17,
-     "net_price": "4.35",
-     "quantity": "15",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 18,
-     "net_price": "78.00",
-     "quantity": "56.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
      "line_no": 19,
-     "net_price": "78.00",
-     "quantity": "39.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 20,
-     "net_price": "6.90",
-     "quantity": "21",
+     "net_price": "5.20",
+     "quantity": "24",
      "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 21,
-     "net_price": "3.95",
-     "quantity": "33.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 22,
-     "net_price": "4.75",
-     "quantity": "45.25",
-     "unit_code": "KGM"
     },
     {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 23,
+     "line_no": 20,
      "net_price": "38.00",
-     "quantity": "10",
+     "quantity": "58",
      "unit_code": "H87"
     },
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 24,
-     "net_price": "5.20",
-     "quantity": "51",
-     "unit_code": "H87"
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 21,
+     "net_price": "1.85",
+     "quantity": "25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 22,
+     "net_price": "3.15",
+     "quantity": "34.75",
+     "unit_code": "LTR"
     }
    ],
-   "number": "PO-AT-4026",
+   "number": "PO-AT-4024",
    "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
    "supplier_vat_id": "ATU47798882",
    "tenant": "nordwerk-at"
@@ -3786,466 +3187,717 @@
    "currency": "EUR",
    "lines": [
     {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "6.90",
+     "quantity": "45",
+     "unit_code": "H87"
+    },
+    {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 1,
+     "line_no": 2,
      "net_price": "38.00",
-     "quantity": "47",
+     "quantity": "5",
      "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "53",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 3,
-     "net_price": "4.75",
-     "quantity": "83.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "12.50",
-     "quantity": "28",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "12.50",
-     "quantity": "32",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 6,
-     "net_price": "49.90",
-     "quantity": "8",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 7,
-     "net_price": "5.20",
-     "quantity": "49",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 8,
-     "net_price": "1.85",
-     "quantity": "23.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 9,
-     "net_price": "3.95",
-     "quantity": "24",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 10,
-     "net_price": "1.85",
-     "quantity": "52.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 11,
-     "net_price": "49.90",
-     "quantity": "53",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 12,
-     "net_price": "49.90",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 13,
-     "net_price": "78.00",
-     "quantity": "88.25",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 14,
-     "net_price": "1.85",
-     "quantity": "65.25",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 15,
-     "net_price": "3.15",
-     "quantity": "45.5",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 16,
-     "net_price": "5.20",
-     "quantity": "19",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 17,
-     "net_price": "3.95",
-     "quantity": "25.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 18,
-     "net_price": "4.75",
-     "quantity": "36",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 19,
-     "net_price": "6.90",
-     "quantity": "26",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 20,
-     "net_price": "78.00",
-     "quantity": "72",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 21,
-     "net_price": "1.85",
-     "quantity": "38.25",
-     "unit_code": "MTR"
-    }
-   ],
-   "number": "PO-AT-4027",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "85.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "1.75",
-     "unit_code": "KGM"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "23",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 4,
-     "net_price": "4.75",
-     "quantity": "22.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 5,
-     "net_price": "3.15",
-     "quantity": "89.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 6,
-     "net_price": "16.80",
-     "quantity": "62.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 7,
-     "net_price": "1.85",
-     "quantity": "46.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 8,
-     "net_price": "1.85",
-     "quantity": "67.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 9,
-     "net_price": "5.20",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 10,
-     "net_price": "6.90",
-     "quantity": "11",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 11,
      "net_price": "3.95",
-     "quantity": "2.5",
+     "quantity": "55.75",
      "unit_code": "KGM"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 12,
-     "net_price": "4.75",
-     "quantity": "81.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 13,
-     "net_price": "5.20",
-     "quantity": "13",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 14,
-     "net_price": "3.15",
-     "quantity": "78.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 15,
-     "net_price": "6.90",
-     "quantity": "36",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 16,
-     "net_price": "49.90",
-     "quantity": "34",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 17,
-     "net_price": "4.35",
-     "quantity": "39",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 18,
-     "net_price": "4.35",
-     "quantity": "21",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 19,
-     "net_price": "12.50",
-     "quantity": "4",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 20,
-     "net_price": "49.90",
-     "quantity": "15",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 21,
-     "net_price": "5.20",
-     "quantity": "55",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4028",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 1,
-     "net_price": "1.85",
-     "quantity": "59.75",
-     "unit_code": "MTR"
     },
     {
      "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 2,
+     "line_no": 4,
      "net_price": "2.40",
-     "quantity": "56",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
      "quantity": "48",
      "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "33.5",
+     "line_no": 5,
+     "net_price": "4.75",
+     "quantity": "20",
      "unit_code": "KGM"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 5,
-     "net_price": "49.90",
-     "quantity": "58",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
      "line_no": 6,
-     "net_price": "16.80",
-     "quantity": "97.75",
-     "unit_code": "KGM"
+     "net_price": "6.90",
+     "quantity": "11",
+     "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
      "line_no": 7,
+     "net_price": "49.90",
+     "quantity": "29",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 8,
+     "net_price": "5.20",
+     "quantity": "60",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 9,
+     "net_price": "4.35",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 10,
+     "net_price": "4.35",
+     "quantity": "43",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 11,
+     "net_price": "5.20",
+     "quantity": "43",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 12,
+     "net_price": "12.50",
+     "quantity": "28",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 13,
      "net_price": "1.85",
-     "quantity": "74.25",
+     "quantity": "15.5",
      "unit_code": "MTR"
     },
     {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 8,
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 14,
+     "net_price": "4.35",
+     "quantity": "3",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 15,
+     "net_price": "5.20",
+     "quantity": "37",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 16,
+     "net_price": "16.80",
+     "quantity": "68.25",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4025",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 1,
+     "net_price": "78.00",
+     "quantity": "83.5",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 2,
+     "net_price": "78.00",
+     "quantity": "63",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "6.90",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 4,
+     "net_price": "3.95",
+     "quantity": "37",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 5,
      "net_price": "4.75",
-     "quantity": "35",
+     "quantity": "88.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 6,
+     "net_price": "38.00",
+     "quantity": "31",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 7,
+     "net_price": "5.20",
+     "quantity": "46",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 8,
+     "net_price": "3.95",
+     "quantity": "90.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 9,
+     "net_price": "1.85",
+     "quantity": "53.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 10,
+     "net_price": "3.95",
+     "quantity": "92",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 11,
+     "net_price": "5.20",
+     "quantity": "45",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 12,
+     "net_price": "1.85",
+     "quantity": "82.25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 13,
+     "net_price": "3.95",
+     "quantity": "29.5",
      "unit_code": "KGM"
     },
     {
      "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 14,
+     "net_price": "16.80",
+     "quantity": "56.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 15,
+     "net_price": "49.90",
+     "quantity": "20",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4026",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 1,
+     "net_price": "12.50",
+     "quantity": "1",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 2,
+     "net_price": "49.90",
+     "quantity": "48",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 3,
+     "net_price": "5.20",
+     "quantity": "40",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 4,
+     "net_price": "16.80",
+     "quantity": "95.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 5,
+     "net_price": "6.90",
+     "quantity": "27",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 6,
+     "net_price": "3.15",
+     "quantity": "73.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 7,
+     "net_price": "3.15",
+     "quantity": "80.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 8,
+     "net_price": "49.90",
+     "quantity": "18",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 9,
+     "net_price": "6.90",
+     "quantity": "41",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 10,
+     "net_price": "12.50",
+     "quantity": "6",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 11,
+     "net_price": "38.00",
+     "quantity": "45",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 12,
+     "net_price": "38.00",
+     "quantity": "54",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 13,
+     "net_price": "6.90",
+     "quantity": "33",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 14,
+     "net_price": "4.75",
+     "quantity": "51.25",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4027",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 1,
+     "net_price": "2.40",
+     "quantity": "49",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 2,
+     "net_price": "1.85",
+     "quantity": "93.25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 3,
+     "net_price": "49.90",
+     "quantity": "4",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 4,
+     "net_price": "2.40",
+     "quantity": "44",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 5,
+     "net_price": "6.90",
+     "quantity": "5",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 6,
+     "net_price": "4.75",
+     "quantity": "24.25",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 7,
+     "net_price": "78.00",
+     "quantity": "64.75",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 8,
+     "net_price": "1.85",
+     "quantity": "55.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 9,
+     "net_price": "49.90",
+     "quantity": "39",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 10,
+     "net_price": "38.00",
+     "quantity": "14",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 11,
+     "net_price": "4.75",
+     "quantity": "20",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 12,
+     "net_price": "6.90",
+     "quantity": "57",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 13,
+     "net_price": "38.00",
+     "quantity": "17",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 14,
+     "net_price": "4.75",
+     "quantity": "45",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 15,
+     "net_price": "16.80",
+     "quantity": "22.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 16,
+     "net_price": "2.40",
+     "quantity": "45",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
+     "line_no": 17,
+     "net_price": "3.15",
+     "quantity": "62.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 18,
+     "net_price": "2.40",
+     "quantity": "24",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4028",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 1,
+     "net_price": "3.95",
+     "quantity": "71.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 2,
+     "net_price": "4.35",
+     "quantity": "34",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "12.50",
+     "quantity": "39",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 4,
+     "net_price": "4.35",
+     "quantity": "21",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 5,
+     "net_price": "4.75",
+     "quantity": "6.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 6,
+     "net_price": "3.15",
+     "quantity": "29.25",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 7,
+     "net_price": "78.00",
+     "quantity": "32.5",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 8,
+     "net_price": "4.35",
+     "quantity": "57",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 9,
+     "net_price": "49.90",
+     "quantity": "24",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 10,
+     "net_price": "5.20",
+     "quantity": "20",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 11,
+     "net_price": "3.15",
+     "quantity": "73.75",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 12,
+     "net_price": "1.85",
+     "quantity": "51.5",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 13,
+     "net_price": "4.35",
+     "quantity": "10",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 14,
+     "net_price": "3.15",
+     "quantity": "3",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 15,
+     "net_price": "3.95",
+     "quantity": "87",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4029",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 1,
+     "net_price": "5.20",
+     "quantity": "38",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
+     "quantity": "53",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 3,
      "net_price": "16.80",
      "quantity": "27",
      "unit_code": "KGM"
     },
     {
      "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 10,
-     "net_price": "4.35",
-     "quantity": "31",
-     "unit_code": "H87"
+     "line_no": 4,
+     "net_price": "78.00",
+     "quantity": "61.5",
+     "unit_code": "HUR"
     },
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 11,
-     "net_price": "12.50",
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 5,
+     "net_price": "49.90",
      "quantity": "13",
      "unit_code": "H87"
     },
     {
      "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 12,
-     "net_price": "3.95",
-     "quantity": "47.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 13,
-     "net_price": "1.85",
-     "quantity": "44.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 14,
-     "net_price": "78.00",
-     "quantity": "58",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 15,
-     "net_price": "38.00",
-     "quantity": "35",
+     "line_no": 6,
+     "net_price": "6.90",
+     "quantity": "57",
      "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 16,
-     "net_price": "5.20",
+     "line_no": 7,
+     "net_price": "16.80",
+     "quantity": "44.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 8,
+     "net_price": "1.85",
+     "quantity": "58",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
+     "line_no": 9,
+     "net_price": "16.80",
+     "quantity": "68.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "line_no": 10,
+     "net_price": "2.40",
      "quantity": "20",
      "unit_code": "H87"
     },
     {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 17,
-     "net_price": "49.90",
-     "quantity": "14",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 18,
-     "net_price": "78.00",
-     "quantity": "14.75",
-     "unit_code": "HUR"
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 11,
+     "net_price": "3.15",
+     "quantity": "27",
+     "unit_code": "LTR"
     },
     {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 19,
+     "line_no": 12,
      "net_price": "38.00",
+     "quantity": "8",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 13,
+     "net_price": "2.40",
      "quantity": "2",
      "unit_code": "H87"
     },
     {
      "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 20,
+     "line_no": 14,
      "net_price": "49.90",
      "quantity": "30",
      "unit_code": "H87"
     },
     {
      "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 21,
-     "net_price": "2.40",
+     "line_no": 15,
+     "net_price": "12.50",
      "quantity": "38",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 16,
+     "net_price": "16.80",
+     "quantity": "54.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 17,
+     "net_price": "2.40",
+     "quantity": "25",
      "unit_code": "H87"
     }
    ],
-   "number": "PO-AT-4029",
+   "number": "PO-AT-4030",
    "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
    "supplier_vat_id": "ATU51008732",
    "tenant": "nordwerk-at"
@@ -4254,188 +3906,25 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
+     "description": "Druckluftschlauch PU 8x6 mm",
      "line_no": 1,
      "net_price": "1.85",
-     "quantity": "88.5",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "41",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 3,
-     "net_price": "4.75",
-     "quantity": "3",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 4,
-     "net_price": "38.00",
-     "quantity": "29",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 5,
-     "net_price": "1.85",
-     "quantity": "0.5",
+     "quantity": "3.75",
      "unit_code": "MTR"
     },
     {
      "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 6,
-     "net_price": "38.00",
-     "quantity": "45",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 7,
-     "net_price": "16.80",
-     "quantity": "21.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 8,
-     "net_price": "12.50",
-     "quantity": "9",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Ersatzteil für Anlage Ä/Ö/Ü-Linie, Pos. 12½",
-     "line_no": 9,
-     "net_price": "38.00",
-     "quantity": "38",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 10,
-     "net_price": "12.50",
-     "quantity": "14",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 11,
-     "net_price": "78.00",
-     "quantity": "95.75",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 12,
-     "net_price": "4.35",
-     "quantity": "37",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 13,
-     "net_price": "5.20",
-     "quantity": "30",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sonderanfertigung lt. Zeichnung Nr. 4711-A & Rev. <B>",
-     "line_no": 14,
-     "net_price": "3.95",
-     "quantity": "7.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kleinteile-Sortiment \"Werkstatt\" – Größe XL, ölbeständig",
-     "line_no": 15,
-     "net_price": "5.20",
-     "quantity": "15",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 16,
-     "net_price": "12.50",
-     "quantity": "49",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 17,
-     "net_price": "3.95",
-     "quantity": "70.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 18,
-     "net_price": "1.85",
-     "quantity": "37.75",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 19,
-     "net_price": "6.90",
-     "quantity": "10",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 20,
-     "net_price": "12.50",
-     "quantity": "39",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 21,
-     "net_price": "1.85",
-     "quantity": "47.5",
-     "unit_code": "MTR"
-    }
-   ],
-   "number": "PO-AT-4030",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 1,
-     "net_price": "49.90",
-     "quantity": "52",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
      "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "13",
+     "net_price": "38.00",
+     "quantity": "41",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
      "line_no": 3,
      "net_price": "12.50",
-     "quantity": "44",
+     "quantity": "12",
      "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "81.25",
-     "unit_code": "HUR"
     }
    ],
    "number": "PO-AT-4031",
@@ -4450,99 +3939,73 @@
      "description": "Druckluftschlauch PU 8x6 mm",
      "line_no": 1,
      "net_price": "1.85",
-     "quantity": "67",
+     "quantity": "63.25",
      "unit_code": "MTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "59",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "99",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "87",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 5,
-     "net_price": "5.20",
-     "quantity": "42",
-     "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4032",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
    "tenant": "nordwerk-at"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Hydrauliköl HLP 46",
+     "description": "Stretchfolie 500 mm, 23 µ",
      "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "28.5",
-     "unit_code": "LTR"
+     "net_price": "4.75",
+     "quantity": "8.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 2,
+     "net_price": "4.35",
+     "quantity": "59",
+     "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4033",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
+   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
+   "supplier_vat_id": "ATU51008732",
    "tenant": "nordwerk-at"
   },
   {
    "currency": "EUR",
    "lines": [
     {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 1,
-     "net_price": "49.90",
-     "quantity": "11",
-     "unit_code": "H87"
-    },
-    {
      "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 2,
+     "line_no": 1,
      "net_price": "2.40",
-     "quantity": "37",
+     "quantity": "38",
      "unit_code": "H87"
     },
     {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 3,
-     "net_price": "38.00",
-     "quantity": "11",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 4,
-     "net_price": "1.85",
-     "quantity": "94",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 5,
-     "net_price": "4.75",
-     "quantity": "15.5",
-     "unit_code": "KGM"
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 2,
+     "net_price": "78.00",
+     "quantity": "10",
+     "unit_code": "HUR"
     }
    ],
    "number": "PO-AT-4034",
+   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
+   "supplier_vat_id": "ATU47798882",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 1,
+     "net_price": "3.95",
+     "quantity": "49.25",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4035",
    "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
    "supplier_vat_id": "ATU63717192",
    "tenant": "nordwerk-at"
@@ -4551,54 +4014,17 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Druckluftschlauch PU 8x6 mm",
+     "description": "Montagestunde Servicetechniker",
      "line_no": 1,
-     "net_price": "1.85",
-     "quantity": "47.25",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 2,
-     "net_price": "4.35",
-     "quantity": "43",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
-     "net_price": "2.40",
-     "quantity": "56",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "12.50",
-     "quantity": "3",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4035",
-   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
-   "supplier_vat_id": "ATU62056897",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 1,
-     "net_price": "2.40",
-     "quantity": "20",
-     "unit_code": "H87"
+     "net_price": "78.00",
+     "quantity": "17.75",
+     "unit_code": "HUR"
     },
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
      "line_no": 2,
      "net_price": "6.90",
-     "quantity": "45",
+     "quantity": "36",
      "unit_code": "H87"
     }
    ],
@@ -4611,132 +4037,104 @@
    "currency": "EUR",
    "lines": [
     {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "45",
+     "net_price": "38.00",
+     "quantity": "48",
      "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 2,
+     "net_price": "1.85",
+     "quantity": "56.75",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 3,
+     "net_price": "49.90",
+     "quantity": "56",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4037",
+   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
+   "supplier_vat_id": "ATU47798882",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "3.15",
+     "quantity": "52",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 2,
+     "net_price": "12.50",
+     "quantity": "58",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 3,
+     "net_price": "1.85",
+     "quantity": "90.5",
+     "unit_code": "MTR"
+    }
+   ],
+   "number": "PO-AT-4038",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 1,
+     "net_price": "16.80",
+     "quantity": "50.25",
+     "unit_code": "KGM"
     },
     {
      "description": "Montagestunde Servicetechniker",
      "line_no": 2,
      "net_price": "78.00",
-     "quantity": "32",
+     "quantity": "41.25",
      "unit_code": "HUR"
     },
     {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "description": "Fachbuch Hydraulik-Grundlagen",
      "line_no": 3,
-     "net_price": "2.40",
-     "quantity": "58",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 4,
-     "net_price": "3.15",
-     "quantity": "2.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
-     "net_price": "6.90",
-     "quantity": "41",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4037",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "19.5",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "32.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "12.50",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "91",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 5,
-     "net_price": "5.20",
-     "quantity": "10",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4038",
-   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
-   "supplier_vat_id": "ATU47798882",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 1,
-     "net_price": "2.40",
-     "quantity": "25",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 2,
-     "net_price": "5.20",
-     "quantity": "31",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 3,
-     "net_price": "3.15",
-     "quantity": "3",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 4,
-     "net_price": "4.35",
-     "quantity": "35",
+     "net_price": "49.90",
+     "quantity": "29",
      "unit_code": "H87"
     },
     {
      "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 5,
+     "line_no": 4,
      "net_price": "6.90",
-     "quantity": "8",
+     "quantity": "44",
      "unit_code": "H87"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 5,
+     "net_price": "1.85",
+     "quantity": "15.25",
+     "unit_code": "MTR"
     }
    ],
    "number": "PO-AT-4039",
-   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
-   "supplier_vat_id": "ATU47798882",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
    "tenant": "nordwerk-at"
   },
   {
@@ -4746,28 +4144,14 @@
      "description": "Gehörschutzstöpsel (Box à 200)",
      "line_no": 1,
      "net_price": "38.00",
-     "quantity": "5",
+     "quantity": "33",
      "unit_code": "H87"
     },
     {
-     "description": "Montagestunde Servicetechniker",
+     "description": "Kaffeebohnen für Kantine 1 kg",
      "line_no": 2,
-     "net_price": "78.00",
-     "quantity": "35",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 3,
-     "net_price": "4.75",
-     "quantity": "69.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 4,
-     "net_price": "3.95",
-     "quantity": "95.5",
+     "net_price": "16.80",
+     "quantity": "93.75",
      "unit_code": "KGM"
     }
    ],
@@ -4780,10 +4164,164 @@
    "currency": "EUR",
    "lines": [
     {
+     "description": "Schweißdraht SG2 1,0 mm",
+     "line_no": 1,
+     "net_price": "3.95",
+     "quantity": "15.5",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 2,
+     "net_price": "4.35",
+     "quantity": "20",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4041",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "3.15",
+     "quantity": "89.5",
+     "unit_code": "LTR"
+    }
+   ],
+   "number": "PO-AT-4043",
+   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
+   "supplier_vat_id": "ATU29308231",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Gehörschutzstöpsel (Box à 200)",
+     "line_no": 1,
+     "net_price": "38.00",
+     "quantity": "49",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
+     "quantity": "16",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 3,
+     "net_price": "78.00",
+     "quantity": "16",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 4,
+     "net_price": "4.75",
+     "quantity": "69.75",
+     "unit_code": "KGM"
+    },
+    {
+     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
+     "line_no": 5,
+     "net_price": "12.50",
+     "quantity": "21",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4044",
+   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
+   "supplier_vat_id": "ATU51008732",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 1,
+     "net_price": "78.00",
+     "quantity": "67.5",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
+     "quantity": "16",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4045",
+   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
+   "supplier_vat_id": "ATU29308231",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
+     "net_price": "2.40",
+     "quantity": "31",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4047",
+   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
+   "supplier_vat_id": "ATU47798882",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Stretchfolie 500 mm, 23 µ",
+     "line_no": 1,
+     "net_price": "4.75",
+     "quantity": "10.75",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4048",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Kaffeebohnen für Kantine 1 kg",
+     "line_no": 1,
+     "net_price": "15.46",
+     "quantity": "69.75",
+     "unit_code": "KGM"
+    }
+   ],
+   "number": "PO-AT-4049",
+   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
+   "supplier_vat_id": "ATU51008732",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
      "description": "Fachbuch Hydraulik-Grundlagen",
      "line_no": 1,
      "net_price": "49.90",
-     "quantity": "60",
+     "quantity": "30",
      "unit_code": "H87"
     },
     {
@@ -4808,364 +4346,9 @@
      "unit_code": "MTR"
     }
    ],
-   "number": "PO-AT-4041",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 1,
-     "net_price": "3.15",
-     "quantity": "17",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 2,
-     "net_price": "49.90",
-     "quantity": "6",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4043",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 1,
-     "net_price": "16.80",
-     "quantity": "35.5",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4044",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 1,
-     "net_price": "3.95",
-     "quantity": "23.5",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "26.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 3,
-     "net_price": "49.90",
-     "quantity": "16",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 4,
-     "net_price": "5.20",
-     "quantity": "51",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4045",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "32.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 2,
-     "net_price": "3.15",
-     "quantity": "16.25",
-     "unit_code": "LTR"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 3,
-     "net_price": "1.85",
-     "quantity": "70",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 4,
-     "net_price": "6.90",
-     "quantity": "11",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4047",
-   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
-   "supplier_vat_id": "ATU47798882",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.75",
-     "quantity": "28.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schweißdraht SG2 1,0 mm",
-     "line_no": 2,
-     "net_price": "3.95",
-     "quantity": "91.5",
-     "unit_code": "KGM"
-    }
-   ],
-   "number": "PO-AT-4048",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "6.56",
-     "quantity": "56",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 2,
-     "net_price": "4.75",
-     "quantity": "82.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
-     "line_no": 3,
-     "net_price": "2.40",
-     "quantity": "5",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 4,
-     "net_price": "78.00",
-     "quantity": "4.5",
-     "unit_code": "HUR"
-    },
-    {
-     "description": "Hydrauliköl HLP 46",
-     "line_no": 5,
-     "net_price": "3.15",
-     "quantity": "76.5",
-     "unit_code": "LTR"
-    }
-   ],
-   "number": "PO-AT-4049",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Fachbuch Hydraulik-Grundlagen",
-     "line_no": 1,
-     "net_price": "49.90",
-     "quantity": "12",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "38",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 3,
-     "net_price": "6.90",
-     "quantity": "14",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 4,
-     "net_price": "1.85",
-     "quantity": "39",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 5,
-     "net_price": "16.80",
-     "quantity": "10",
-     "unit_code": "KGM"
-    }
-   ],
    "number": "PO-AT-4050",
-   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
-   "supplier_vat_id": "ATU47798882",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.32",
-     "quantity": "86.25",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
-     "line_no": 2,
-     "net_price": "6.90",
-     "quantity": "33",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4051",
    "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
    "supplier_vat_id": "ATU63537681",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
-     "line_no": 1,
-     "net_price": "5.20",
-     "quantity": "28.5",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4052",
-   "supplier_name": "Alpen Hydraulik Prandstetter KG (fiktiv)",
-   "supplier_vat_id": "ATU47798882",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Druckluftschlauch PU 8x6 mm",
-     "line_no": 1,
-     "net_price": "1.59",
-     "quantity": "17.25",
-     "unit_code": "MTR"
-    },
-    {
-     "description": "Montagestunde Servicetechniker",
-     "line_no": 2,
-     "net_price": "78.00",
-     "quantity": "90.75",
-     "unit_code": "HUR"
-    }
-   ],
-   "number": "PO-AT-4053",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Sechskantschraube M8x40, verzinkt (100 Stk.)",
-     "line_no": 1,
-     "net_price": "12.50",
-     "quantity": "22",
-     "unit_code": "H87"
-    },
-    {
-     "description": "Gehörschutzstöpsel (Box à 200)",
-     "line_no": 2,
-     "net_price": "38.00",
-     "quantity": "22",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4054",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Stretchfolie 500 mm, 23 µ",
-     "line_no": 1,
-     "net_price": "4.13",
-     "quantity": "24",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Kaffeebohnen für Kantine 1 kg",
-     "line_no": 2,
-     "net_price": "16.80",
-     "quantity": "61.75",
-     "unit_code": "KGM"
-    },
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 3,
-     "net_price": "4.35",
-     "quantity": "32",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4055",
-   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
-   "supplier_vat_id": "ATU51008732",
-   "tenant": "nordwerk-at"
-  },
-  {
-   "currency": "EUR",
-   "lines": [
-    {
-     "description": "Rillenkugellager 6204-2RS",
-     "line_no": 1,
-     "net_price": "4.35",
-     "quantity": "4",
-     "unit_code": "H87"
-    }
-   ],
-   "number": "PO-AT-4056",
-   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
-   "supplier_vat_id": "ATU29308231",
    "tenant": "nordwerk-at"
   },
   {
@@ -5175,13 +4358,172 @@
      "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
      "line_no": 1,
      "net_price": "2.14",
-     "quantity": "56",
+     "quantity": "5",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4051",
+   "supplier_name": "Lager & Antrieb Hinterseer OG (fiktiv)",
+   "supplier_vat_id": "ATU29308231",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Fachbuch Hydraulik-Grundlagen",
+     "line_no": 1,
+     "net_price": "49.90",
+     "quantity": "3",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 2,
+     "net_price": "78.00",
+     "quantity": "14.25",
+     "unit_code": "HUR"
+    }
+   ],
+   "number": "PO-AT-4052",
+   "supplier_name": "Elektro Steinwandner e.U. (fiktiv)",
+   "supplier_vat_id": "ATU51008732",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Rillenkugellager 6204-2RS",
+     "line_no": 1,
+     "net_price": "3.74",
+     "quantity": "46",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
+     "quantity": "40",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 3,
+     "net_price": "3.15",
+     "quantity": "95.75",
+     "unit_code": "LTR"
+    }
+   ],
+   "number": "PO-AT-4053",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "3.15",
+     "quantity": "37.125",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 2,
+     "net_price": "78.00",
+     "quantity": "95",
+     "unit_code": "HUR"
+    }
+   ],
+   "number": "PO-AT-4054",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 1,
+     "net_price": "2.11",
+     "quantity": "11",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4055",
+   "supplier_name": "Stahlbau Kirchtaler GmbH (fiktiv)",
+   "supplier_vat_id": "ATU62056897",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "3.15",
+     "quantity": "10.25",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Druckluftschlauch PU 8x6 mm",
+     "line_no": 2,
+     "net_price": "1.85",
+     "quantity": "1.25",
+     "unit_code": "MTR"
+    },
+    {
+     "description": "Sechskantmutter M8, verzinkt (100 Stk.)",
+     "line_no": 3,
+     "net_price": "6.90",
+     "quantity": "45",
+     "unit_code": "H87"
+    },
+    {
+     "description": "Montagestunde Servicetechniker",
+     "line_no": 4,
+     "net_price": "78.00",
+     "quantity": "47",
+     "unit_code": "HUR"
+    },
+    {
+     "description": "Schutzhandschuhe Nitril, Gr. 9 (Paar)",
+     "line_no": 5,
+     "net_price": "2.40",
+     "quantity": "49",
+     "unit_code": "H87"
+    }
+   ],
+   "number": "PO-AT-4056",
+   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63717192",
+   "tenant": "nordwerk-at"
+  },
+  {
+   "currency": "EUR",
+   "lines": [
+    {
+     "description": "Hydrauliköl HLP 46",
+     "line_no": 1,
+     "net_price": "2.74",
+     "quantity": "49",
+     "unit_code": "LTR"
+    },
+    {
+     "description": "Kabelbinder 300x4,8 mm (100 Stk.)",
+     "line_no": 2,
+     "net_price": "5.20",
+     "quantity": "35",
      "unit_code": "H87"
     }
    ],
    "number": "PO-AT-4057",
-   "supplier_name": "Sicherheitstechnik Moosbrugger GmbH (fiktiv)",
-   "supplier_vat_id": "ATU63717192",
+   "supplier_name": "Werkzeug Gruberhof GmbH (fiktiv)",
+   "supplier_vat_id": "ATU63537681",
    "tenant": "nordwerk-at"
   }
  ],

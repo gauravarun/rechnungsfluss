@@ -11,6 +11,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
   - Versioned prompt `v1`, a print-oriented output schema, and a strict mapping to the canonical model.
   - Record/replay cassettes.
 - **Pipeline:** plain PDFs now go through the extractor. `extraction_incomplete`, `extraction_uncertain` and `not_an_invoice` route to review. Refusals and other technical extraction errors mark the invoice `FAILED` (replayable).
+- **PDF variants:**
+  - Classic and compact vector layouts, plus image-only **scans** (rotated, blurred, grainy, JPEG, no text layer), all drawn from one layout description.
+  - The PDFs now print every reviewable field.
+  - Scans use the Vera font bundled with reportlab, for umlauts.
+- **Dataset regenerated** with layouts. The documents are now **committed** as the canonical eval inputs. The drift guard excludes scan hashes (rasterization isn't byte-stable across operating systems) and checks the committed files instead.
 - **ADR-0004 amended:** structured outputs instead of forced tool use, which Opus 5.5 rejects.
 
 ### Added (session 2, continued: W3)

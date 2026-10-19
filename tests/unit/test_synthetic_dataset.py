@@ -101,10 +101,37 @@ def test_routes_are_consistent_with_reasons(dataset: tuple[Path, list[dict[str, 
             assert lbl["expected_route"] == "review"
 
 
+def _without_scan_hashes(manifest: Path) -> list[dict[str, object]]:
+    """Scan rasterization (FreeType, blur, JPEG) is not guaranteed byte-identical across
+    platforms, so scan hashes are excluded here and checked against the committed files."""
+    labels = [json.loads(line) for line in manifest.read_text("utf-8").splitlines()]
+    return [{**lbl, "sha256": None} if lbl["layout"] == "scan" else lbl for lbl in labels]
+
+
 def test_committed_manifest_matches_the_generator(
     dataset: tuple[Path, list[dict[str, object]]],
 ) -> None:
     """Drift guard: regenerate with `python -m rechnungsfluss.synthetic.generate`."""
     out, _ = dataset
-    for name in ("manifest.jsonl", "purchase_orders.json"):
-        assert (out / name).read_bytes() == (COMMITTED / name).read_bytes(), name
+    assert (out / "purchase_orders.json").read_bytes() == (
+        COMMITTED / "purchase_orders.json"
+    ).read_bytes()
+    assert _without_scan_hashes(out / "manifest.jsonl") == _without_scan_hashes(
+        COMMITTED / "manifest.jsonl"
+    )
+
+
+def test_committed_files_match_their_labels() -> None:
+    """The committed documents are the canonical eval inputs (cassettes are keyed by them)."""
+    import hashlib
+
+    from rechnungsfluss.formats import zugferd
+
+    labels = [
+        json.loads(line) for line in (COMMITTED / "manifest.jsonl").read_text("utf-8").splitlines()
+    ]
+    for lbl in labels:
+        data = (COMMITTED / str(lbl["file"])).read_bytes()
+        if lbl["format"] == "zugferd":
+            data = zugferd.attachment(data)[1]
+        assert hashlib.sha256(data).hexdigest() == lbl["sha256"], lbl["doc_id"]
