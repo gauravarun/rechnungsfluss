@@ -1,0 +1,47 @@
+{
+ "audit_chains_total": 126,
+ "audit_chains_verified": 126,
+ "by_category": {
+  "clean": {
+   "documents": 44,
+   "route_agree": 44
+  },
+  "duplicate": {
+   "documents": 18,
+   "route_agree": 18
+  },
+  "missing_fields": {
+   "documents": 18,
+   "route_agree": 18
+  },
+  "noisy": {
+   "documents": 16,
+   "route_agree": 16
+  },
+  "po_mismatch": {
+   "documents": 18,
+   "route_agree": 18
+  },
+  "wrong_totals": {
+   "documents": 18,
+   "route_agree": 18
+  }
+ },
+ "dataset_manifest_sha256": "da261af9b9dc9e2f49569dce96effa7c016236c266b4c35edbee811361c00cc9",
+ "disagreements": [],
+ "documents": 132,
+ "duplicate_fn": 0,
+ "duplicate_fp": 0,
+ "duplicate_link_correct": 12,
+ "duplicate_tp": 12,
+ "expected_review": 66,
+ "exported": 60,
+ "failed": 0,
+ "false_accepts": [],
+ "false_reviews": [],
+ "generated_at": "2026-10-19T08:36:05+00:00",
+ "git_commit": "c0947a9",
+ "observed_review": 66,
+ "reasons_agree": 132,
+ "route_agree": 132
+}
