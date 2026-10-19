@@ -2,10 +2,11 @@
 
 Rules (documented in ADR-0004 amendment):
 - Values are parsed strictly; anything unparseable counts as missing.
-- Nothing is computed to fill a gap, with one documented equivalence: the
-  canonical model has no allowances or charges, so BT-106 (sum of line net
-  amounts) equals BT-109 (total without VAT), and BT-106 is taken from the
-  printed net total. If allowances or charges are ever modelled, this changes.
+- Nothing is computed to fill a gap, with one documented equivalence: when
+  the document prints no separate line sum (BT-106), it is taken from the
+  printed net total (BT-109). The canonical model has no allowances or charges,
+  so the two are equal by definition. If the document prints both, both are
+  read as printed, so a wrong line sum stays visible to the validator.
 - VAT category (BT-151/BT-118) is not printed on the documents we receive:
   "S" (standard) when the rate is above 0, "Z" (zero rated) when it is 0.
 - Missing required data does not raise: the result carries ``missing`` field
@@ -121,6 +122,7 @@ def to_canonical(x: ExtractedInvoice) -> MappingResult:
     if not breakdown:
         c.missing.append("vat_breakdown")
     net_total = c.amount(x.totals.total_without_vat, "totals.total_without_vat")
+    line_sum = c.amount(x.totals.line_net_sum, "totals.line_net_sum", required=False)
     contact = x.seller_contact
     seller = _party(c, x.seller, "seller")
     if contact is not None:
@@ -142,7 +144,7 @@ def to_canonical(x: ExtractedInvoice) -> MappingResult:
         "lines": lines,
         "vat_breakdown": breakdown,
         "totals": {
-            "line_net_sum": net_total,  # BT-106 == BT-109 without allowances/charges
+            "line_net_sum": line_sum if line_sum is not None else net_total,
             "total_without_vat": net_total,
             "vat_total": c.amount(x.totals.vat_total, "totals.vat_total"),
             "total_with_vat": c.amount(x.totals.total_with_vat, "totals.total_with_vat"),
