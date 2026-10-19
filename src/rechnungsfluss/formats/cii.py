@@ -130,6 +130,9 @@ def to_cii(invoice: Invoice, *, specification_id: str) -> bytes:
         _sub(_sub(item, _r("AssociatedDocumentLineDocument")), _r("LineID"), line.line_id)
         _sub(_sub(item, _r("SpecifiedTradeProduct")), _r("Name"), line.description or "-")
         agreement = _sub(item, _r("SpecifiedLineTradeAgreement"))
+        if line.order_line_ref:
+            order = _sub(agreement, _r("BuyerOrderReferencedDocument"))
+            _sub(order, _r("LineID"), line.order_line_ref)
         price = _sub(agreement, _r("NetPriceProductTradePrice"))
         _sub(price, _r("ChargeAmount"), fmt_amount(line.net_price))
         delivery = _sub(item, _r("SpecifiedLineTradeDelivery"))
@@ -313,6 +316,11 @@ def from_cii(data: bytes) -> Invoice:
                 vat_category=req_text(item, f"{tax_path}/ram:CategoryCode", NS),
                 vat_rate=_opt_dec(item, f"{tax_path}/ram:RateApplicablePercent"),
                 description=child_text(item, "ram:SpecifiedTradeProduct/ram:Name", NS),
+                order_line_ref=child_text(
+                    item,
+                    "ram:SpecifiedLineTradeAgreement/ram:BuyerOrderReferencedDocument/ram:LineID",
+                    NS,
+                ),
             )
         )
 

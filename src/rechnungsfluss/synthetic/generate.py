@@ -27,6 +27,7 @@ from enum import StrEnum
 from pathlib import Path
 
 from rechnungsfluss.domain.invoice import Invoice, Party
+from rechnungsfluss.domain.reasons import Reason
 from rechnungsfluss.formats import SPEC_EN16931, cii, ubl, zugferd
 from rechnungsfluss.synthetic import defects
 from rechnungsfluss.synthetic.builder import LineSpec, build_invoice
@@ -60,14 +61,18 @@ class Route(StrEnum):
     """Byte-identical re-delivery: dropped by ingest idempotency (ADR-0007)."""
 
 
-# Our own review reasons (not EN 16931 rules); the W3 pipeline must produce them.
-REASON_VALIDATION = "validation_failed"
-REASON_NOT_E_INVOICE = "not_an_e_invoice"
-REASON_NO_PO = "no_po_reference"
-REASON_PO_PRICE = "po_price_mismatch"
-REASON_PO_QTY = "po_quantity_mismatch"
-REASON_DUPLICATE = "duplicate_suspected"
-REASON_NO_DUE_DATE = "missing_due_date"
+# Our own review reasons (not EN 16931 rules), shared with the pipeline.
+REASON_VALIDATION = Reason.VALIDATION_FAILED.value
+REASON_NOT_E_INVOICE = Reason.NOT_AN_E_INVOICE.value
+REASON_NO_PO = Reason.NO_PO_REFERENCE.value
+REASON_PO_PRICE = Reason.PO_PRICE_MISMATCH.value
+REASON_PO_QTY = Reason.PO_QUANTITY_MISMATCH.value
+REASON_DUPLICATE = Reason.DUPLICATE_SUSPECTED.value
+REASON_NO_DUE_DATE = Reason.MISSING_DUE_DATE.value
+
+BT132_SHARE = 0.7
+"""Share of non-noisy invoices whose lines carry BT-132; the rest exercise the
+description fallback of 2-way matching (ADR-0014)."""
 
 PER_TENANT = {
     Category.CLEAN: 22,
@@ -99,6 +104,7 @@ class PurchaseOrder:
     tenant: str
     number: str
     supplier_vat_id: str | None
+    supplier_name: str
     currency: str
     lines: list[PurchaseOrderLine]
 
@@ -154,10 +160,16 @@ def _pick_format(profile: TenantProfile, rng: random.Random) -> str:
 
 
 def _lines(profile: TenantProfile, rng: random.Random, *, noisy: bool) -> list[LineSpec]:
-    count = rng.randint(10, 25) if noisy else rng.randint(1, 5)
+    """Noisy invoices: 10-25 lines (products may repeat), always with BT-132.
+    Others: 1-5 distinct products, BT-132 on BT132_SHARE of invoices."""
+    if noisy:
+        products = [rng.choice(CATALOGUE) for _ in range(rng.randint(10, 25))]
+        with_ref = True
+    else:
+        products = rng.sample(CATALOGUE, rng.randint(1, 5))
+        with_ref = rng.random() < BT132_SHARE
     specs = []
-    for _ in range(count):
-        product = rng.choice(CATALOGUE)
+    for index, product in enumerate(products, start=1):
         desc = product.description
         if noisy and rng.random() < 0.4:
             desc = rng.choice(_NOISY_EXTRAS)
@@ -175,6 +187,7 @@ def _lines(profile: TenantProfile, rng: random.Random, *, noisy: bool) -> list[L
                 net_price=product.net_price,
                 vat_category="S",
                 vat_rate=rate,
+                order_line_ref=str(index) if with_ref else None,
             )
         )
     return specs
@@ -185,6 +198,7 @@ def _po_for(profile: TenantProfile, number: str, supplier: Party, inv: Invoice) 
         tenant=profile.tenant,
         number=number,
         supplier_vat_id=supplier.vat_id,
+        supplier_name=supplier.name,
         currency=inv.currency,
         lines=[
             PurchaseOrderLine(

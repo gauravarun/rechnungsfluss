@@ -33,6 +33,7 @@ def line_specs(draw: st.DrawFn) -> LineSpec:
         net_price=draw(st.decimals(min_value=Decimal("0.01"), max_value=Decimal("9999"), places=2)),
         vat_category=category,
         vat_rate=rate,
+        order_line_ref=draw(st.none() | st.from_regex(r"[1-9][0-9]{0,2}", fullmatch=True)),
     )
 
 
