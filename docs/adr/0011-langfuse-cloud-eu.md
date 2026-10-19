@@ -12,3 +12,9 @@ Trace every Bedrock call in Langfuse Cloud, EU region. Each trace records prompt
 
 ## Consequences
 - ➖ Prompt and response content leaves AWS. That's acceptable only because all data is synthetic. Before any real data: a DPA, or self-hosting, or masking. This is recorded in `security.md`.
+
+## Implementation note (2026-10-19)
+- **Code and SDK:** `observability/tracing.py` uses langfuse 4.16.0 (OpenTelemetry-based). There is one `generation` per Bedrock call, recorded by the `TracingCall` wrapper. It runs in live mode only, so cassette replays aren't traced.
+- **Contents of a trace:** model, prompt version, effort, token usage, latency, stop reason, tenant, eval run ID, and the PDF's SHA-256 and size. **The PDF is never sent.**
+- **Masking:** identifiers in the structured output are masked by default (IBAN, VAT IDs, e-mail addresses, phone numbers). Amounts and dates stay readable for debugging.
+- **Verification:** a unit test runs the real SDK client against an in-memory span exporter and asserts what would be exported.

@@ -44,6 +44,9 @@ class LlmRequest:
     prompt_version: str
     model: str
     effort: Effort
+    metadata: tuple[tuple[str, str], ...] = ()
+    """Trace context (tenant, eval run). Not part of the cassette key: it doesn't
+    change what the model sees."""
 
     @property
     def key(self) -> str:
@@ -201,11 +204,16 @@ class ClaudeExtractor:
     ) -> None:
         self._call = call
         self.model, self.prompt_version, self.effort = model, prompt_version, effort
+        self.trace_metadata: tuple[tuple[str, str], ...] = ()
 
     def extract(self, tenant: TenantId, pdf: bytes) -> Extraction:
         response = self._call(
             LlmRequest(
-                pdf=pdf, prompt_version=self.prompt_version, model=self.model, effort=self.effort
+                pdf=pdf,
+                prompt_version=self.prompt_version,
+                model=self.model,
+                effort=self.effort,
+                metadata=(("tenant", tenant.value), *self.trace_metadata),
             )
         )
         extracted = ExtractedInvoice.model_validate(response.output)

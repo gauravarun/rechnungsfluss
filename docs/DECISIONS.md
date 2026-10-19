@@ -105,7 +105,10 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **Key extraction metric = silent errors:** wrong values the model didn't flag. Flagged errors already go to review.
 - **CI live eval via OIDC:** main branch only, invoke-only permissions, and nothing runs until the owner sets the role variable. The exact IAM actions for the Mantle endpoint get verified by the smoke test (runbook §4.3).
 
+- **Langfuse traces never include the PDF,** and they mask identifiers by default. The data is synthetic, but the pipeline has to behave correctly before real documents ever arrive.
+
 ### Open / next session
+- **Owner action (optional):** create a Langfuse Cloud EU project and set `LANGFUSE_PUBLIC_KEY` / `LANGFUSE_SECRET_KEY` locally. For CI, add them as repository secrets.
 - **Owner action:** Bedrock setup and first baseline (runbook §4), then the accuracy threshold.
 - **W3: complete.**
 - **W4: LLM extraction.**

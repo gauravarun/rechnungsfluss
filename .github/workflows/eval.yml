@@ -86,6 +86,11 @@ jobs:
       - name: live extraction eval (records cassettes)
         env:
           RF_BEDROCK_MODEL_ID: ${{ vars.RF_BEDROCK_MODEL_ID || 'anthropic.claude-opus-5-5' }}
+          # Optional: tracing is a no-op when these secrets are not set (ADR-0011).
+          LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+          LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+          LANGFUSE_HOST: https://cloud.langfuse.com
+          RF_ENVIRONMENT: ci-nightly
         run: >-
           uv run python -m rechnungsfluss.evaluation.extraction
           --mode live --record --routing --gate

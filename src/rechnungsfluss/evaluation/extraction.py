@@ -40,8 +40,10 @@ from rechnungsfluss.extraction.claude import (
     RecordingCall,
     ReplayCall,
 )
+from rechnungsfluss.observability.tracing import TracingCall, tracer_from_env
 
 CASSETTES = Path("eval/cassettes")
+TRACER = tracer_from_env()  # Langfuse when LANGFUSE_* keys are set, else a no-op
 BASELINE = Path("eval/baselines/extraction.json")
 THRESHOLDS = Path("eval/thresholds.json")
 
@@ -274,12 +276,16 @@ def _extractor(args: argparse.Namespace) -> ClaudeExtractor:
     if args.mode == "recorded":
         call = ReplayCall(args.cassettes)
     else:
-        call = BedrockCall(region=args.region, profile=args.aws_profile)
+        call = TracingCall(BedrockCall(region=args.region, profile=args.aws_profile), TRACER)
         if args.record:
             call = RecordingCall(call, args.cassettes)
-    return ClaudeExtractor(
+    extractor = ClaudeExtractor(
         call, model=args.model, prompt_version=args.prompt_version, effort=args.effort
     )
+    extractor.trace_metadata = (
+        ("eval_run", f"{args.mode}-{dt.datetime.now(dt.UTC):%Y%m%dT%H%M%S}"),
+    )
+    return extractor
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -380,6 +386,7 @@ def main(argv: list[str] | None = None) -> int:
             encoding="utf-8",
             newline="\n",
         )
+    TRACER.flush()
     if args.gate:
         failures = gate(report, BASELINE, THRESHOLDS)
         for failure in failures:
