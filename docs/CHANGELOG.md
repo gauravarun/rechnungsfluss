@@ -11,6 +11,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **`validation/kosit`:** KoSIT daemon client and report parser that returns the official rule IDs.
 - **`scripts/kosit.sh`:** fetches the validator and configuration (SHA-256 pinned) and runs the daemon.
 - **CI:** starts KoSIT and runs the integration tests with `RF_REQUIRE_KOSIT=1`, so a missing validator fails the build instead of skipping.
+- **Structured-path evaluation harness** (`evaluation/structured`) with a CI gate that requires 100 % field accuracy and full KoSIT agreement on the deterministic XML path. First report: `eval/reports/2026-10-19-structured.md`.
 - **Synthetic evaluation set** (`synthetic/generate`, committed `eval/dataset/manifest.jsonl` and `purchase_orders.json`):
   - 132 labelled documents across 2 tenants and 6 categories.
   - VAT IDs fail their official checksum on purpose. IBANs have valid checksums and an all-zero bank code.

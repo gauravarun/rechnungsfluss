@@ -73,7 +73,14 @@ Short, dated entries per work session. Significant architectural decisions get a
 - **Synthetic identifiers:** VAT IDs have a deliberately invalid check digit. IBANs have valid checksums (BR-DE-19) with an all-zero bank code.
 - **ZUGFeRD label hash is over the embedded XML,** because factur-x stamps PDF metadata with the current time. The committed manifest is byte-reproducible.
 
+- **The first harness run caught a label bug.** It measured 98.70 %, because every truth had `specification_id = null` while the documents carry BT-24. The generator now records the BT-24 it writes. The report keeps the honest caveat that 100 % on self-generated data is a regression check, not real-world accuracy.
+- **The XML-path CI gate is fixed at 100 %**, because parsing is deterministic. The LLM-path threshold is still the owner's decision after the W4 baseline (ADR-0010).
+
 ### Open / next session
-- **W1 status:** complete. The pipeline runner skeleton follows in W3.
-- **W2:** XRechnung UBL/CII and ZUGFeRD parsers, KoSIT daemon in docker compose, synthetic generator (≥ 100 labelled invoices).
+- **W1 and W2: complete.** Remaining W2 acceptance item: none.
+- **W3:**
+  - Pipeline runner (local) and Step Functions ASL.
+  - Ingest idempotency, duplicate detection and 2-way PO matching. Matching tolerances will be per-tenant config and need an ADR.
+  - Audit events on every transition.
+  - Routing labels in `manifest.jsonl` become verifiable.
 - **Verify the ⚠️ legal claims** in `standards.md` against primary sources.

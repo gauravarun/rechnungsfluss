@@ -359,9 +359,13 @@ def _content_hash(fmt: str, data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def _truth(inv: Invoice) -> dict[str, object]:
-    """Full canonical invoice as JSON; Invoice.model_validate(truth) restores it."""
-    return inv.model_dump(mode="json", exclude={"provenance"})
+def _truth(inv: Invoice, specification_id: str | None) -> dict[str, object]:
+    """Canonical invoice as encoded in the document, including the BT-24 actually written.
+
+    Invoice.model_validate(truth) restores it.
+    """
+    encoded = inv.model_copy(update={"specification_id": specification_id})
+    return encoded.model_dump(mode="json", exclude={"provenance"})
 
 
 def generate(out: Path, seed: int = DEFAULT_SEED) -> list[Label]:
@@ -400,7 +404,7 @@ def generate(out: Path, seed: int = DEFAULT_SEED) -> list[Label]:
                 expected_route=route.value,
                 review_reasons=draft.reasons,
                 purchase_order=draft.invoice.purchase_order_ref,
-                truth=None if draft.minimum_profile else _truth(draft.invoice),
+                truth=None if draft.minimum_profile else _truth(draft.invoice, spec),
             )
             _write(out / label.file, data)
             tenant_labels.append((label, draft.invoice, data))
@@ -476,7 +480,7 @@ def _duplicates(
                 review_reasons=reasons,
                 duplicate_of=original.doc_id,
                 purchase_order=inv.purchase_order_ref,
-                truth=_truth(inv),
+                truth=_truth(inv, spec),
             )
             _write(out / label.file, data)
             labels.append(label)
