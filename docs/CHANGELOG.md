@@ -4,6 +4,15 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 
 ## [Unreleased]
 
+### Added (session 3, 2026-10-19: W4)
+- **LLM extraction** (`extraction/`):
+  - Claude Opus 5.5 on Bedrock via `AnthropicBedrockMantle`, with structured outputs (`beta.messages.parse`) and effort `medium`.
+  - Client-side refusal fallback to Opus 4.8.
+  - Versioned prompt `v1`, a print-oriented output schema, and a strict mapping to the canonical model.
+  - Record/replay cassettes.
+- **Pipeline:** plain PDFs now go through the extractor. `extraction_incomplete`, `extraction_uncertain` and `not_an_invoice` route to review. Refusals and other technical extraction errors mark the invoice `FAILED` (replayable).
+- **ADR-0004 amended:** structured outputs instead of forced tool use, which Opus 5.5 rejects.
+
 ### Added (session 2, continued: W3)
 - **ADR-0014** (proposed): 2-way PO matching rules, reason codes and per-tenant tolerance defaults. The defaults await owner confirmation.
 - **Canonical model:** BT-132 (referenced PO line) on invoice lines, in both CII and UBL. KoSIT accepts both.

@@ -104,7 +104,11 @@ class Extractor(Protocol):
     def extract(self, tenant: TenantId, pdf: bytes) -> Extraction: ...
 
 
-class ExtractionUnavailableError(RuntimeError):
+class ExtractionError(RuntimeError):
+    """Extraction failed for a technical reason; the invoice goes to FAILED and can be replayed."""
+
+
+class ExtractionUnavailableError(ExtractionError):
     """No extractor is configured; plain PDFs cannot be processed yet."""
 
 

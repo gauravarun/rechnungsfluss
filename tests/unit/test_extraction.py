@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import sqlite3
 from collections.abc import Iterator
+from dataclasses import replace
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
@@ -28,6 +29,7 @@ from rechnungsfluss.domain.tenancy import TenantId
 from rechnungsfluss.extraction.claude import (
     CassetteMissingError,
     ClaudeExtractor,
+    ExtractionRefusedError,
     LlmRequest,
     LlmResponse,
     RecordingCall,
@@ -311,3 +313,24 @@ def test_mapping_keeps_amount_precision() -> None:
     invoice = _map(extracted()).invoice
     assert isinstance(invoice, Invoice)
     assert invoice.totals.amount_due == Decimal("148.75")
+
+
+class RefusingCall:
+    def __call__(self, request: LlmRequest) -> LlmResponse:
+        raise ExtractionRefusedError("no structured output (stop_reason=refusal)")
+
+
+def test_refusal_marks_the_invoice_failed_and_replayable(
+    conn: sqlite3.Connection, tmp_path: Path, tenant_de: TenantId
+) -> None:
+    pipeline = _pipeline(conn, tmp_path, extracted())
+    refusing = Pipeline(replace(pipeline.s, extractor=ClaudeExtractor(RefusingCall())))
+    rec = refusing.process(
+        tenant_de, refusing.ingest(tenant_de, render_pdf(make_invoice())).invoice_id
+    )
+    assert rec.state is InvoiceState.FAILED
+    assert "refusal" in str(rec.meta["error"])
+    replayed = pipeline.replay(tenant_de, rec.invoice_id, actor="user:operator")
+    # Extraction now succeeds; this minimal setup has no POs, so it lands in review.
+    assert replayed.state is InvoiceState.IN_REVIEW
+    assert replayed.meta["reasons"] == ["po_not_found"]

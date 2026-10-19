@@ -38,6 +38,7 @@ from rechnungsfluss.ports import (
     ErpClient,
     ErpUnavailableError,
     Extraction,
+    ExtractionError,
     ExtractionUnavailableError,
     Extractor,
     FingerprintStore,
@@ -193,7 +194,7 @@ class Pipeline:
                     is_e_invoice, profile = doc.is_e_invoice, doc.profile.value
                 except zugferd.NotZugferdError:
                     return self._parsed_pdf(tenant, rec, self._extract(tenant, data))
-        except (ParseError, ExtractionUnavailableError) as exc:
+        except (ParseError, ExtractionError) as exc:
             return self._transition(tenant, rec, S.FAILED, meta={"error": str(exc)})
         self.s.store.put(tenant, f"validation-input/{rec.invoice_id}.xml", xml)
         meta = {"format": fmt, "is_e_invoice": is_e_invoice, "profile": profile}

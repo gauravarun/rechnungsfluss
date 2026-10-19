@@ -22,7 +22,7 @@ from typing import Any, Literal, Protocol
 from rechnungsfluss.domain.tenancy import TenantId
 from rechnungsfluss.extraction.mapping import to_canonical
 from rechnungsfluss.extraction.schema import ExtractedInvoice
-from rechnungsfluss.ports import Extraction
+from rechnungsfluss.ports import Extraction, ExtractionError
 
 DEFAULT_MODEL = "anthropic.claude-opus-5-5"
 FALLBACK_MODEL = "anthropic.claude-opus-4-8"
@@ -66,8 +66,8 @@ class LlmCall(Protocol):
     def __call__(self, request: LlmRequest) -> LlmResponse: ...
 
 
-class ExtractionRefusedError(RuntimeError):
-    pass
+class ExtractionRefusedError(ExtractionError):
+    """The model (and its fallback) declined; the invoice goes to FAILED, never to approval."""
 
 
 class CassetteMissingError(LookupError):
