@@ -35,34 +35,11 @@ from rechnungsfluss.formats import SPEC_EN16931, cii, zugferd
 from rechnungsfluss.formats.cii import to_cii_minimum
 from rechnungsfluss.ports import NotFoundError
 from rechnungsfluss.synthetic.render import render_pdf
-from rechnungsfluss.validation.kosit import Finding, Severity, ValidationResult
 from tests.conftest import make_invoice
+from tests.fakes import FixedExtractor, StubValidator
 
 S = InvoiceState
 T0 = dt.datetime(2026, 10, 19, 8, 0, tzinfo=dt.UTC)
-
-
-class StubValidator:
-    def __init__(self) -> None:
-        self.calls = 0
-
-    def validate(self, document: bytes) -> ValidationResult:
-        self.calls += 1
-        if b"999.99" in document:
-            return ValidationResult(
-                accepted=False,
-                scenario="stub",
-                findings=(Finding(code="STUB-1", severity=Severity.ERROR, message="bad total"),),
-            )
-        return ValidationResult(accepted=True, scenario="stub")
-
-
-class FixedExtractor:
-    def __init__(self, invoice: Invoice) -> None:
-        self.invoice = invoice
-
-    def extract(self, tenant: TenantId, pdf: bytes) -> Invoice:
-        return self.invoice
 
 
 @pytest.fixture

@@ -66,11 +66,9 @@ Each extracted field carries provenance: `source ∈ {xml, llm, human}` and an o
 | Entity | PK | SK |
 |---|---|---|
 | Document | `TENANT#t#DOC#sha256` | `META` |
-| Invoice | `TENANT#t#INV#id` | `V#n` (immutable versions), `CURRENT` |
-| PurchaseOrder | `TENANT#t#PO#no` | `META`, `LINE#n` |
-| ReviewTask | `TENANT#t#INV#id` | `REVIEW` (GSI1 `TENANT#t#STATUS#open`) |
-| DupIndex | `TENANT#t#DUP#vat#no` | `INV#id` |
-| Export | `TENANT#t#INV#id` | `EXPORT` |
+| Invoice | `TENANT#t#INV#id` | `CURRENT` (version attribute, conditional writes); GSI1 `TENANT#t#STATE#<state>` |
+| PurchaseOrder | `TENANT#t#PO#no` | `META` (lines embedded) |
+| Fingerprint (duplicates) | `TENANT#t#DUP#sha256(seller key)` | `INV#id` |
 | AuditEvent (`rf-audit`) | `TENANT#t#INV#id` | `ts#seq` |
 
 Every key starts with `TENANT#<id>`. In AWS, IAM `dynamodb:LeadingKeys` conditions bound to the `tenant` session tag enforce this, so isolation does not depend only on application code (ADR-0006).

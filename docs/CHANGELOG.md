@@ -20,6 +20,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
   - Review actions: approve, approve with corrections (re-validated and audited field by field), reject.
   - Replay for `FAILED` and `EXPORT_FAILED`.
 - **New ports and local adapters:** idempotency, fingerprints, purchase orders, validator, extractor, and an ERP that enforces idempotency keys and can inject failures.
+- **AWS adapters** (`adapters/aws`): S3 object store (tenant prefix, optional per-tenant KMS key), DynamoDB invoice repository (conditional writes, by-state GSI), append-only audit log (`attribute_not_exists`), idempotency claims (TTL), fingerprints and POs. Each adapter is bound to one tenant and refuses calls for another. Tested with moto, including a full pipeline run.
+- **ADR-0007 amended:** per-step idempotency comes from state guards and conditional writes, not Powertools.
 - **Routing evaluation** (`evaluation/routing`) with a CI gate: zero false accepts and full label agreement. Reports: `eval/reports/2026-10-19-routing.md`, plus the structured report re-run on the regenerated dataset.
 
 ### Added (session 2, 2026-10-19: W2)
