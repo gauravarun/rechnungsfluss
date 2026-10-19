@@ -68,7 +68,7 @@ class Report:
 
 
 def _group(path: str) -> str:
-    """Report per field, with line/VAT-breakdown indices collapsed: lines[3].quantity -> lines[].quantity."""
+    """Collapse list indices for per-field reporting: lines[3].quantity -> lines[].quantity."""
     out, depth = [], 0
     for ch in path:
         if ch == "[":
@@ -153,7 +153,7 @@ def evaluate(dataset: Path, validator: KositValidator, validator_name: str) -> R
 
 def _git_commit() -> str:
     try:
-        out = subprocess.run(  # noqa: S603
+        out = subprocess.run(
             ["git", "rev-parse", "--short", "HEAD"],  # noqa: S607
             capture_output=True,
             text=True,
