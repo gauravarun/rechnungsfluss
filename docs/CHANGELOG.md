@@ -11,6 +11,12 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This p
 - **`validation/kosit`:** KoSIT daemon client and report parser that returns the official rule IDs.
 - **`scripts/kosit.sh`:** fetches the validator and configuration (SHA-256 pinned) and runs the daemon.
 - **CI:** starts KoSIT and runs the integration tests with `RF_REQUIRE_KOSIT=1`, so a missing validator fails the build instead of skipping.
+- **Synthetic evaluation set** (`synthetic/generate`, committed `eval/dataset/manifest.jsonl` and `purchase_orders.json`):
+  - 132 labelled documents across 2 tenants and 6 categories.
+  - VAT IDs fail their official checksum on purpose. IBANs have valid checksums and an all-zero bank code.
+  - Generation is deterministic, with a drift guard in CI.
+  - All labels are checked against KoSIT for an exact rule-ID match.
+- **`formats/cii.to_cii_minimum`:** Factur-X MINIMUM serializer, for test inputs.
 - **`formats/zugferd`:** extracts and embeds Factur-X/ZUGFeRD 2.x data with the `factur-x` library. The attachment is pre-checked by the hardened XML parser. MINIMUM and BASIC WL profiles are flagged as not being e-invoices.
 - **`synthetic/render`:** deterministic invoice PDF (reportlab) with a visible "SYNTHETISCH" marker.
 - **Dependency cutoff:** `[tool.uv] exclude-newer` enforces the two-week rule for transitive dependencies too. It downgraded `ast-serialize`, `iniconfig`, `pluggy` and `pillow`, which had slipped in too new.

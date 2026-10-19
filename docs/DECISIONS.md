@@ -62,6 +62,17 @@ Short, dated entries per work session. Significant architectural decisions get a
   - The security policy was not changed.
 - **Known limit:** generated hybrid PDFs are not verified for PDF/A-3 conformance. Only the Factur-X XML is validated, by the factur-x XSD and KoSIT.
 
+- **Dataset labels are verified, not assumed.** The first draft had 21 label/validator disagreements. They showed:
+  - EN 16931 VAT rules tolerate ±1.00.
+  - BR-CO-25 is only monitored, not enforced.
+  - Changing BT-106 also fires BR-CO-13.
+  - A missing seller VAT ID fires BR-CO-26 (+ BR-DE-16 under XRechnung).
+  Labels now equal KoSIT's output exactly, and the generator refuses VAT deltas inside the tolerance.
+- **A missing due date routes to review as our own rule,** because the official validator accepts it. This is documented in `standards.md`.
+- **New `po_mismatch` category** (price or quantity above the PO), so 2-way matching has negative cases. It wasn't in the original brief's list, which said "at least" those five.
+- **Synthetic identifiers:** VAT IDs have a deliberately invalid check digit. IBANs have valid checksums (BR-DE-19) with an all-zero bank code.
+- **ZUGFeRD label hash is over the embedded XML,** because factur-x stamps PDF metadata with the current time. The committed manifest is byte-reproducible.
+
 ### Open / next session
 - **W1 status:** complete. The pipeline runner skeleton follows in W3.
 - **W2:** XRechnung UBL/CII and ZUGFeRD parsers, KoSIT daemon in docker compose, synthetic generator (≥ 100 labelled invoices).
