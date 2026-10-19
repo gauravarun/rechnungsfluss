@@ -142,7 +142,7 @@ resource "aws_dynamodb_table" "main" {
     type = "S"
   }
 
-  # Open review tasks per tenant: gsi1pk = TENANT#<t>#STATUS#open
+  # Invoices by state per tenant: gsi1pk = TENANT#<t>#STATE#<state>, gsi1sk = invoice id
   global_secondary_index {
     name            = "gsi1"
     projection_type = "ALL"
