@@ -83,13 +83,32 @@ class Validator(Protocol):
     def validate(self, document: bytes) -> ValidationResult: ...
 
 
+@dataclass(frozen=True, slots=True)
+class Extraction:
+    """Result of reading a plain PDF. The extractor never decides routing."""
+
+    invoice: Invoice | None
+    """None when required data was missing or the document is not an invoice."""
+    is_invoice: bool = True
+    missing_fields: tuple[str, ...] = ()
+    uncertain_fields: tuple[str, ...] = ()
+    model: str | None = None
+    prompt_version: str | None = None
+    usage: Mapping[str, int] = field(default_factory=dict)
+    latency_ms: int | None = None
+
+
 class Extractor(Protocol):
-    """Turns a plain PDF into canonical invoice data (LLM-backed from W4)."""
+    """Turns a plain PDF into canonical invoice data (Claude on Bedrock, ADR-0004)."""
 
-    def extract(self, tenant: TenantId, pdf: bytes) -> Invoice: ...
+    def extract(self, tenant: TenantId, pdf: bytes) -> Extraction: ...
 
 
-class ExtractionUnavailableError(RuntimeError):
+class ExtractionError(RuntimeError):
+    """Extraction failed for a technical reason; the invoice goes to FAILED and can be replayed."""
+
+
+class ExtractionUnavailableError(ExtractionError):
     """No extractor is configured; plain PDFs cannot be processed yet."""
 
 

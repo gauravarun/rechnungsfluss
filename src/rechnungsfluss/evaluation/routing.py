@@ -40,7 +40,7 @@ from rechnungsfluss.domain.matching import PurchaseOrder
 from rechnungsfluss.domain.states import InvoiceState
 from rechnungsfluss.domain.tenancy import TenantId
 from rechnungsfluss.evaluation.structured import _git_commit
-from rechnungsfluss.ports import Validator
+from rechnungsfluss.ports import Extraction, Validator
 
 S = InvoiceState
 
@@ -51,8 +51,12 @@ class OracleExtractor:
     def __init__(self, truths: dict[str, Invoice]) -> None:
         self._by_sha = truths
 
-    def extract(self, tenant: TenantId, pdf: bytes) -> Invoice:
-        return self._by_sha[hashlib.sha256(pdf).hexdigest()]
+    def extract(self, tenant: TenantId, pdf: bytes) -> Extraction:
+        return Extraction(
+            invoice=self._by_sha[hashlib.sha256(pdf).hexdigest()],
+            model="oracle",
+            prompt_version="ground-truth",
+        )
 
 
 @dataclass
